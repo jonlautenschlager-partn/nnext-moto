@@ -6,6 +6,7 @@ on:
     paths:
       - "links.txt"
       - "inbox/**"
+      - "app/**"
       - "scripts/**"
       - "knowledge-base/**"
       - "insurance-*.json"

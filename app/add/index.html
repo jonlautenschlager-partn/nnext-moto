@@ -50,7 +50,7 @@
   </div>
 
   <div class="panel" id="formPanel" hidden>
-    <h2>1. Enlace del anuncio</h2>
+    <h2>1. Enlace del anuncio <span class="mini" id="changeTk" style="cursor:pointer;color:var(--accent);float:right">cambiar token</span></h2>
     <input id="urls" type="text" placeholder="Pega el enlace (o varios, uno por línea)">
     <p>Pega también el <b>texto del anuncio</b> si la web bloquea la lectura automática (Milanuncios, Wallapop…): el sistema rellena los campos con él.</p>
     <textarea id="paste" placeholder="(opcional) pega aquí el texto del anuncio…"></textarea>
@@ -134,9 +134,23 @@ function showMsg(kind, text) {
   m.innerHTML = text;
 }
 
-$("saveTk").addEventListener("click", () => {
+$("saveTk").addEventListener("click", async () => {
   const v = $("tk").value.trim();
-  if (v.length > 20) { localStorage.setItem("nnext-token", v); location.reload(); }
+  if (!/^(github_pat_[A-Za-z0-9_]{40,}|ghp_[A-Za-z0-9]{30,})$/.test(v)) {
+    return showMsg("err", "El token no parece completo: debe empezar por github_pat_ (o ghp_), sin espacios, ~93 caracteres. En GitHub usa el botón 'copy' en vez de seleccionar el texto a mano.");
+  }
+  showMsg("ok", "Comprobando el token con GitHub…");
+  try {
+    const test = await api("GET", "links.txt", null, v);
+    if (!test.ok) {
+      return showMsg("err", "GitHub rechaza este token (HTTP " + test.status + "). Regenera el token en GitHub (Settings → Developer settings → nnext-moto → Regenerate) y cópialo completo.");
+    }
+    localStorage.setItem("nnext-token", v);
+    showMsg("ok", "Token válido. Guardando…");
+    setTimeout(() => location.reload(), 600);
+  } catch (e) {
+    showMsg("err", "No se pudo comprobar: " + (e.message || e));
+  }
 });
 
 $("go").addEventListener("click", async () => {
@@ -162,13 +176,30 @@ $("go").addEventListener("click", async () => {
         if (!p.ok) throw new Error(`inbox image: ${p.status}`);
       }
     }
-    showMsg("ok", `Hecho: ${r.added} enlace(s) añadidos${paste ? " + texto" : ""}${shot ? " + captura" : ""}. El robot lo procesa en ~1 minuto. <a href="../" style="color:var(--accent)">Ver panel</a>`);
+    const extra = [paste ? "texto" : null, shot ? "captura" : null].filter(Boolean).join(" + ");
+    if (r.added === 0) {
+      showMsg("ok", "Ese enlace ya estaba guardado — no hace falta repetirlo." + (extra ? ` (${extra} actualizado)` : ""));
+    } else {
+      showMsg("ok", `Hecho: ${r.added} enlace(s) añadidos${extra ? " + " + extra : ""}. El robot lo procesa en ~1 minuto. <a href="../" style="color:var(--accent)">Ver panel</a>`);
+    }
     $("urls").value = ""; $("paste").value = ""; $("shot").value = "";
   } catch (e) {
-    showMsg("err", "Error: " + (e.message || e));
+    const s = String(e.message || e);
+    if (s.includes("401") || /Bad credentials/i.test(s)) {
+      $("tokenPanel").hidden = false;
+      showMsg("err", "El token guardado no es válido (401). Pégalo otra vez arriba y pulsa Guardar.");
+    } else {
+      showMsg("err", "Error: " + s);
+    }
   } finally {
     $("go").disabled = false;
   }
+});
+
+$("changeTk").addEventListener("click", () => {
+  $("tokenPanel").hidden = false;
+  $("tk").focus();
+  $("tk").scrollIntoView({ behavior: "smooth", block: "center" });
 });
 
 if (!getToken()) needToken(); else { $("tokenPanel").hidden = true; $("formPanel").hidden = false; }
