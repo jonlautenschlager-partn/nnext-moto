@@ -1,0 +1,20 @@
+{
+  "name": "nnext-moto",
+  "version": "0.1.0",
+  "description": "A2 motorcycle market tracker for Spain",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "add": "node scripts/add-link.js",
+    "scrape": "node scripts/run-scrape.js",
+    "build": "node scripts/build-dashboard.mjs",
+    "parse-text": "node scripts/parse-text.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {},
+  "optionalDependencies": {
+    "cheerio": "^1.0.0"
+  }
+}

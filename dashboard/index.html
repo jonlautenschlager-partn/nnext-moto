@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NNext Moto — radar A2</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 9 9"/><path d="M12 12l4-2"/></svg>
+    <div>
+      <h1>NNext Moto</h1>
+      <span id="generated" class="muted"></span>
+    </div>
+  </div>
+  <div class="actions">
+    <button id="exportCsv" class="btn ghost" type="button">Export CSV</button>
+    <button id="exportXlsx" class="btn ghost" type="button">Export Excel</button>
+  </div>
+</header>
+
+<section id="stats" class="stats"></section>
+
+<section class="filters" id="filters">
+  <input id="f-search" type="search" placeholder="Buscar marca, modelo, ubicación…">
+  <select id="f-brand"><option value="">Marca: todas</option></select>
+  <select id="f-type">
+    <option value="">Tipo: todos</option>
+    <option>naked</option><option>sport</option><option>trail</option><option>touring</option>
+    <option>custom</option><option>classic</option><option>scooter</option><option>enduro</option><option>other</option>
+  </select>
+  <select id="f-status">
+    <option value="">Estado: activos</option>
+    <option value="active">Activos</option>
+    <option value="removed">Vendidos/eliminados</option>
+    <option value="">Todos</option>
+  </select>
+  <select id="f-a2">
+    <option value="">A2: todas</option>
+    <option value="yes">Solo A2 legales</option>
+    <option value="no">No A2</option>
+    <option value="unknown">Sin confirmar</option>
+  </select>
+  <select id="f-seller">
+    <option value="">Vendedor: todos</option>
+    <option value="particular">Particular</option>
+    <option value="professional">Profesional</option>
+  </select>
+  <div class="range">
+    <label>Precio €</label>
+    <input id="f-priceMin" type="number" placeholder="min" inputmode="numeric">
+    <span>–</span>
+    <input id="f-priceMax" type="number" placeholder="max" inputmode="numeric">
+  </div>
+  <div class="range">
+    <label>Km ≤</label>
+    <input id="f-kmMax" type="number" placeholder="30000" inputmode="numeric">
+  </div>
+  <div class="range">
+    <label>Año ≥</label>
+    <input id="f-yearMin" type="number" placeholder="2018" inputmode="numeric">
+  </div>
+  <select id="f-sort">
+    <option value="newest">Orden: más recientes</option>
+    <option value="price-asc">Precio ↑</option>
+    <option value="price-desc">Precio ↓</option>
+    <option value="km-asc">Km ↑</option>
+    <option value="year-desc">Año ↓</option>
+    <option value="total-asc">Coste total ↑ (moto+seguro)</option>
+    <option value="price-kw">€/kW ↑</option>
+  </select>
+  <button id="f-fav" class="btn ghost toggle" type="button" title="Solo favoritos">Favoritos</button>
+  <button id="f-reset" class="btn ghost" type="button">Reset</button>
+</section>
+
+<main id="grid" class="grid"></main>
+<div id="empty" class="empty hidden">Nada que mostrar con estos filtros.</div>
+
+<footer class="foot">
+  <span class="muted">Seguro = estimación "terceros con grúa" para tu perfil (no es una oferta). A2 = potencia ≤ 35 kW.</span>
+</footer>
+
+<script src="data.js"></script>
+<script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js" defer></script>
+<script src="app.js" defer></script>
+</body>
+</html>

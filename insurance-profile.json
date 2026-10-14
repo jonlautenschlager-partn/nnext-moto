@@ -1,0 +1,40 @@
+{
+  "rider": {
+    "age": 29,
+    "birthYear": 1997,
+    "licenseA2Since": "2026-10",
+    "yearsA1Experience": 1,
+    "yearsAMotorcycle": 1,
+    "yearsA2": 0,
+    "hasCarLicense": true,
+    "claimsLast5Years": 0
+  },
+  "location": {
+    "postalCode": "28010",
+    "city": "Madrid",
+    "province": "Madrid",
+    "zoneFactor": "big-city-central"
+  },
+  "parking": {
+    "garage": true,
+    "garageType": "shared-no-security",
+    "streetParking": false
+  },
+  "usage": {
+    "annualKm": 5000,
+    "use": "particular",
+    "mainRiderOnly": true
+  },
+  "referencePoints": [
+    {
+      "bike": "Honda CB125R",
+      "year": null,
+      "coverage": "terceros con grua",
+      "annualPriceEur": 214,
+      "source": "current real policy",
+      "date": "2026-10"
+    }
+  ],
+  "coverageWanted": "terceros con grua",
+  "notes": "Estimate engine: prices shown are ranges, never a quote. Anchor = CB125R 214 eur/yr real policy."
+}
