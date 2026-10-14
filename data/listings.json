@@ -50,7 +50,7 @@
       "extracted from AS24 soft page (detail blocked for bots)"
     ],
     "site": "autoscout24.es",
-    "lastScrapedAt": "2026-10-14T14:40:52.510Z",
+    "lastScrapedAt": "2026-10-14T15:32:22.041Z",
     "a2": {
       "legal": false,
       "restricted": false,
@@ -61,7 +61,7 @@
       "min": 360,
       "max": 590,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T15:15:51.671Z",
+      "computedAt": "2026-10-14T15:39:21.932Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
@@ -128,7 +128,7 @@
     "status": "active",
     "notes": [],
     "site": "moto-ocasion.com",
-    "lastScrapedAt": "2026-10-14T14:40:53.321Z",
+    "lastScrapedAt": "2026-10-14T15:32:22.502Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -139,7 +139,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T15:15:51.671Z",
+      "computedAt": "2026-10-14T15:39:21.932Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
@@ -204,9 +204,11 @@
     "scrapeStatus": "ok",
     "httpStatus": 200,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "filled from pasted ad text"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-10-14T14:40:53.752Z",
+    "lastScrapedAt": "2026-10-14T15:32:22.918Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -217,7 +219,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T15:15:51.672Z",
+      "computedAt": "2026-10-14T15:39:21.932Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "postalCode": "46020",
@@ -288,7 +290,7 @@
     "status": "active",
     "notes": [],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-10-14T14:40:54.312Z",
+    "lastScrapedAt": "2026-10-14T15:32:23.349Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -299,7 +301,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T15:15:51.672Z",
+      "computedAt": "2026-10-14T15:39:21.932Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "postalCode": "08004",
@@ -336,7 +338,7 @@
     "title": "Yamaha XSR 700 A2",
     "brand": "Yamaha",
     "model": "XSR700",
-    "type": "classic",
+    "type": "naked",
     "year": 2021,
     "km": 22000,
     "price": 5000,
@@ -368,10 +370,11 @@
     "httpStatus": 200,
     "status": "active",
     "notes": [
-      "ad says 'limitada' — power capped to 35 kW (A2 restricted)"
+      "ad says 'limitada' — power capped to 35 kW (A2 restricted)",
+      "filled from pasted ad text"
     ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-10-14T14:40:54.651Z",
+    "lastScrapedAt": "2026-10-14T15:32:23.628Z",
     "a2": {
       "legal": true,
       "restricted": true,
@@ -382,7 +385,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T15:15:51.672Z",
+      "computedAt": "2026-10-14T15:39:21.933Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "postalCode": "28013",
@@ -417,7 +420,7 @@
     ],
     "title": "Ducati Monster 696 A2",
     "brand": "Ducati",
-    "model": "Monster",
+    "model": "Monster 696",
     "type": "naked",
     "year": 2009,
     "km": 42000,
@@ -454,10 +457,11 @@
     "httpStatus": 200,
     "status": "active",
     "notes": [
-      "ad says 'limitada' — power capped to 35 kW (A2 restricted)"
+      "ad says 'limitada' — power capped to 35 kW (A2 restricted)",
+      "filled from pasted ad text"
     ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-10-14T14:40:54.959Z",
+    "lastScrapedAt": "2026-10-14T15:32:23.903Z",
     "a2": {
       "legal": true,
       "restricted": true,
@@ -468,7 +472,7 @@
       "min": 255,
       "max": 400,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T15:15:51.673Z",
+      "computedAt": "2026-10-14T15:39:21.933Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "postalCode": "18003",
@@ -490,7 +494,9 @@
     "url": "https://www.cuimo.com/moto/HONDA-CBR-500-R-2021-797d35ce",
     "addedAt": "2026-10-14T14:11:34.439Z",
     "favorite": false,
-    "manualFields": [],
+    "manualFields": [
+      "location"
+    ],
     "priceHistory": [],
     "title": "HONDA CBR 500 R de segunda mano",
     "brand": "Honda",
@@ -500,7 +506,7 @@
     "km": 55130,
     "price": 5199,
     "currency": "EUR",
-    "location": null,
+    "location": "Valencia",
     "seller": null,
     "powerKw": 35,
     "powerCv": 47.6,
@@ -536,9 +542,11 @@
     "scrapeStatus": "ok",
     "httpStatus": 200,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "filled from pasted ad text"
+    ],
     "site": "cuimo.com",
-    "lastScrapedAt": "2026-10-14T14:40:55.268Z",
+    "lastScrapedAt": "2026-10-14T15:32:24.193Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -549,7 +557,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T15:15:51.673Z",
+      "computedAt": "2026-10-14T15:39:21.933Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
@@ -570,7 +578,7 @@
     ],
     "title": "DUCATI MONSTER 796 ¿A2? -",
     "brand": "Ducati",
-    "model": "MONSTER 796",
+    "model": "Monster 796",
     "type": "naked",
     "year": 2011,
     "km": 29000,
@@ -606,9 +614,9 @@
     "description": "WWW.MOTO–OCASION.COM DUCATI MONSTER 796 .ESTUPENDA. .SE ENTREGA CON GARANTÍA Y TOTALMENTE REVISADA. .POSIBILIDAD DE LIMITAR PARA CARNET A2. .EQUIPADA CON: - CÚPULA, TAPA DE COLÍN, TOPES ANTICAÍDA, ETC. .ACEPTAMOS SU MOTO COMO PARTE DE PAGO. .FINANCIACIÓN INSTANTÁNEA SIN ENTRADA. .ENVÍO GRATUITO A TODA ESPAÑA GARANTIZADO*. .PREGUNTE SIN COMPROMISO. ASESORAMIENTO TELEFÓNICO DE CONFIANZA. *Excepto islas. Consultar tarifas.",
     "availability": null,
     "kbModel": {
-      "stockKw": 82,
-      "kg": 166,
-      "restrictedAvailable": false,
+      "stockKw": 64,
+      "kg": 183,
+      "restrictedAvailable": true,
       "type": "naked"
     },
     "scrapeStatus": "ok",
@@ -616,18 +624,18 @@
     "status": "active",
     "notes": [],
     "site": "moto-ocasion.com",
-    "lastScrapedAt": "2026-10-14T14:44:19.739Z",
+    "lastScrapedAt": "2026-10-14T15:32:24.672Z",
     "a2": {
       "legal": false,
       "restricted": false,
-      "confidence": "high",
-      "reason": "Power 59.6 kW > 35 kW limit"
+      "confidence": "low",
+      "reason": "Listed power 59.6 kW — needs official A2 restriction kit (stock 64 kW, kit exists)"
     },
     "insurance": {
       "min": 360,
       "max": 590,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T15:15:51.673Z",
+      "computedAt": "2026-10-14T15:39:21.933Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
@@ -655,53 +663,79 @@
       "description"
     ],
     "priceHistory": [],
-    "title": "Ducati",
+    "title": "Ducati Monster 797 Roja 2018 Limitada para A2",
     "brand": "Ducati",
-    "model": null,
-    "type": "other",
-    "year": null,
-    "km": 800,
-    "price": null,
+    "model": "Monster 797",
+    "type": "naked",
+    "year": 2018,
+    "km": 19800,
+    "price": 5800,
     "currency": "EUR",
-    "location": null,
-    "seller": null,
-    "powerKw": null,
+    "location": "Sant Joan les Fonts",
+    "seller": "particular",
+    "powerKw": 35,
     "powerCv": null,
     "cc": null,
     "fuel": null,
     "gearbox": null,
-    "color": null,
+    "color": "Rojo",
     "carnet": null,
-    "postalCode": null,
-    "lastModified": null,
+    "postalCode": "17857",
+    "lastModified": "2026-10-14T12:46:05.000Z",
     "condition": null,
     "productId": null,
-    "images": null,
-    "description": "- Estilo naked. - Limitada para carnet A2 - 19,800 Km - ITV al dia - Revisiones realizadas en servicio oficial Ducati - Historial de mantenimiento -Escape SC Project -Espejos y puños Rizoma -Protectores de ruedas -Bateria Nueva -Neumaticos recién cambiados -Kit de transmisión nuevo -Siempre guardada en garaje privado y usada principalmente para salidas de fin de semana -Ninguna caída. -Se entrega con 2 llaves - No cambios -Único dueño - Se entrega tambien con funda protectora caballete Retrovisores y escape de serie.",
-    "availability": null,
-    "kbModel": null,
-    "scrapeStatus": "ok-pasted-text",
-    "httpStatus": 403,
+    "images": [
+      "https://cdn.wallapop.com/images/10420/ky/ft/__/c10420p1267168307/i6645035387.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/ky/ft/__/c10420p1267168307/i6526668208.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/ky/ft/__/c10420p1267168307/i6526668267.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/ky/ft/__/c10420p1267168307/i6526668343.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/ky/ft/__/c10420p1267168307/i6526668403.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/ky/ft/__/c10420p1267168307/i6526668434.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/ky/ft/__/c10420p1267168307/i6526668446.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/ky/ft/__/c10420p1267168307/i6526668456.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/ky/ft/__/c10420p1267168307/i6645035405.jpg?pictureSize=W800"
+    ],
+    "description": "- Estilo naked.\n- Limitada para carnet A2\n- 19,800 Km\n- ITV al dia\n- Revisiones realizadas en servicio oficial Ducati\n- Historial de mantenimiento\n-Escape SC Project\n-Espejos y puños Rizoma\n-Protectores de ruedas\n-Bateria Nueva\n-Neumaticos recién cambiados\n-Kit de transmisión nuevo\n-Siempre guardada en garaje privado y usada principalmente para salidas de fin de semana\n-Ninguna caída.\n-Se entrega con 2 llaves\n- No cambios\n-Único dueño\n- Se entrega tambien con funda protectora\ncaballete Retrovisores y escape de serie.",
+    "availability": "https://schema.org/InStock",
+    "kbModel": {
+      "stockKw": 53.7,
+      "kg": 186,
+      "restrictedAvailable": true,
+      "type": "naked"
+    },
+    "scrapeStatus": "ok",
+    "httpStatus": 200,
     "status": "active",
     "notes": [
-      "HTTP 403 — site blocked automated access; needs paste-text or screenshot",
+      "ad says 'limitada' — power capped to 35 kW (A2 restricted)",
       "filled from pasted ad text"
     ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-10-14T15:04:04.146Z",
+    "lastScrapedAt": "2026-10-14T15:32:26.173Z",
     "a2": {
-      "legal": null,
-      "restricted": false,
-      "confidence": "low",
-      "reason": "No power info and no model match"
+      "legal": true,
+      "restricted": true,
+      "confidence": "medium",
+      "reason": "Restricted to 35 kW from stock 53.7 kW — legal if official A2 version"
     },
     "insurance": {
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T15:15:51.674Z",
+      "computedAt": "2026-10-14T15:39:21.933Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
-    }
+    },
+    "localImages": [
+      "0.jpg",
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg",
+      "7.jpg",
+      "8.jpg"
+    ]
   },
   {
     "id": "6ddf8d3029a0",
@@ -719,59 +753,66 @@
       "description"
     ],
     "priceHistory": [],
-    "title": "Suzuki SV650",
+    "title": "Suzuki SV 650 ABS Naked Negra/Roja",
     "brand": "Suzuki",
     "model": "SV650",
-    "type": "other",
+    "type": "naked",
     "year": 2020,
     "km": 30000,
-    "price": null,
+    "price": 3600,
     "currency": "EUR",
-    "location": null,
-    "seller": null,
-    "powerKw": 35,
+    "location": "Madrid",
+    "seller": "particular",
+    "powerKw": 56,
     "powerCv": null,
     "cc": 645,
     "fuel": null,
     "gearbox": null,
-    "color": null,
+    "color": "Negro",
     "carnet": null,
-    "postalCode": null,
-    "lastModified": null,
+    "postalCode": "28017",
+    "lastModified": "2026-08-16T12:29:04.000Z",
     "condition": null,
     "productId": null,
-    "images": null,
-    "description": "Suzuki SV650 (No Limitada) modelo 2020 estilo naked. con solo 30.000 km. sus mantenimientos al dia en la casa oficial aceite de motor, liquido de frenos recién cambiados, Levas Retractiles color rojo, Doble freno Disco de la marca Tokico, sistema de ABS, tiene el neumatico trasero recien cambiado de la marca Bridgestone La moto está en perfectas condiciones con su ITV hasta el 2027 vendo o permuto por otra moto menor CC, depende cual sea. Precio negociable - Motor V-Twin de 645cc ⁃ Diseño deportivo y ágil ⁃ Ideal para ciudad y carretera. ⁃ Chasis tubular",
-    "availability": null,
+    "images": [
+      "https://cdn.wallapop.com/images/10420/ld/2c/__/c10420p1291734767/i6679444933.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/ld/2c/__/c10420p1291734767/i6679444950.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/ld/2c/__/c10420p1291734767/i6679444977.jpg?pictureSize=W800"
+    ],
+    "description": "Suzuki SV650 (No Limitada) modelo 2020 estilo naked. con solo 30.000 km. sus mantenimientos al dia en la casa oficial aceite de motor, liquido de frenos recién cambiados, Levas Retractiles color rojo, Doble freno Disco de la marca Tokico, sistema de ABS, tiene el neumatico trasero recien cambiado de la marca Bridgestone La moto está en perfectas condiciones con su ITV hasta el 2027 vendo o permuto por otra moto menor CC, depende cual sea. Precio negociable\n- Motor V-Twin de 645cc\n⁃ Diseño deportivo y ágil\n⁃ Ideal para ciudad y carretera.\n⁃ Chasis tubular",
+    "availability": "https://schema.org/InStock",
     "kbModel": {
       "stockKw": 56,
       "kg": 199,
       "restrictedAvailable": true,
       "type": "naked"
     },
-    "scrapeStatus": "ok-pasted-text",
-    "httpStatus": 403,
+    "scrapeStatus": "ok",
+    "httpStatus": 200,
     "status": "active",
     "notes": [
-      "HTTP 403 — site blocked automated access; needs paste-text or screenshot",
-      "filled from pasted ad text",
-      "ad says 'limitada' — power capped to 35 kW (A2 restricted)"
+      "filled from pasted ad text"
     ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-10-14T15:08:40.906Z",
+    "lastScrapedAt": "2026-10-14T15:32:27.511Z",
     "a2": {
-      "legal": true,
-      "restricted": true,
-      "confidence": "medium",
-      "reason": "Restricted to 35 kW from stock 56 kW — legal if official A2 version"
+      "legal": false,
+      "restricted": false,
+      "confidence": "low",
+      "reason": "Listed power 56 kW — needs official A2 restriction kit (stock 56 kW, kit exists)"
     },
     "insurance": {
-      "min": 315,
-      "max": 495,
+      "min": 345,
+      "max": 520,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T15:15:51.675Z",
+      "computedAt": "2026-10-14T15:39:21.934Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
-    }
+    },
+    "localImages": [
+      "0.jpg",
+      "1.jpg",
+      "2.jpg"
+    ]
   },
   {
     "id": "0a37bcda810f",
@@ -791,42 +832,52 @@
     "title": "Triumph Trident 660",
     "brand": "Triumph",
     "model": "Trident 660",
-    "type": "other",
-    "year": null,
-    "km": null,
-    "price": null,
+    "type": "naked",
+    "year": 2023,
+    "km": 24682,
+    "price": 4500,
     "currency": "EUR",
-    "location": null,
-    "seller": null,
+    "location": "Madrid",
+    "seller": "particular",
     "powerKw": 59.6,
     "powerCv": 81,
     "cc": null,
     "fuel": null,
     "gearbox": null,
-    "color": null,
+    "color": "Negro",
     "carnet": null,
-    "postalCode": null,
-    "lastModified": null,
+    "postalCode": "28029",
+    "lastModified": "2026-10-13T11:55:07.000Z",
     "condition": null,
     "productId": null,
-    "images": null,
-    "description": "Descripción ULTIMO PRECIO, sino se vende esta semana se entrega a compraventa Triumph Trident 660. - quick shifter para subir y bajar marchas - modos de conducción - dispone libro de mantenimientos sellados hechos en triumph - garantía oficial - en muy buen estado, ningun desperfecto - 81CV carnet A, limitable A2",
-    "availability": null,
+    "images": [
+      "https://cdn.wallapop.com/images/10420/ln/ec/__/c10420p1309089775/i6781699219.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/ln/ec/__/c10420p1309089775/i6781699523.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/ln/ec/__/c10420p1309089775/i6781699583.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/ln/ec/__/c10420p1309089775/i6781699563.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/ln/ec/__/c10420p1309089775/i6781699265.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/ln/ec/__/c10420p1309089775/i6781699495.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/ln/ec/__/c10420p1309089775/i6781699284.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/ln/ec/__/c10420p1309089775/i6781699354.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/ln/ec/__/c10420p1309089775/i6781699322.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/ln/ec/__/c10420p1309089775/i6781699407.jpg?pictureSize=W800"
+    ],
+    "description": "ULTIMO PRECIO, sino se vende esta semana se entrega a compraventa\nTriumph Trident 660.\n- quick shifter para subir y bajar marchas\n- modos de conducción\n- dispone libro de mantenimientos sellados hechos en triumph\n- garantía oficial\n- en muy buen estado, ningun desperfecto\n- 81CV carnet A, limitable A2",
+    "availability": "https://schema.org/InStock",
     "kbModel": {
       "stockKw": 59.6,
       "kg": 187,
       "restrictedAvailable": true,
       "type": "naked"
     },
-    "scrapeStatus": "ok-pasted-text",
-    "httpStatus": 403,
+    "scrapeStatus": "ok",
+    "httpStatus": 200,
     "status": "active",
     "notes": [
-      "HTTP 403 — site blocked automated access; needs paste-text or screenshot",
       "filled from pasted ad text"
     ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-10-14T15:15:32.950Z",
+    "lastScrapedAt": "2026-10-14T15:32:28.719Z",
     "a2": {
       "legal": false,
       "restricted": false,
@@ -837,8 +888,20 @@
       "min": 400,
       "max": 620,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T15:15:51.675Z",
+      "computedAt": "2026-10-14T15:39:21.934Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
-    }
+    },
+    "localImages": [
+      "0.jpg",
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg",
+      "7.jpg",
+      "8.jpg",
+      "9.jpg"
+    ]
   }
 ]

@@ -1,13 +1,18 @@
 import {
   extractPrice, extractKm, extractYear, extractCvKw, extractCc,
-  extractBrand, detectType, cleanText,
+  extractBrand, extractModelFromTitle, detectType, cleanText,
 } from "./lib.mjs";
 import { matchModel } from "./a2.mjs";
 
 // Parse pasted ad text (or page text) into structured fields.
 // Used when a site blocks the scraper: user pastes the ad content.
+//
+// IMPORTANT: value extraction runs on a cleaned one-line string, but the
+// STRUCTURE (title line, section headers) is read from the raw text —
+// cleanText() collapses newlines, which destroyed title/description parsing.
 export async function parseAdText(text) {
-  const t = cleanText(text);
+  const raw = String(text ?? "");
+  const t = cleanText(raw);
   const out = {
     title: null,
     brand: null,
@@ -57,29 +62,55 @@ export async function parseAdText(text) {
     if (!out.brand) out.brand = mm.make;
     if (!out.type || out.type === "other") out.type = mm.type;
   }
-
-  // title: first line that isn't a section header
-  const HEADERS = /^(descripci[oó]n|caracter[ií]sticas|detalles|datos|specs?)$/i;
-  let title = null;
-  for (const line of t.split(/\n|·|\|/)) {
-    const s = cleanText(line);
-    if (!s || HEADERS.test(s)) continue;
-    if (s.length <= 120) { title = s; break; }
-    break;
+  if (out.brand && out.model == null) {
+    out.model = extractModelFromTitle(t.slice(0, 160), out.brand);
   }
-  if (title) out.title = title;
 
-  // description: paste format is "Descripción\n<body>\n\nCaracterísticas\nKm\n..." or plain body
+  // ---- structure from RAW text (newlines preserved) ----
+  const HEADERS = /^(descripci[oó]n|caracter[ií]sticas|detalles|datos|specs?)\s*:?\s*$/i;
+  const BULLET = /^\s*[-•⁃*·]\s*/;
+  const lines = raw.split(/\r?\n/).map((s) => s.trim());
+
+  // description: text after the "Descripción" header, or the whole raw text
   let desc = null;
-  const descM = t.match(/descripci[oó]n\s*\n([\s\S]*?)(?:\n\s*caracter[ií]sticas\b|$)/i);
-  if (descM) desc = descM[1].trim();
-  if (!desc && !/caracter[ií]sticas/i.test(t)) desc = t; // plain body text
+  const hdrIdx = lines.findIndex((l) => HEADERS.test(l));
+  if (hdrIdx >= 0) {
+    const rest = lines.slice(hdrIdx + 1);
+    // stop at the next known section header
+    const nextHdr = rest.findIndex((l) => HEADERS.test(l));
+    desc = (nextHdr >= 0 ? rest.slice(0, nextHdr) : rest).filter(Boolean).join("\n").trim();
+  }
+  if (!desc && !/caracter[ií]sticas/i.test(t)) desc = lines.filter(Boolean).join("\n").trim();
   if (desc) {
-    // drop title-ish first line if it repeats the listing title
-    const lines = desc.split("\n");
-    if (lines.length > 1 && out.title && lines[0].trim().toLowerCase() === out.title.trim().toLowerCase()) desc = lines.slice(1).join("\n").trim();
+    // drop a first line that just repeats the listing title
+    const dLines = desc.split("\n");
+    if (dLines.length > 1 && out.title && dLines[0].trim().toLowerCase() === out.title.trim().toLowerCase()) {
+      desc = dLines.slice(1).join("\n").trim();
+    }
     out.description = desc || null;
   }
+
+  // title: first meaningful line that is not a header, not a bullet, not a
+  // junk phrase; only if the text carries a brand/model context (structured
+  // pastes without a title would otherwise promote feature lines to title)
+  const SKIP_TITLE = /^(no negociable|precio negociable|[úu]ltimo precio|se vende|vendo|hola|buenas|buenos d[ií]as|atenci[oó]n)\b/i;
+  const FIELD_LABEL = /^(kms?|a[ñn]o|estilo|precio|color|cilindrada|potencia|marcas?|modelo|combustible|cambio|matriculaci[oó]n)\s*$/i;
+  let title = null;
+  if (out.brand || out.model) {
+    for (const line of lines) {
+      if (!line || HEADERS.test(line) || BULLET.test(line)) continue;
+      if (FIELD_LABEL.test(line)) break; // entered the characteristics section
+      const s = cleanText(line.replace(/^#+\s*/, ""));
+      if (!s || SKIP_TITLE.test(s)) continue;
+      if (s.length <= 120) { title = s; break; }
+      const firstSentence = s.split(/(?<=\.)\s/)[0] || "";
+      if (out.brand && firstSentence.toLowerCase().includes(out.brand.toLowerCase()) && firstSentence.length <= 120) {
+        title = firstSentence;
+      }
+      break;
+    }
+  }
+  if (title) out.title = title;
 
   return out;
 }

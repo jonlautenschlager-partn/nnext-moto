@@ -1,8 +1,9 @@
 // Downloads listing photos into data/images/<id>/ so they survive ad deletion.
 // Idempotent: skips files already present. Max 10 images per listing.
-import { mkdir, access, writeFile, readdir } from "node:fs/promises";
+// Falls back to the user's inbox screenshot when a listing has no photos at all.
+import { mkdir, access, writeFile, readdir, copyFile } from "node:fs/promises";
 import { join } from "node:path";
-import { DATA_DIR } from "./lib.mjs";
+import { DATA_DIR, ROOT } from "./lib.mjs";
 
 const IMAGES_DIR = join(DATA_DIR, "images");
 const MAX_IMAGES = 10;
@@ -56,6 +57,20 @@ export async function downloadImages(listings) {
     if (local.length) {
       l.localImages = local;
       total += local.length;
+      continue;
+    }
+    // no photos scraped: use the inbox screenshot (if any) as the cover image
+    const shot = join(ROOT, "inbox", `${l.id}.jpg`);
+    if (await exists(shot)) {
+      const dir = join(IMAGES_DIR, l.id);
+      await mkdir(dir, { recursive: true });
+      const target = join(dir, "0.jpg");
+      if (!(await exists(target))) await copyFile(shot, target);
+      l.localImages = ["0.jpg"];
+      total++;
+      if (!l.notes?.includes("imagen desde captura del anuncio")) {
+        l.notes = [...new Set([...(l.notes || []), "imagen desde captura del anuncio"])].slice(-5);
+      }
     }
   }
   return total;

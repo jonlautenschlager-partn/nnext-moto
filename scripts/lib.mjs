@@ -48,16 +48,28 @@ export function siteOf(url) {
   }
 }
 
-// Parse Spanish-formatted numbers: "12.500 €", "5.900", "25.000 km", "1.234,56"
+// Parse Spanish-formatted numbers: "12.500 €", "5.900", "25.000 km", "1.234,56".
+// English-style thousands also handled: "19,800 km" -> 19800.
 export function parseEsNumber(str) {
   if (str == null) return null;
   if (typeof str === "number" && isFinite(str)) return Math.round(str);
-  let s = String(str).trim();
-  s = s.replace(/[\s\u00a0\u202f.]/g, (m, i) => (m === "." ? "" : ""));
-  // handle thousands dots removed above; now handle decimal comma
+  let s = String(str).trim().replace(/[\s\u00a0\u202f]/g, "");
   const m = s.match(/-?\d+(?:[.,]\d+)?/);
   if (!m) return null;
-  const n = parseFloat(m[0].replace(",", "."));
+  let num = m[0];
+  const hasDot = num.includes("."), hasComma = num.includes(",");
+  if (hasDot && hasComma) {
+    // Spanish format: dots = thousands, comma = decimals
+    num = num.replace(/\./g, "").replace(",", ".");
+  } else if (hasComma) {
+    // comma followed by exactly 3 digits at the end = thousands separator
+    if (/,\d{3}$/.test(num)) num = num.replace(/,/g, "");
+    else num = num.replace(",", ".");
+  } else if (hasDot) {
+    // bare dots = thousands separators (Spanish convention)
+    num = num.replace(/\./g, "");
+  }
+  const n = parseFloat(num);
   if (!isFinite(n)) return null;
   return Math.round(n);
 }
@@ -83,7 +95,7 @@ export function extractKm(text) {
     const n = parseEsNumber(labeled[1]);
     if (n != null && n >= 0 && n <= 300000) return n;
   }
-  const re = /(\d[\d\s\u00a0\u202f.]{0,9})\s*kms?\b/gi;
+  const re = /(\d[\d\s\u00a0\u202f.,]{0,9})\s*kms?\b/gi;
   let m;
   while ((m = re.exec(text))) {
     const before = text.slice(Math.max(0, m.index - 24), m.index).toLowerCase();
@@ -210,18 +222,53 @@ export function extractModelFromTitle(title, brand) {
   return model.length >= 2 ? model : null;
 }
 
+// ad says the bike IS A2-restricted ("limitada"), but NOT when the text negates
+// it ("No Limitada", "sin limitar", "no está limitada")
+export function saysRestricted(text) {
+  if (!text) return false;
+  const re = /limitad\w*|restringid\w*/gi;
+  let m;
+  while ((m = re.exec(text))) {
+    const before = text.slice(Math.max(0, m.index - 14), m.index);
+    if (/\b(?:no|sin|tampoco|jamás)\b\s*(?:est[aá]\s*)?$/i.test(before)) continue;
+    return true;
+  }
+  return false;
+}
+
+// derive a title from the URL path slug: ".../ducati-monster-797-roja-2018-1267168307"
+// -> "Ducati Monster 797 Roja 2018" (generic fallback when a site blocks scraping)
+export function titleFromUrlSlug(url) {
+  try {
+    const path = new URL(url).pathname;
+    const seg = path.split("/").filter(Boolean).pop() || "";
+    let s = seg
+      .replace(/[-_]?[0-9a-f]{6,}$/i, "") // trailing id: -1267168307, -797d35ce
+      .replace(/[-_]+/g, " ")
+      .trim();
+    if (!s) return null;
+    const words = s.split(/\s+/).filter(Boolean);
+    if (words.length < 2) return null;
+    return words
+      .map((w) => (/^\d/.test(w) ? w : w.charAt(0).toUpperCase() + w.slice(1)))
+      .join(" ");
+  } catch {
+    return null;
+  }
+}
+
 export function detectType(text) {
   if (!text) return "other";
   const t = text.toLowerCase();
   const map = [
     ["scooter|matricul|moto de rueda|maxiscooter|xmax|tmax|forza|sh 3|pcx|nmax|vespa|beverly|burgerman|joymax", "scooter"],
-    ["trail|adventure|rally|ténéré|tenere|transalp|v-strom|vstrom|multistrada|gs 8|gs 3|adv|x-adv|cb500x|nx500|himalayan", "trail"],
-    ["custom|chopper|bobber|cruiser|rebel|vulcan|iron|softail|street bob|v7|inazuma", "custom"],
-    ["sport|superbike|sbk|r6|r1|cbr|gsx-r|gsxr|ninja zx|zx-6|zx-10|panigale|rs 6|rs6|daytona|rr|gp", "sport"],
-    ["classic|clásica|café racer|caferacer|scrambler|vintage|retro|xsr|rebel|interceptor|continental|bonneville", "classic"],
-    ["touring|viaje|tracer|nt|gt|fjr|klt|sport touring", "touring"],
-    ["naked|roadster|mt-0|mt 0|z65|z90|monster|duke|trident|hornet|sv65|street triple|voge 5|tnt|cb65", "naked"],
-    ["enduro|motocross|cross|sm|supermotard|exc|sx-f|wr|crf", "enduro"],
+    ["trail|adventure|rally|ténéré|tenere|transalp|v-strom|vstrom|multistrada|\\bgs 8\\b|\\bgs 3\\b|\\badv\\b|x-adv|cb500x|nx500|himalayan", "trail"],
+    ["custom|chopper|bobber|\\bcruiser\\b|\\brebel\\b|vulcan|\\biron\\b|softail|street bob|\\bv7\\b|inazuma", "custom"],
+    ["sport|deportiva|superbike|sbk|\\br6\\b|\\br1\\b|\\bcbr\\b|gsx-r|gsxr|ninja zx|zx-6|zx-10|panigale|\\brs 6\\b|\\brs6\\b|daytona|\\brr\\b|\\bgp\\b", "sport"],
+    ["classic|clásica|café racer|caferacer|scrambler|vintage|\\bretro\\b|\\bxsr\\b|interceptor|continental|bonneville", "classic"],
+    ["touring|viaje|tracer|\\bnt\\b|\\bgt\\b|fjr|\\bklt\\b|sport touring", "touring"],
+    ["naked|roadster|mt-0|mt 0|\\bz65\\b|\\bz90\\b|monster|duke|trident|hornet|\\bsv65\\b|street triple|voge 5|tnt|cb65", "naked"],
+    ["enduro|motocross|\\bcross\\b|\\bsm\\b|supermotard|exc|sx-f|\\bwr\\b|crf", "enduro"],
   ];
   for (const [re, type] of map) {
     if (new RegExp(re, "i").test(t)) return type;

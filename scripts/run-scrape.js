@@ -4,12 +4,13 @@ import { extract } from "./scrape.mjs";
 import { a2Check, matchModel } from "./a2.mjs";
 import { estimateInsurance } from "./insurance.mjs";
 import { parseAdText } from "./parse-text.mjs";
-import { readListings, writeJson, listingId, DATA_DIR, ROOT, today, nowIso, diffPrice, extractBrand, extractModelFromTitle, brandIsSiteSelf, canonicalBrand, detectType } from "./lib.mjs";
+import { readListings, writeJson, listingId, DATA_DIR, ROOT, today, nowIso, diffPrice, extractBrand, extractModelFromTitle, brandIsSiteSelf, canonicalBrand, saysRestricted, titleFromUrlSlug, detectType } from "./lib.mjs";
 
 const args = process.argv.slice(2);
 const newOnly = args.includes("--new-only");
 const quiet = args.includes("--quiet");
 const reenrichOnly = args.includes("--reenrich-only");
+const reparsePastes = args.includes("--reparse-pastes");
 
 async function exists(p) {
   try { await access(p); return true; } catch { return false; }
@@ -80,13 +81,53 @@ function mergeRefresh(rec, r) {
   rec.httpStatus = r.httpStatus;
 }
 
+// re-apply the paste parser over stored inbox texts. The paste is the source of
+// truth only for fields it originally filled (manualFields) or for fields that
+// are still null — a successful scrape always keeps its scraped values. This
+// makes it safe to replay after parser improvements (repairs old mis-parses).
+const PASTE_FIELDS = ["title","brand","model","type","year","km","price","cc","powerCv","powerKw","location","seller","kbModel","description"];
+const STATUS_RANK = { ok: 3, "ok-pasted-text": 2, "needs-manual": 1, blocked: 0, failed: 0, "removed-link": 0 };
+async function reparsePastesAll(listings) {
+  let n = 0;
+  for (const rec of listings) {
+    const pastePath = join(ROOT, "inbox", `${rec.id}.txt`);
+    if (!(await exists(pastePath))) continue;
+    const text = await readFile(pastePath, "utf8");
+    const parsed = await parseAdText(text);
+    const manual = new Set(rec.manualFields || []);
+    const touched = [];
+    for (const k of PASTE_FIELDS) {
+      const v = parsed[k];
+      if (v == null || v === "") continue;
+      // a generic "other" type must never clobber a concrete classification
+      if (k === "type" && (v === "other" || v == null) && rec.type && rec.type !== "other") continue;
+      const isPasteDerived = manual.has(k);
+      const isMissing = rec[k] == null || rec[k] === "";
+      if (!isPasteDerived && !isMissing) continue; // scraped value wins
+      if (String(rec[k] ?? "") === String(v)) continue; // unchanged
+      rec[k] = v;
+      touched.push(k);
+    }
+    if (!touched.length) continue;
+    rec.manualFields = [...new Set([...(rec.manualFields || []), ...touched])];
+    if ((STATUS_RANK[rec.scrapeStatus] ?? 0) < STATUS_RANK["ok-pasted-text"]) rec.scrapeStatus = "ok-pasted-text";
+    if (!rec.notes?.includes("filled from pasted ad text")) {
+      rec.notes = [...new Set([...(rec.notes || []), "filled from pasted ad text"])].slice(-5);
+    }
+    console.log(`REPASTE ${rec.id}: ${touched.join(", ")}`);
+    n++;
+  }
+  return n;
+}
+
 // re-derive brand/model/type/kbModel/powerKw for every listing with the current
 // extraction logic (fixes mis-parsed data without network access; idempotent)
 async function reenrichAll(listings) {
   let changed = 0;
+  const LIMITADA_NOTE = "ad says 'limitada' — power capped to 35 kW (A2 restricted)";
   for (const rec of listings) {
     const manual = new Set(rec.manualFields || []);
-    const before = JSON.stringify([rec.brand, rec.model, rec.type, rec.powerKw, rec.kbModel]);
+    const before = JSON.stringify([rec.brand, rec.model, rec.type, rec.powerKw, rec.kbModel, rec.title]);
     const source = `${rec.title || ""} ${rec.model || ""} ${rec.description || ""}`;
 
     // dealer sites sometimes scrape their own shop name as the brand
@@ -95,6 +136,19 @@ async function reenrichAll(listings) {
     } else if (!manual.has("brand") && rec.brand) {
       rec.brand = canonicalBrand(rec.brand);
     }
+
+    // title missing or just the brand: rebuild from the URL slug (generic fallback)
+    if (!rec.title || rec.title.trim().toLowerCase() === (rec.brand || "").trim().toLowerCase()) {
+      rec.title = titleFromUrlSlug(rec.url) || `${rec.brand || ""} ${rec.model || ""}`.trim() || rec.title || null;
+    }
+
+    // undo an earlier wrong 'limitada' cap (e.g. "(No Limitada)" ads): reset the
+    // power so the KB can fill the real stock value again
+    if (!manual.has("powerKw") && (rec.notes || []).includes(LIMITADA_NOTE) && !saysRestricted(source)) {
+      rec.powerKw = null;
+      rec.notes = (rec.notes || []).filter((x) => x !== LIMITADA_NOTE);
+    }
+
     if (!manual.has("model") && !rec.model) {
       rec.model = extractModelFromTitle(rec.title || source, rec.brand);
     }
@@ -110,24 +164,26 @@ async function reenrichAll(listings) {
         // otherwise keep the ad's fuller phrasing (e.g. "MT-07 Naked")
       }
       if (!manual.has("powerKw") && rec.powerKw == null && mm.stockKw != null) rec.powerKw = mm.stockKw;
-      // ad says "limitada" (A2-restricted by seller): cap power at 35 kW
-      if (!manual.has("powerKw") && /limitad|restringid/i.test(source) && rec.powerKw != null && rec.powerKw > 35 && mm.restrictedAvailable) {
+      // ad says the bike IS A2-restricted: cap power at 35 kW
+      if (!manual.has("powerKw") && saysRestricted(source) && rec.powerKw != null && rec.powerKw > 35 && mm.restrictedAvailable) {
         rec.powerKw = 35;
-        if (!rec.notes?.includes("ad says 'limitada' — power capped to 35 kW (A2 restricted)")) {
-          rec.notes = [...(rec.notes || []), "ad says 'limitada' — power capped to 35 kW (A2 restricted)"].slice(-5);
+        if (!rec.notes?.includes(LIMITADA_NOTE)) {
+          rec.notes = [...(rec.notes || []), LIMITADA_NOTE].slice(-5);
         }
       }
-      if (!manual.has("type") && (rec.type == null || rec.type === "other")) rec.type = mm.type || detectType(`${rec.title || ""} ${rec.model || ""}`);
+      if ((rec.type == null || rec.type === "other") && mm.type && mm.type !== "other") rec.type = mm.type;
     }
-    if ((!rec.type || rec.type === "other") && !manual.has("type")) {
-      rec.type = detectType(`${rec.title || ""} ${rec.model || ""}`);
+    if ((!rec.type || rec.type === "other")) {
+      // "other" is a placeholder — upgrading it is always an improvement
+      const t = mm?.type || detectType(`${rec.title || ""} ${rec.model || ""}`);
+      if (t && t !== "other") rec.type = t;
     }
     if (!rec.title && (rec.brand || rec.model)) {
       rec.title = `${rec.brand || ""} ${rec.model || ""}`.trim() || null;
     }
     rec.a2 = await a2Check(rec);
     rec.insurance = await estimateInsurance(rec);
-    if (JSON.stringify([rec.brand, rec.model, rec.type, rec.powerKw, rec.kbModel]) !== before) changed++;
+    if (JSON.stringify([rec.brand, rec.model, rec.type, rec.powerKw, rec.kbModel, rec.title]) !== before) changed++;
   }
   return changed;
 }
@@ -165,7 +221,7 @@ async function main() {
 
   console.log(`Links: ${links.length} total, ${newLinks.length} new, ${listings.length} tracked\n`);
 
-  if (!reenrichOnly) {
+  if (!reenrichOnly && !reparsePastes) {
     // 1. New links
     for (const link of newLinks) {
       const id = listingId(link);
@@ -214,6 +270,7 @@ async function main() {
   }
 
   // 4. Re-derive brand/model/type/power with the current logic (no network)
+  if (reparsePastes) await reparsePastesAll(listings);
   const changed = await reenrichAll(listings);
   if (changed) console.log(`reenrich: updated fields on ${changed} listing(s)`);
 

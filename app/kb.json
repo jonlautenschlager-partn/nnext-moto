@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-14T15:15:51.680Z",
+ "generatedAt": "2026-10-14T15:39:21.936Z",
  "models": [
   {
    "make": "Yamaha",
@@ -342,6 +342,22 @@
    "name": "Monster 696",
    "stockKw": 58.8,
    "kg": 173,
+   "restrictedAvailable": true,
+   "type": "naked"
+  },
+  {
+   "make": "Ducati",
+   "name": "Monster 796",
+   "stockKw": 64,
+   "kg": 183,
+   "restrictedAvailable": true,
+   "type": "naked"
+  },
+  {
+   "make": "Ducati",
+   "name": "Monster 797",
+   "stockKw": 53.7,
+   "kg": 186,
    "restrictedAvailable": true,
    "type": "naked"
   },

@@ -156,7 +156,8 @@ function imgTag(l, idx, cls) {
   const hasLocal = (l.localImages || []).length > idx;
   const fallback = hasLocal ? `data-local="${idx}"` : "";
   if (!remote && !hasLocal) return `<div class="noimg">sin imagen</div>`;
-  return `<img class="${cls || ""}" loading="lazy" src="${esc(remote || "")}" alt="" ${fallback} data-listing="${l.id}">`;
+  if (!remote && hasLocal) return `<img class="${cls || ""}" loading="lazy" ${fallback} data-listing="${l.id}">`;
+  return `<img class="${cls || ""}" loading="lazy" src="${esc(remote)}" alt="" ${fallback} data-listing="${l.id}">`;
 }
 
 async function handleImgError(el) {
@@ -174,7 +175,9 @@ function completeness(l) {
   const missing = [];
   for (const [key, label] of CORE_FIELDS) {
     const v = l[key];
-    const ok = key === "images" ? (v || []).length > 0 : key === "description" ? !!(v && String(v).trim().length > 20) : v != null && v !== "";
+    const ok = key === "images" ? ((v || []).length > 0 || (l.localImages || []).length > 0)
+      : key === "description" ? !!(v && String(v).trim().length > 20)
+      : v != null && v !== "";
     if (ok) filled++;
     else missing.push([key, label]);
   }
@@ -371,9 +374,10 @@ function render() {
       render();
     });
   });
-  // image error fallbacks
+  // image error fallbacks + eager load of local-only (archived) images
   document.querySelectorAll("img[data-listing]").forEach((el) => {
     el.addEventListener("error", () => handleImgError(el), { once: true });
+    if (el.dataset.local != null && !el.getAttribute("src")) handleImgError(el);
   });
   // open detail on card/thumbs click
   document.querySelectorAll("[data-open]").forEach((el) => {
@@ -521,6 +525,7 @@ function openDetail(id) {
       galMain.innerHTML = `<img class="gal-img" src="${esc(remote || "")}" alt="" ${hasLocal ? `data-local="${idx}"` : ""} data-listing="${l.id}">`;
       const img = galMain.querySelector("img");
       img.addEventListener("error", () => handleImgError(img), { once: true });
+      if (img.dataset.local != null && !img.getAttribute("src")) handleImgError(img);
     });
   });
   const mainImg = galMain.querySelector("img");

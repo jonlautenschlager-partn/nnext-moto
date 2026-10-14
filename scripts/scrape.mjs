@@ -1,4 +1,4 @@
-import { readJson, writeJson, listingId, siteOf, cleanText, extractPrice, extractKm, extractYear, extractCvKw, extractCc, extractBrand, extractModelFromTitle, brandIsSiteSelf, detectType, parseEsNumber, nowIso } from "./lib.mjs";
+import { readJson, writeJson, listingId, siteOf, cleanText, extractPrice, extractKm, extractYear, extractCvKw, extractCc, extractBrand, extractModelFromTitle, brandIsSiteSelf, titleFromUrlSlug, saysRestricted, detectType, parseEsNumber, nowIso } from "./lib.mjs";
 import { a2Check, matchModel } from "./a2.mjs";
 import { estimateInsurance } from "./insurance.mjs";
 import { parseAdText } from "./parse-text.mjs";
@@ -162,6 +162,8 @@ export function enrichFromText(data, html, url) {
   // type: from title/model/KB only — body text pollutes with nav/menu words
   if (data.type == null || data.type === "other") data.type = detectType((data.title || "") + " " + (data.model || ""));
   if (data.brand && data.model == null) data.model = extractModelFromTitle(data.title || text.slice(0, 120), data.brand);
+  // generic fallback: blocked pages still expose the item name in the URL slug
+  if (!data.title) data.title = titleFromUrlSlug(url);
 
   // price/km often in title too: "Yamaha MT-07 2021 - 6.900 €"
   const titleSource = data.title || "";
@@ -178,11 +180,11 @@ export function enrichFromText(data, html, url) {
     if (data.type === "other" || !data.type) data.type = mm.type;
     // KB knows the stock power — fill it when the page doesn't state one
     if (data.powerKw == null && mm.stockKw != null) data.powerKw = mm.stockKw;
-    // ad says "limitada" (A2-restricted by seller): cap stated power at 35 kW.
-    // only look at the ad's own title/description — page boilerplate contains
-    // "responsabilidad limitada" and similar noise
+    // ad says the bike IS A2-restricted: cap stated power at 35 kW. Only the
+    // ad's own title/description counts — page boilerplate contains phrases
+    // like "responsabilidad limitada", and "(No Limitada)" must NOT match.
     const adText = `${data.title || ""} ${data.description || ""}`;
-    if (/limitad|restringid/i.test(adText) && data.powerKw != null && data.powerKw > 35 && mm.restrictedAvailable) {
+    if (saysRestricted(adText) && data.powerKw != null && data.powerKw > 35 && mm.restrictedAvailable) {
       data.powerKw = 35;
       data.notes = [...(data.notes || []), "ad says 'limitada' — power capped to 35 kW (A2 restricted)"];
     }
