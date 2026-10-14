@@ -45,16 +45,25 @@ jobs:
           APP_DEPLOY_KEY: ${{ secrets.APP_DEPLOY_KEY }}
         run: node scripts/sync-app.mjs
 
-      - name: Commit data updates
+      - name: Commit data updates (self-healing)
         run: |
           git config user.name "nnext-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A data app inbox
-          if git diff --cached --quiet; then
-            echo "No data changes"
-          else
-            git commit -m "scrape: update data [skip ci]"
+          for attempt in 1 2 3; do
+            git add -A data app inbox
+            if git diff --cached --quiet; then
+              echo "No data changes"
+              exit 0
+            fi
+            git commit -m "scrape: update data [skip ci]" || true
+            if git push; then
+              echo "pushed (attempt $attempt)"
+              exit 0
+            fi
+            echo "push failed (attempt $attempt) — re-syncing with remote"
             git fetch origin main
-            git rebase origin/main
-            git push
-          fi
+            git reset --hard origin/main
+            node scripts/run-scrape.js --new-only >/dev/null 2>&1 || true
+          done
+          echo "Giving up after 3 attempts"
+          exit 1

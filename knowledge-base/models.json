@@ -44,6 +44,7 @@
     {"make": "BMW", "name": "G 310 R", "cc": 313, "stockKw": 25.0, "stockCv": 34, "kg": 158.5, "restrictedAvailable": false, "type": "naked"},
     {"make": "BMW", "name": "F 900 R", "cc": 895, "stockKw": 77.0, "stockCv": 105, "kg": 211, "restrictedAvailable": false, "type": "naked", "comment": "77kW > 70 => NOT A2-derivable"},
     {"make": "Ducati", "name": "Monster", "cc": 937, "stockKw": 82.0, "stockCv": 111.5, "kg": 166, "restrictedAvailable": false, "type": "naked", "comment": "82kW > 70 => NOT A2-derivable"},
+    {"make": "Ducati", "name": "Monster 696", "cc": 696, "stockKw": 58.8, "stockCv": 80, "kg": 173, "restrictedAvailable": true, "type": "naked", "comment": "A2-restricted versions offered by Ducati"},
     {"make": "Ducati", "name": "Scrambler Full Throttle", "cc": 803, "stockKw": 54.0, "stockCv": 73.4, "kg": 185, "restrictedAvailable": true, "type": "classic"},
     {"make": "CFMoto", "name": "450NK", "cc": 449, "stockKw": 37.0, "stockCv": 50.3, "kg": 175, "restrictedAvailable": true, "type": "naked", "comment": "37kW stock, A2 kit to 35kW"},
     {"make": "CFMoto", "name": "450MT", "cc": 449, "stockKw": 37.0, "stockCv": 50.3, "kg": 197, "restrictedAvailable": true, "type": "trail"},

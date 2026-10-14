@@ -225,6 +225,13 @@ export async function extract(url) {
 
   const html = page.html;
 
+  // bot-challenge pages (200 with challenge markup): never enrich from them
+  if (/cf-chl|challenge-platform|Just a moment|Attention Required|captcha|Enable JavaScript and cookies/i.test(html.slice(0, 5000))) {
+    result.scrapeStatus = "blocked";
+    result.notes.push("bot challenge page returned 200 — no data extracted");
+    return result;
+  }
+
   // tier 1: JSON-LD
   let data = parseVehicleLd(html, url) || {};
   // tier 1b: meta tags

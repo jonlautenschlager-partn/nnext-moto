@@ -57,30 +57,49 @@ export function extractPrice(text) {
     const n = parseEsNumber(eur[1]);
     if (n && n >= 300 && n <= 100000) return n;
   }
-  const bare = text.match(/(?:^|[\s>])(\d{3,5}(?:\.\d{3})*)\s*(?:€|$)/m);
-  if (bare) {
-    const n = parseEsNumber(bare[1]);
-    if (n && n >= 300 && n <= 100000) return n;
-  }
   return null;
 }
 
+// km of the listing (odometer), not service intervals like "menos de 3.000kms"
 export function extractKm(text) {
   if (!text) return null;
-  const m = text.match(/(\d[\d\s\u00a0\u202f.]{0,9})\s*kms?\b/i);
-  if (!m) return null;
-  const n = parseEsNumber(m[1]);
-  if (n == null) return null;
-  if (n >= 10 && n <= 300000) return n; // 10 = "0 km" odo style, 300k sanity cap
+  // Wallapop/portal style: a line "Km" (or "Kilómetros") followed by the value
+  const labeled = text.match(/(?:^|\n)\s*k[ií]l[oó]metros?\s*\n+\s*([\d.,]+)\s*kms?\b/i)
+    || text.match(/(?:^|\n)\s*km\s*\n+\s*([\d.,]+)\s*kms?\b/i);
+  if (labeled) {
+    const n = parseEsNumber(labeled[1]);
+    if (n != null && n >= 0 && n <= 300000) return n;
+  }
+  const re = /(\d[\d\s\u00a0\u202f.]{0,9})\s*kms?\b/gi;
+  let m;
+  while ((m = re.exec(text))) {
+    const before = text.slice(Math.max(0, m.index - 24), m.index).toLowerCase();
+    if (/menos de|a los|cambiad|aceite|correas?|kit|cadena|neum|frenos?|bater/.test(before)) continue;
+    const n = parseEsNumber(m[1]);
+    if (n == null) continue;
+    // odometer values are either 0 (nueva) or >= 100; ignore round small numbers like 1000 unless labeled
+    if (n === 0) return 0;
+    if (n >= 100 && n <= 300000) return n;
+  }
   return null;
 }
 
 export function extractYear(text) {
   if (!text) return null;
-  const m = text.match(/\b(19[89]\d|20[0-3]\d)\b/);
-  if (!m) return null;
-  const y = parseInt(m[1], 10);
-  if (y >= 1980 && y <= new Date().getFullYear() + 1) return y;
+  // Wallapop/portal style: "Año" line followed by the year
+  const labeled = text.match(/(?:^|\n)\s*a[ñn]o\s*\n+\s*(\d{4})/i);
+  if (labeled) {
+    const y = parseInt(labeled[1], 10);
+    if (y >= 1980 && y <= new Date().getFullYear() + 1) return y;
+  }
+  const re = /\b(19[89]\d|20[0-3]\d)\b/g;
+  let m;
+  while ((m = re.exec(text))) {
+    const before = text.slice(Math.max(0, m.index - 20), m.index).toLowerCase();
+    if (/se hizo|en julio|en junio|conversion|revisad|itv|comprad/.test(before)) continue;
+    const y = parseInt(m[1], 10);
+    if (y >= 1980 && y <= new Date().getFullYear() + 1) return y;
+  }
   return null;
 }
 
@@ -114,11 +133,12 @@ const BRANDS = [
 
 export function extractBrand(text) {
   if (!text) return null;
-  const t = text.toLowerCase();
+  let best = null;
   for (const b of BRANDS) {
-    if (t.includes(b.toLowerCase())) return b;
+    const idx = text.toLowerCase().indexOf(b.toLowerCase());
+    if (idx >= 0 && (best == null || idx < best.idx)) best = { brand: b, idx };
   }
-  return null;
+  return best ? best.brand : null;
 }
 
 export function detectType(text) {

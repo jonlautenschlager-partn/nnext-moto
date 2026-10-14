@@ -32,6 +32,11 @@ function normalize(r) {
     fuel: r.fuel ?? null,
     gearbox: r.gearbox ?? null,
     color: r.color ?? null,
+    carnet: r.carnet ?? null,
+    postalCode: r.postalCode ?? null,
+    lastModified: r.lastModified ?? null,
+    condition: r.condition ?? null,
+    productId: r.productId ?? null,
     images: r.images ?? null,
     description: r.description ?? null,
     availability: r.availability ?? null,
@@ -45,18 +50,18 @@ function normalize(r) {
   };
 }
 
-// merge extracted refresh data into existing record, never overwriting manual fields
+// merge extracted refresh data into existing record; refresh always wins over
+// paste-filled data (extractors are the source of truth once they work)
 function mergeRefresh(rec, r) {
-  const manualFields = rec.manualFields || [];
   for (const [k, v] of Object.entries(normalize(r))) {
     if (k === "status") continue;
-    if (manualFields.includes(k)) continue;
     if (v != null && v !== "") rec[k] = v;
   }
   if (r.status) rec.status = r.status;
   if (r.notes?.length) rec.notes = [...new Set([...(rec.notes || []), ...r.notes])].slice(-5);
   rec.lastScrapedAt = r.scrapedAt;
-  rec.scrapeStatus = r.scrapeStatus === "removed-link" ? rec.scrapeStatus : r.scrapeStatus;
+  // never downgrade: a blocked fetch doesn't erase previously-good data
+  if (r.scrapeStatus !== "blocked") rec.scrapeStatus = r.scrapeStatus;
   rec.httpStatus = r.httpStatus;
 }
 

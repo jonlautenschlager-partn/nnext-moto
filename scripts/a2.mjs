@@ -13,14 +13,15 @@ function loadKbSync() {
 // Normalize model name: "Yamaha MT-07 A2 2021" -> { make: "Yamaha", name: "MT-07" }
 export function matchModel(make, title) {
   const models = loadKbSync();
-  const t = (title || "").toLowerCase();
-  const m = (make || "").toLowerCase();
+  const norm = (s) => String(s || "").toLowerCase().replace(/[\s-]+/g, "");
+  const t = norm(title);
+  const m = norm(make).slice(0, 4);
   let best = null;
   for (const mod of models) {
-    const nameLower = mod.name.toLowerCase();
-    if (!t.includes(nameLower)) continue;
+    const nameNorm = norm(mod.name);
+    if (!nameNorm || !t.includes(nameNorm)) continue;
     if (m && !mod.make.toLowerCase().startsWith(m.slice(0, 4))) continue;
-    if (!best || nameLower.length > best.name.toLowerCase().length) best = mod;
+    if (!best || nameNorm.length > norm(best.name).length) best = mod;
   }
   return best || null;
 }
