@@ -45,7 +45,7 @@
       "extracted from AS24 soft page (detail blocked for bots)"
     ],
     "site": "autoscout24.es",
-    "lastScrapedAt": "2026-10-14T13:36:40.481Z",
+    "lastScrapedAt": "2026-10-14T13:37:12.227Z",
     "a2": {
       "legal": false,
       "restricted": false,
@@ -56,7 +56,7 @@
       "min": 360,
       "max": 590,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T13:36:40.935Z",
+      "computedAt": "2026-10-14T13:37:13.066Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     }
   },
@@ -99,7 +99,7 @@
     "status": "active",
     "notes": [],
     "site": "moto-ocasion.com",
-    "lastScrapedAt": "2026-10-14T13:36:40.936Z",
+    "lastScrapedAt": "2026-10-14T13:37:13.066Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -110,7 +110,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T13:36:41.268Z",
+      "computedAt": "2026-10-14T13:37:13.960Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "carnet": "A, A2",
@@ -129,7 +129,7 @@
     "title": "Honda CBR 500R 2019 A2",
     "brand": "Honda",
     "model": "CBR 500R",
-    "type": "sport",
+    "type": "other",
     "year": 2019,
     "km": 48000,
     "price": 3800,
@@ -157,12 +157,14 @@
       "restrictedAvailable": false,
       "type": "sport"
     },
-    "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "scrapeStatus": "blocked",
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-10-14T13:36:41.268Z",
+    "lastScrapedAt": "2026-10-14T13:37:13.960Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -173,7 +175,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T13:36:41.691Z",
+      "computedAt": "2026-10-14T13:37:14.030Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "postalCode": "46020",
@@ -194,7 +196,7 @@
     "title": "Honda CBR 500R Apta A2",
     "brand": "Honda",
     "model": "CBR 500R",
-    "type": "sport",
+    "type": "other",
     "year": 2020,
     "km": 39000,
     "price": 4990,
@@ -222,15 +224,16 @@
     "kbModel": {
       "stockKw": 35,
       "kg": 192,
-      "restrictedAvailable": false,
-      "type": "sport"
+      "restrictedAvailable": false
     },
-    "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "scrapeStatus": "blocked",
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-10-14T13:36:41.691Z",
+    "lastScrapedAt": "2026-10-14T13:37:14.030Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -241,7 +244,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T13:36:41.968Z",
+      "computedAt": "2026-10-14T13:37:14.038Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "postalCode": "08004",
@@ -261,7 +264,7 @@
     "title": "Yamaha XSR 700 A2",
     "brand": "Yamaha",
     "model": "XSR 700",
-    "type": "classic",
+    "type": "other",
     "year": 2021,
     "km": 22000,
     "price": 5000,
@@ -289,12 +292,14 @@
       "restrictedAvailable": true,
       "type": "classic"
     },
-    "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "scrapeStatus": "blocked",
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-10-14T13:36:41.968Z",
+    "lastScrapedAt": "2026-10-14T13:37:14.038Z",
     "a2": {
       "legal": true,
       "restricted": true,
@@ -305,7 +310,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T13:36:42.542Z",
+      "computedAt": "2026-10-14T13:37:14.046Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "postalCode": "28013",
@@ -334,7 +339,7 @@
     "title": "Ducati Monster 696 A2",
     "brand": "Ducati",
     "model": "Monster",
-    "type": "naked",
+    "type": "other",
     "year": 2009,
     "km": 42000,
     "price": 3500,
@@ -362,15 +367,16 @@
     "kbModel": {
       "stockKw": 58.8,
       "kg": 173,
-      "restrictedAvailable": true,
-      "type": "naked"
+      "restrictedAvailable": true
     },
-    "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "scrapeStatus": "blocked",
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-10-14T13:36:42.543Z",
+    "lastScrapedAt": "2026-10-14T13:37:14.046Z",
     "a2": {
       "legal": true,
       "restricted": true,
@@ -381,7 +387,7 @@
       "min": 255,
       "max": 400,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T13:36:43.064Z",
+      "computedAt": "2026-10-14T13:37:14.053Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "postalCode": "18003",
