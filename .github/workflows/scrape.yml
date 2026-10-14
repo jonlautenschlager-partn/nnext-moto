@@ -53,5 +53,7 @@ jobs:
             echo "No data changes"
           else
             git commit -m "scrape: update data [skip ci]"
+            git fetch origin main
+            git rebase origin/main
             git push
           fi
