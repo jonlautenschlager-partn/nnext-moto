@@ -50,7 +50,7 @@
       "extracted from AS24 soft page (detail blocked for bots)"
     ],
     "site": "autoscout24.es",
-    "lastScrapedAt": "2026-10-14T14:34:42.710Z",
+    "lastScrapedAt": "2026-10-14T14:38:18.472Z",
     "a2": {
       "legal": false,
       "restricted": false,
@@ -61,7 +61,7 @@
       "min": 360,
       "max": 590,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T14:34:45.419Z",
+      "computedAt": "2026-10-14T14:38:20.822Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
@@ -128,7 +128,7 @@
     "status": "active",
     "notes": [],
     "site": "moto-ocasion.com",
-    "lastScrapedAt": "2026-10-14T14:34:43.220Z",
+    "lastScrapedAt": "2026-10-14T14:38:18.805Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -139,7 +139,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T14:34:45.419Z",
+      "computedAt": "2026-10-14T14:38:20.823Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
@@ -201,12 +201,14 @@
       "restrictedAvailable": false,
       "type": "sport"
     },
-    "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "scrapeStatus": "blocked",
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-10-14T14:34:43.563Z",
+    "lastScrapedAt": "2026-10-14T14:38:19.816Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -217,7 +219,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T14:34:45.420Z",
+      "computedAt": "2026-10-14T14:38:20.823Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "postalCode": "46020",
@@ -283,12 +285,14 @@
       "restrictedAvailable": false,
       "type": "sport"
     },
-    "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "scrapeStatus": "blocked",
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-10-14T14:34:44.029Z",
+    "lastScrapedAt": "2026-10-14T14:38:20.046Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -299,7 +303,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T14:34:45.420Z",
+      "computedAt": "2026-10-14T14:38:20.823Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "postalCode": "08004",
@@ -364,14 +368,14 @@
       "restrictedAvailable": true,
       "type": "classic"
     },
-    "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "scrapeStatus": "blocked",
+    "httpStatus": 403,
     "status": "active",
     "notes": [
-      "ad says 'limitada' — power capped to 35 kW (A2 restricted)"
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
     ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-10-14T14:34:44.342Z",
+    "lastScrapedAt": "2026-10-14T14:38:20.057Z",
     "a2": {
       "legal": true,
       "restricted": true,
@@ -382,7 +386,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T14:34:45.420Z",
+      "computedAt": "2026-10-14T14:38:20.823Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "postalCode": "28013",
@@ -450,14 +454,14 @@
       "restrictedAvailable": true,
       "type": "naked"
     },
-    "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "scrapeStatus": "blocked",
+    "httpStatus": 403,
     "status": "active",
     "notes": [
-      "ad says 'limitada' — power capped to 35 kW (A2 restricted)"
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
     ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-10-14T14:34:44.619Z",
+    "lastScrapedAt": "2026-10-14T14:38:20.063Z",
     "a2": {
       "legal": true,
       "restricted": true,
@@ -468,7 +472,7 @@
       "min": 255,
       "max": 400,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T14:34:45.421Z",
+      "computedAt": "2026-10-14T14:38:20.824Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "postalCode": "18003",
@@ -538,7 +542,7 @@
     "status": "active",
     "notes": [],
     "site": "cuimo.com",
-    "lastScrapedAt": "2026-10-14T14:34:45.017Z",
+    "lastScrapedAt": "2026-10-14T14:38:20.069Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -549,7 +553,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T14:34:45.421Z",
+      "computedAt": "2026-10-14T14:38:20.824Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
