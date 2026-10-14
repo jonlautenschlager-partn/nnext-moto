@@ -1,0 +1,469 @@
+{
+ "generatedAt": "2026-10-14T14:34:45.424Z",
+ "models": [
+  {
+   "make": "Yamaha",
+   "name": "MT-07",
+   "stockKw": 54.8,
+   "kg": 184,
+   "restrictedAvailable": true,
+   "type": "naked"
+  },
+  {
+   "make": "Yamaha",
+   "name": "MT-03",
+   "stockKw": 30.9,
+   "kg": 169,
+   "restrictedAvailable": false,
+   "type": "naked"
+  },
+  {
+   "make": "Yamaha",
+   "name": "YZF-R3",
+   "stockKw": 30.75,
+   "kg": 173,
+   "restrictedAvailable": false,
+   "type": "sport"
+  },
+  {
+   "make": "Yamaha",
+   "name": "Tracer 7",
+   "stockKw": 54.8,
+   "kg": 196,
+   "restrictedAvailable": true,
+   "type": "touring"
+  },
+  {
+   "make": "Yamaha",
+   "name": "Tenere 700",
+   "stockKw": 54,
+   "kg": 204,
+   "restrictedAvailable": true,
+   "type": "trail"
+  },
+  {
+   "make": "Yamaha",
+   "name": "XSR700",
+   "stockKw": 54.8,
+   "kg": 188,
+   "restrictedAvailable": true,
+   "type": "classic"
+  },
+  {
+   "make": "Yamaha",
+   "name": "XMAX 300",
+   "stockKw": 20.6,
+   "kg": 179,
+   "restrictedAvailable": false,
+   "type": "scooter"
+  },
+  {
+   "make": "Honda",
+   "name": "CB500 Hornet",
+   "stockKw": 35,
+   "kg": 186,
+   "restrictedAvailable": false,
+   "type": "naked"
+  },
+  {
+   "make": "Honda",
+   "name": "NX500",
+   "stockKw": 35,
+   "kg": 196,
+   "restrictedAvailable": false,
+   "type": "trail"
+  },
+  {
+   "make": "Honda",
+   "name": "CB500X",
+   "stockKw": 35,
+   "kg": 192,
+   "restrictedAvailable": false,
+   "type": "trail"
+  },
+  {
+   "make": "Honda",
+   "name": "CL500",
+   "stockKw": 35,
+   "kg": 192,
+   "restrictedAvailable": false,
+   "type": "classic"
+  },
+  {
+   "make": "Honda",
+   "name": "CBR500R",
+   "stockKw": 35,
+   "kg": 192,
+   "restrictedAvailable": false,
+   "type": "sport"
+  },
+  {
+   "make": "Honda",
+   "name": "CB650R",
+   "stockKw": 70,
+   "kg": 208,
+   "restrictedAvailable": true,
+   "type": "naked"
+  },
+  {
+   "make": "Honda",
+   "name": "CBR650R",
+   "stockKw": 70,
+   "kg": 213,
+   "restrictedAvailable": true,
+   "type": "sport"
+  },
+  {
+   "make": "Honda",
+   "name": "Forza 350",
+   "stockKw": 21.5,
+   "kg": 186,
+   "restrictedAvailable": false,
+   "type": "scooter"
+  },
+  {
+   "make": "Honda",
+   "name": "ADV350",
+   "stockKw": 21.5,
+   "kg": 186,
+   "restrictedAvailable": false,
+   "type": "scooter"
+  },
+  {
+   "make": "Honda",
+   "name": "CB125R",
+   "stockKw": 11,
+   "kg": 130,
+   "restrictedAvailable": false,
+   "type": "naked"
+  },
+  {
+   "make": "Honda",
+   "name": "Rebel 500",
+   "stockKw": 34,
+   "kg": 192,
+   "restrictedAvailable": false,
+   "type": "custom"
+  },
+  {
+   "make": "Kawasaki",
+   "name": "Z650",
+   "stockKw": 50.2,
+   "kg": 187,
+   "restrictedAvailable": true,
+   "type": "naked"
+  },
+  {
+   "make": "Kawasaki",
+   "name": "Ninja 650",
+   "stockKw": 50.2,
+   "kg": 196,
+   "restrictedAvailable": true,
+   "type": "sport"
+  },
+  {
+   "make": "Kawasaki",
+   "name": "Z400",
+   "stockKw": 26.7,
+   "kg": 168,
+   "restrictedAvailable": false,
+   "type": "naked"
+  },
+  {
+   "make": "Kawasaki",
+   "name": "Vulcan S",
+   "stockKw": 46,
+   "kg": 228,
+   "restrictedAvailable": true,
+   "type": "custom"
+  },
+  {
+   "make": "Kawasaki",
+   "name": "Eliminator 450",
+   "stockKw": 33.4,
+   "kg": 175,
+   "restrictedAvailable": false,
+   "type": "custom"
+  },
+  {
+   "make": "Suzuki",
+   "name": "SV650",
+   "stockKw": 56,
+   "kg": 199,
+   "restrictedAvailable": true,
+   "type": "naked"
+  },
+  {
+   "make": "Suzuki",
+   "name": "GSX-8S",
+   "stockKw": 57.6,
+   "kg": 210,
+   "restrictedAvailable": true,
+   "type": "naked"
+  },
+  {
+   "make": "Suzuki",
+   "name": "V-Strom 800DE",
+   "stockKw": 57.6,
+   "kg": 230,
+   "restrictedAvailable": true,
+   "type": "trail"
+  },
+  {
+   "make": "KTM",
+   "name": "390 Duke",
+   "stockKw": 33,
+   "kg": 165,
+   "restrictedAvailable": false,
+   "type": "naked"
+  },
+  {
+   "make": "KTM",
+   "name": "390 Adventure",
+   "stockKw": 32,
+   "kg": 177,
+   "restrictedAvailable": false,
+   "type": "trail"
+  },
+  {
+   "make": "KTM",
+   "name": "690 Duke",
+   "stockKw": 55,
+   "kg": 152,
+   "restrictedAvailable": false,
+   "type": "naked"
+  },
+  {
+   "make": "Aprilia",
+   "name": "RS 457",
+   "stockKw": 35,
+   "kg": 175,
+   "restrictedAvailable": false,
+   "type": "sport"
+  },
+  {
+   "make": "Aprilia",
+   "name": "Tuono 457",
+   "stockKw": 35,
+   "kg": 175,
+   "restrictedAvailable": false,
+   "type": "naked"
+  },
+  {
+   "make": "Aprilia",
+   "name": "RS 660",
+   "stockKw": 70,
+   "kg": 183,
+   "restrictedAvailable": true,
+   "type": "sport"
+  },
+  {
+   "make": "Aprilia",
+   "name": "Tuono 660",
+   "stockKw": 70,
+   "kg": 183,
+   "restrictedAvailable": true,
+   "type": "naked"
+  },
+  {
+   "make": "Triumph",
+   "name": "Speed 400",
+   "stockKw": 29.5,
+   "kg": 177,
+   "restrictedAvailable": false,
+   "type": "naked"
+  },
+  {
+   "make": "Triumph",
+   "name": "Scrambler 400 X",
+   "stockKw": 29.5,
+   "kg": 179,
+   "restrictedAvailable": false,
+   "type": "trail"
+  },
+  {
+   "make": "Triumph",
+   "name": "Trident 660",
+   "stockKw": 59.6,
+   "kg": 187,
+   "restrictedAvailable": true,
+   "type": "naked"
+  },
+  {
+   "make": "Triumph",
+   "name": "Daytona 660",
+   "stockKw": 59.6,
+   "kg": 206,
+   "restrictedAvailable": true,
+   "type": "sport"
+  },
+  {
+   "make": "Triumph",
+   "name": "Speed Twin 900",
+   "stockKw": 47,
+   "kg": 198,
+   "restrictedAvailable": true,
+   "type": "classic"
+  },
+  {
+   "make": "BMW",
+   "name": "F 800 GS",
+   "stockKw": 59,
+   "kg": 219,
+   "restrictedAvailable": true,
+   "type": "trail"
+  },
+  {
+   "make": "BMW",
+   "name": "G 310 R",
+   "stockKw": 25,
+   "kg": 158.5,
+   "restrictedAvailable": false,
+   "type": "naked"
+  },
+  {
+   "make": "BMW",
+   "name": "F 900 R",
+   "stockKw": 77,
+   "kg": 211,
+   "restrictedAvailable": false,
+   "type": "naked"
+  },
+  {
+   "make": "Ducati",
+   "name": "Monster",
+   "stockKw": 82,
+   "kg": 166,
+   "restrictedAvailable": false,
+   "type": "naked"
+  },
+  {
+   "make": "Ducati",
+   "name": "Monster 696",
+   "stockKw": 58.8,
+   "kg": 173,
+   "restrictedAvailable": true,
+   "type": "naked"
+  },
+  {
+   "make": "Ducati",
+   "name": "Scrambler Full Throttle",
+   "stockKw": 54,
+   "kg": 185,
+   "restrictedAvailable": true,
+   "type": "classic"
+  },
+  {
+   "make": "CFMoto",
+   "name": "450NK",
+   "stockKw": 37,
+   "kg": 175,
+   "restrictedAvailable": true,
+   "type": "naked"
+  },
+  {
+   "make": "CFMoto",
+   "name": "450MT",
+   "stockKw": 37,
+   "kg": 197,
+   "restrictedAvailable": true,
+   "type": "trail"
+  },
+  {
+   "make": "CFMoto",
+   "name": "700 CL-X",
+   "stockKw": 51,
+   "kg": 192,
+   "restrictedAvailable": true,
+   "type": "naked"
+  },
+  {
+   "make": "Voge",
+   "name": "525R",
+   "stockKw": 39,
+   "kg": 178,
+   "restrictedAvailable": true,
+   "type": "naked"
+  },
+  {
+   "make": "Benelli",
+   "name": "TNT 500",
+   "stockKw": 35,
+   "kg": 200,
+   "restrictedAvailable": false,
+   "type": "naked"
+  },
+  {
+   "make": "Royal Enfield",
+   "name": "Hunter 350",
+   "stockKw": 20.2,
+   "kg": 181,
+   "restrictedAvailable": false,
+   "type": "classic"
+  },
+  {
+   "make": "Royal Enfield",
+   "name": "Classic 350",
+   "stockKw": 20.2,
+   "kg": 195,
+   "restrictedAvailable": false,
+   "type": "classic"
+  },
+  {
+   "make": "Royal Enfield",
+   "name": "Himalayan 450",
+   "stockKw": 29.4,
+   "kg": 196,
+   "restrictedAvailable": false,
+   "type": "trail"
+  },
+  {
+   "make": "Husqvarna",
+   "name": "Svartpilen 401",
+   "stockKw": 32,
+   "kg": 171,
+   "restrictedAvailable": false,
+   "type": "naked"
+  },
+  {
+   "make": "Vespa",
+   "name": "GTS 300",
+   "stockKw": 17.5,
+   "kg": 163,
+   "restrictedAvailable": false,
+   "type": "scooter"
+  },
+  {
+   "make": "Piaggio",
+   "name": "Beverly 400",
+   "stockKw": 25.7,
+   "kg": 200,
+   "restrictedAvailable": false,
+   "type": "scooter"
+  },
+  {
+   "make": "SYM",
+   "name": "Joymax Z+ 300",
+   "stockKw": 19.4,
+   "kg": 197,
+   "restrictedAvailable": false,
+   "type": "scooter"
+  },
+  {
+   "make": "Harley-Davidson",
+   "name": "Nightster",
+   "stockKw": 66,
+   "kg": 221,
+   "restrictedAvailable": true,
+   "type": "custom"
+  },
+  {
+   "make": "Moto Guzzi",
+   "name": "V7 Stone",
+   "stockKw": 48.7,
+   "kg": 218,
+   "restrictedAvailable": true,
+   "type": "classic"
+  }
+ ]
+}

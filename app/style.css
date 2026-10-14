@@ -37,6 +37,7 @@ body {
 .btn:hover { border-color: var(--accent); }
 .btn.toggle.on { border-color: var(--accent-2); color: var(--accent-2); }
 .btn.ghost { background: transparent; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: #0b1220; font-weight: 600; }
 
 .stats { display: flex; gap: 10px; flex-wrap: wrap; padding: 4px 22px 8px; }
 .stat {
@@ -222,3 +223,19 @@ body {
   padding: 5px 10px; font-size: 12.5px;
 }
 .hrow span { color: var(--muted); }
+
+/* ---------- edit panel ---------- */
+.edit-panel {
+  background: var(--panel-2); border: 1px solid rgba(77,163,255,.5);
+  border-radius: 12px; padding: 12px; margin-bottom: 6px;
+}
+.edit-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+.edit-field { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.edit-field span { color: var(--muted); font-size: 10.5px; text-transform: uppercase; letter-spacing: .4px; }
+.edit-field input, .edit-field select {
+  background: var(--panel); border: 1px solid var(--line); color: var(--text);
+  border-radius: 8px; padding: 7px 9px; font-size: 13px; width: 100%;
+}
+.edit-field input:focus, .edit-field select:focus { outline: none; border-color: var(--accent); }
+.edit-actions { display: flex; align-items: center; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+.edit-actions .muted { max-width: 100%; }

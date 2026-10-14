@@ -10,6 +10,7 @@ on:
       - "scripts/**"
       - "knowledge-base/**"
       - "insurance-*.json"
+      - "data/listings.json"
   schedule:
     - cron: "30 5 * * *" # 06:30-07:30 Madrid, daily refresh of all listings
   workflow_dispatch:
@@ -30,6 +31,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+
+      - name: Validate listings.json (never scrape over a corrupt data file)
+        run: node -e "JSON.parse(require('fs').readFileSync('data/listings.json','utf8')); console.log('listings.json OK')"
 
       - name: Install deps
         run: npm install --no-audit --no-fund

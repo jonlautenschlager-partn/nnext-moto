@@ -1,4 +1,4 @@
-import { readJson, writeJson, listingId, siteOf, cleanText, extractPrice, extractKm, extractYear, extractCvKw, extractCc, extractBrand, detectType, parseEsNumber, nowIso } from "./lib.mjs";
+import { readJson, writeJson, listingId, siteOf, cleanText, extractPrice, extractKm, extractYear, extractCvKw, extractCc, extractBrand, extractModelFromTitle, brandIsSiteSelf, detectType, parseEsNumber, nowIso } from "./lib.mjs";
 import { a2Check, matchModel } from "./a2.mjs";
 import { estimateInsurance } from "./insurance.mjs";
 import { parseAdText } from "./parse-text.mjs";
@@ -95,8 +95,10 @@ export function parseVehicleLd(html, url) {
         if (out.price == null && node.offers) {
           const offers = [].concat(node.offers);
           const o = offers[0];
-          if (o && o.price != null) {
-            out.price = parseEsNumber(o.price);
+          // some sites (cuimo) use capital-P "Price"; AggregateOffer may only have lowPrice
+          const raw = o?.price ?? o?.Price ?? o?.PRICE ?? o?.lowPrice ?? o?.LowPrice;
+          if (o && raw != null) {
+            out.price = parseEsNumber(raw);
             out.currency = o.priceCurrency || "EUR";
             out.availability = ldText(o.availability);
           }
@@ -108,8 +110,9 @@ export function parseVehicleLd(html, url) {
   // some sites put offers as separate Product Offer node
   if (out.price == null && out._offer) {
     const o = [].concat(out._offer)[0];
-    if (o && o.price != null) {
-      out.price = parseEsNumber(o.price);
+    const raw = o?.price ?? o?.Price ?? o?.PRICE ?? o?.lowPrice;
+    if (o && raw != null) {
+      out.price = parseEsNumber(raw);
       out.currency = o.priceCurrency || "EUR";
     }
   }
@@ -153,9 +156,12 @@ export function enrichFromText(data, html, url) {
   if (data.powerCv == null && cv) data.powerCv = cv;
   if (data.powerKw == null && kw) data.powerKw = kw;
   if (data.cc == null) data.cc = extractCc(text);
+  // dealer-site JSON-LD sometimes says brand: <the shop itself> (e.g. Cuimo) — drop it
+  if (data.brand && brandIsSiteSelf(data.brand, siteOf(url))) data.brand = null;
   if (data.brand == null) data.brand = extractBrand(text);
   // type: from title/model/KB only — body text pollutes with nav/menu words
   if (data.type == null || data.type === "other") data.type = detectType((data.title || "") + " " + (data.model || ""));
+  if (data.brand && data.model == null) data.model = extractModelFromTitle(data.title || text.slice(0, 120), data.brand);
 
   // price/km often in title too: "Yamaha MT-07 2021 - 6.900 €"
   const titleSource = data.title || "";
@@ -170,6 +176,16 @@ export function enrichFromText(data, html, url) {
     data.kbModel = { stockKw: mm.stockKw, kg: mm.kg, restrictedAvailable: mm.restrictedAvailable, type: mm.type };
     data.brand ??= mm.make;
     if (data.type === "other" || !data.type) data.type = mm.type;
+    // KB knows the stock power — fill it when the page doesn't state one
+    if (data.powerKw == null && mm.stockKw != null) data.powerKw = mm.stockKw;
+    // ad says "limitada" (A2-restricted by seller): cap stated power at 35 kW.
+    // only look at the ad's own title/description — page boilerplate contains
+    // "responsabilidad limitada" and similar noise
+    const adText = `${data.title || ""} ${data.description || ""}`;
+    if (/limitad|restringid/i.test(adText) && data.powerKw != null && data.powerKw > 35 && mm.restrictedAvailable) {
+      data.powerKw = 35;
+      data.notes = [...(data.notes || []), "ad says 'limitada' — power capped to 35 kW (A2 restricted)"];
+    }
   }
   return data;
 }

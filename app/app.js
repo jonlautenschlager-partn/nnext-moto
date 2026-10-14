@@ -33,6 +33,52 @@ function b64ToUtf8(b64) {
   return new TextDecoder().decode(Uint8Array.from(bin, (c) => c.charCodeAt(0)));
 }
 
+function utf8ToB64(s) {
+  const bytes = new TextEncoder().encode(s);
+  let bin = "";
+  for (let i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode(...bytes.subarray(i, i + 0x8000));
+  return btoa(bin);
+}
+
+// ---------- client-side A2 recompute (mirrors scripts/a2.mjs via kb.json) ----------
+let KB = null;
+async function loadKb() {
+  if (KB !== null) return KB;
+  try {
+    const res = await fetch("kb.json");
+    KB = res.ok ? await res.json() : null;
+  } catch {
+    KB = null;
+  }
+  return KB;
+}
+const normModel = (s) => String(s || "").toLowerCase().replace(/[\s-]+/g, "");
+function kbMatch(brand, text, kb) {
+  const t = normModel(text);
+  const m = normModel(brand).slice(0, 4);
+  let best = null;
+  for (const mod of kb.models || []) {
+    const nameNorm = normModel(mod.name);
+    if (!nameNorm || !t.includes(nameNorm)) continue;
+    if (m && !(mod.make || "").toLowerCase().startsWith(m)) continue;
+    if (!best || nameNorm.length > normModel(best.name).length) best = mod;
+  }
+  return best || null;
+}
+function quickA2(l, kb) {
+  const kw = l.powerKw ?? (l.powerCv ? l.powerCv / 1.36 : null);
+  if (kw == null) return null;
+  const mm = kb ? kbMatch(l.brand, `${l.model || ""} ${l.title || ""}`, kb) : null;
+  const stock = mm?.stockKw ?? null;
+  if (kw <= 35) {
+    if (stock != null && stock > 70) return { legal: false, restricted: false, confidence: "high", reason: `${mm.make} ${mm.name} derives from ${stock} kW (>70) — cannot be A2 even at 35 kW` };
+    if (stock != null && stock > 35) return { legal: true, restricted: true, confidence: stock <= 70 ? "medium" : "high", reason: `Restricted to ${kw} kW from stock ${stock} kW — legal if official A2 version` };
+    return { legal: true, restricted: false, confidence: "high", reason: `${kw} kW naturally <= 35 kW` };
+  }
+  if (stock != null && stock <= 70 && mm.restrictedAvailable) return { legal: false, restricted: false, confidence: "medium", reason: `Listed power ${kw} kW — needs official A2 restriction kit (stock ${stock} kW, kit exists)` };
+  return { legal: false, restricted: false, confidence: stock != null ? "high" : "medium", reason: `Power ${kw} kW > 35 kW limit` };
+}
+
 async function loadData() {
   if (window.NNEXT) return window.NNEXT; // local dev: app/data.js present
   const token = localStorage.getItem("nnext-token");
@@ -391,6 +437,7 @@ function openDetail(id) {
       <div class="detail-head">
         <button class="btn ghost" id="detailClose">← Volver</button>
         <h2>${esc(l.title || `${l.brand || ""} ${l.model || ""}`)}</h2>
+        <button class="btn" id="editToggle">Editar ficha</button>
         <a class="btn" href="${esc(l.url)}" target="_blank" rel="noopener">Ver anuncio ↗</a>
       </div>
       <div class="detail-grid">
@@ -410,6 +457,7 @@ function openDetail(id) {
           <textarea id="detailNotes" placeholder="Ej: llamada hecha, preguntar por el kit A2…">${esc(notes)}</textarea>
         </div>
         <div class="detail-col">
+          ${editPanelHtml(l)}
           <h3>Ficha <span class="muted">${c.filled}/${c.total} datos · ${c.pct}%</span></h3>
           <div class="specs">${specsGrid(l)}</div>
           ${c.missing.length ? `<h3>Falta información</h3><div class="chips">${c.missing.map(([k, label]) => `<span class="chip miss" title="${esc(HINTS[k] || "")}">${esc(label)}</span>`).join("")}</div><p class="muted">Pasa el ratón (o mantén pulsado) sobre cada dato para ver cómo completarlo.</p>` : ""}
@@ -425,6 +473,36 @@ function openDetail(id) {
 
   $("detailClose").addEventListener("click", () => { location.hash = ""; });
   overlay.addEventListener("click", (e) => { if (e.target === overlay) location.hash = ""; });
+  // edit panel
+  $("editToggle").addEventListener("click", () => {
+    $("editPanel").classList.toggle("hidden");
+    $("editToggle").textContent = $("editPanel").classList.contains("hidden") ? "Editar ficha" : "Cerrar edición";
+  });
+  $("editCancel").addEventListener("click", () => refreshDetail(id));
+  $("editSave").addEventListener("click", async () => {
+    const status = $("editStatus");
+    const patch = {};
+    document.querySelectorAll("#editPanel [data-edit]").forEach((el) => {
+      const k = el.dataset.edit;
+      let v = el.value;
+      if (el.type === "number" && v !== "") v = String(Number(v.replace(/\./g, "").replace(",", ".")));
+      if (String(l[k] ?? "") !== v && !(l[k] == null && v === "")) patch[k] = v;
+    });
+    if (!Object.keys(patch).length) { status.textContent = "sin cambios"; return; }
+    status.textContent = "guardando…";
+    try {
+      const listings = await saveListingEdits(id, patch);
+      Object.assign(D.listings.find((x) => x.id === id), listings.find((x) => x.id === id));
+      await loadKb();
+      const l2 = D.listings.find((x) => x.id === id);
+      const qa = quickA2(l2, KB);
+      if (qa) l2.a2 = qa;
+      refreshDetail(id);
+    } catch (e) {
+      status.textContent = e.message;
+      status.style.color = "#ff6b6b";
+    }
+  });
   const notesEl = $("detailNotes");
   notesEl.addEventListener("input", () => {
     const notes = JSON.parse(localStorage.getItem("nnext-notes") || "{}");
@@ -463,6 +541,89 @@ function route() {
   const m = location.hash.match(/#\/moto\/([0-9a-f]+)/);
   if (m) openDetail(m[1]);
   else closeDetail();
+}
+
+// ---------- editing from the dashboard ----------
+const EDIT_FIELDS = [
+  ["title", "Título", "text"],
+  ["brand", "Marca", "text"],
+  ["model", "Modelo", "text"],
+  ["type", "Tipo", "select", ["other", "scooter", "trail", "custom", "sport", "classic", "touring", "naked", "enduro"]],
+  ["year", "Año", "number"],
+  ["km", "Km", "number"],
+  ["price", "Precio €", "number"],
+  ["powerKw", "Potencia kW", "number"],
+  ["powerCv", "Potencia CV", "number"],
+  ["cc", "Cilindrada cc", "number"],
+  ["location", "Ubicación", "text"],
+  ["seller", "Vendedor", "select", ["particular", "profesional"]],
+  ["fuel", "Combustible", "text"],
+  ["gearbox", "Cambio", "text"],
+  ["color", "Color", "text"],
+  ["condition", "Estado", "text"],
+  ["carnet", "Carnet", "text"],
+];
+
+function editPanelHtml(l) {
+  const rows = EDIT_FIELDS.map(([k, label, kind, opts]) => {
+    const v = l[k] ?? "";
+    if (kind === "select") {
+      return `<label class="edit-field"><span>${label}</span><select data-edit="${k}">${opts.map((o) => `<option value="${o}" ${String(v) === o ? "selected" : ""}>${o}</option>`).join("")}</select></label>`;
+    }
+    return `<label class="edit-field"><span>${label}</span><input data-edit="${k}" type="${kind}" value="${esc(v)}"></label>`;
+  }).join("");
+  return `<div class="edit-panel hidden" id="editPanel">
+    <div class="edit-grid">${rows}</div>
+    <div class="edit-actions">
+      <button class="btn" id="editCancel">Cancelar</button>
+      <button class="btn primary" id="editSave">Guardar cambios</button>
+      <span class="muted" id="editStatus"></span>
+    </div>
+    <p class="muted">Lo que guardes aquí queda protegido: los refrescos automáticos no sobrescriben estos campos. El veredicto A2 se recalcula al instante; el seguro estimado se actualiza en el próximo refresco automático.</p>
+  </div>`;
+}
+
+async function saveListingEdits(id, patch) {
+  const token = localStorage.getItem("nnext-token");
+  if (!token) throw new Error("sin token — vuelve a la página de añadir para configurarlo");
+  for (let attempt = 0; attempt < 3; attempt++) {
+    const res = await fetch(`${LISTINGS_API}?ref=main`, {
+      headers: { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json" },
+    });
+    if (res.status === 401 || res.status === 403) throw new Error("token no válido o sin permiso de escritura");
+    if (!res.ok) throw new Error(`no se pudo leer listings.json (HTTP ${res.status})`);
+    const j = await res.json();
+    const listings = JSON.parse(b64ToUtf8(j.content));
+    const rec = listings.find((x) => x.id === id);
+    if (!rec) throw new Error("listado no encontrado en listings.json");
+    for (const [k, v] of Object.entries(patch)) {
+      rec[k] = v === "" ? null : v;
+      if (v !== "" && v != null) rec.manualFields = [...new Set([...(rec.manualFields || []), k])];
+      else rec.manualFields = (rec.manualFields || []).filter((f) => f !== k);
+    }
+    const put = await fetch(LISTINGS_API, {
+      method: "PUT",
+      headers: { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json", "Content-Type": "application/json" },
+      body: JSON.stringify({
+        message: `edit ${id} from dashboard`,
+        content: utf8ToB64(JSON.stringify(listings, null, 2) + "\n"),
+        sha: j.sha,
+        branch: "main",
+      }),
+    });
+    if (put.ok) return listings;
+    if (put.status === 409 || put.status === 422) continue; // bot committed meanwhile — refetch & retry
+    const err = await put.json().catch(() => ({}));
+    throw new Error(`GitHub rechazó el guardado (HTTP ${put.status}) ${err.message || ""}`);
+  }
+  throw new Error("conflicto con el refresco automático — reintenta en unos segundos");
+}
+
+function refreshDetail(id) {
+  closeDetail();
+  if (location.hash === `#/moto/${id}`) openDetail(id);
+  else location.hash = `#/moto/${id}`;
+  render();
 }
 
 // ---------- exports ----------

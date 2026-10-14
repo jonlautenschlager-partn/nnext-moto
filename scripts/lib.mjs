@@ -15,6 +15,19 @@ export async function readJson(path, fallback) {
   }
 }
 
+// listings.json is precious: on parse failure, fail loudly instead of silently
+// returning a fallback (which would forget every listing and destroy history)
+export async function readListings(path) {
+  const raw = await readFile(path, "utf8").catch(() => null);
+  if (raw == null) return [];
+  try {
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed : parsed.listings || [];
+  } catch (e) {
+    throw new Error(`listings.json is not valid JSON (${e.message}) — refusing to run to avoid data loss; restore the file first`);
+  }
+}
+
 export async function writeJson(path, data) {
   await mkdir(dirname(path), { recursive: true });
   await writeFile(path, JSON.stringify(data, null, 2) + "\n");
@@ -125,20 +138,76 @@ export function extractCc(text) {
 
 const BRANDS = [
   "Yamaha","Honda","Kawasaki","Suzuki","KTM","Aprilia","Triumph","BMW","Ducati",
-  "Moto Guzzi","Piaggio","Vespa","Benelli","CFMoto","Voge","QJ Motor","Royal Enfield",
-  "Husqvarna","GasGas","MV Agusta","Norton","Brixton","Fantic","Rieju","Derbi",
+  "Moto Guzzi","Piaggio","Vespa","Benelli","CFMoto","CF Moto","Voge","QJ Motor","Royal Enfield",
+  "Husqvarna","GasGas","Gas Gas","MV Agusta","Norton","Brixton","Fantic","Rieju","Derbi",
   "Malaguti","Peugeot","SYM","Kymco","Zontes","Keeway","Bultaco","Niu","Mash",
   "Zero","Energica","Verge","Can-Am","Indian","Harley-Davidson","Harley","Springfield",
+  "Mondial","Italjet","SWM","Beta","Sherco","AJP","Ural","Jawa","ORCAL","KSR",
 ];
+
+const BRAND_RE = new RegExp(
+  BRANDS.map((b) => b.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|"),
+  "i"
+);
 
 export function extractBrand(text) {
   if (!text) return null;
   let best = null;
-  for (const b of BRANDS) {
-    const idx = text.toLowerCase().indexOf(b.toLowerCase());
-    if (idx >= 0 && (best == null || idx < best.idx)) best = { brand: b, idx };
+  for (const m of String(text).matchAll(new RegExp(BRAND_RE.source, "gi"))) {
+    // word boundary: avoid matches inside larger words
+    const before = m.input[m.index - 1];
+    const after = m.input[m.index + m[0].length];
+    if (before && /[A-Za-zÀ-ÿ0-9]/.test(before)) continue;
+    if (after && /[A-Za-zÀ-ÿ0-9]/.test(after)) continue;
+    if (best == null || m.index < best.idx) best = { brand: BRANDS.find((b) => b.toLowerCase() === m[0].toLowerCase()) || m[0], idx: m.index };
   }
-  return best ? best.brand : null;
+  if (!best) return null;
+  // normalize aliases to canonical name
+  const alias = { "harley": "Harley-Davidson", "gas gas": "GasGas", "cf moto": "CFMoto" };
+  const key = best.brand.toLowerCase();
+  return alias[key] || best.brand;
+}
+
+// dealer-site self-reference: JSON-LD "brand: Cuimo" is the shop, not the bike
+export function brandIsSiteSelf(brand, site) {
+  if (!brand || !site) return false;
+  const b = String(brand).toLowerCase().replace(/[^a-z0-9]/g, "");
+  const host = String(site).split(".")[0].replace(/[^a-z0-9]/g, "");
+  if (!b || !host) return false;
+  return b === host || (host.includes(b) && b.length >= 4);
+}
+
+// normalize brand casing/spelling to the canonical list entry ("HONDA" -> "Honda")
+export function canonicalBrand(brand) {
+  if (!brand) return brand;
+  const b = String(brand).trim();
+  const hit = BRANDS.find((x) => x.toLowerCase() === b.toLowerCase());
+  return hit || b;
+}
+
+// pull the model out of a title like "HONDA CBR 500 R de segunda mano" -> "CBR 500 R"
+const MODEL_STOP = /^(de|del|con|por|para|en|y|e|o|año|anno|km|kms|cv|kw|cc|abs|segunda|mano|ocasion|ocasión|nueva|nuevo|usada|usado|matriculad\w*|gasolina|diesel|diésel|el[eé]ctric\w*|h[íi]brid\w*|apta?\b|limitad\w*|a2|revisad\w*|garantizad\w*|financiad\w*|barat\w*|precio|rebajad\w*|oferta)/i;
+
+export function extractModelFromTitle(title, brand) {
+  if (!title) return null;
+  let s = String(title).trim();
+  if (brand) {
+    const re = new RegExp(brand.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "i");
+    const m = s.match(re);
+    if (m) s = s.slice(m.index + m[0].length).trim();
+  }
+  const tokens = [];
+  for (const tok of s.split(/\s+/)) {
+    if (!/^[A-Za-z0-9][A-Za-z0-9-+./]*$/.test(tok)) break;
+    if (MODEL_STOP.test(tok)) break;
+    if (tokens.length >= 5) break;
+    // a year-like token ends the model name wherever it appears (R 1250 GS keeps "1250")
+    if (/^(19|20)\d{2}$/.test(tok)) break;
+    if (/^[€$]\d/.test(tok)) break;
+    tokens.push(tok);
+  }
+  const model = tokens.join(" ").trim();
+  return model.length >= 2 ? model : null;
 }
 
 export function detectType(text) {
