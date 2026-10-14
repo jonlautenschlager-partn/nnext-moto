@@ -392,5 +392,59 @@
     },
     "postalCode": "18003",
     "lastModified": "2026-09-30T22:35:47.000Z"
+  },
+  {
+    "id": "c6bfdd12494f",
+    "url": "https://www.cuimo.com/moto/HONDA-CBR-500-R-2021-797d35ce",
+    "addedAt": "2026-10-14T13:55:26.902Z",
+    "favorite": false,
+    "manualFields": [],
+    "priceHistory": [],
+    "title": "HONDA CBR 500 R de segunda mano",
+    "brand": "Cuimo",
+    "model": null,
+    "type": "sport",
+    "year": 2021,
+    "km": 55130,
+    "price": null,
+    "currency": "EUR",
+    "location": null,
+    "seller": null,
+    "powerKw": 35,
+    "powerCv": 47.6,
+    "cc": 471,
+    "fuel": null,
+    "gearbox": null,
+    "color": null,
+    "carnet": null,
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": null,
+    "images": [
+      "https://images.cuimo.com/1789715585243-18-9-2026-221.jpg?width=1600&quality=90"
+    ],
+    "description": "Comprar HONDA CBR 500 R del año 2021 por 5199€ certificada con garantía premium de hasta 3 años.",
+    "availability": null,
+    "kbModel": null,
+    "scrapeStatus": "ok",
+    "httpStatus": 200,
+    "status": "active",
+    "notes": [],
+    "site": "cuimo.com",
+    "lastScrapedAt": "2026-10-14T13:55:26.013Z",
+    "a2": {
+      "legal": true,
+      "restricted": false,
+      "confidence": "high",
+      "reason": "35 kW naturally <= 35 kW"
+    },
+    "insurance": {
+      "min": 260,
+      "max": 400,
+      "coverage": "terceros con grua",
+      "computedAt": "2026-10-14T13:55:26.904Z",
+      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
+    }
   }
 ]
