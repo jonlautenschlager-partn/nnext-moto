@@ -61,7 +61,7 @@
       "min": 360,
       "max": 590,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T15:09:01.978Z",
+      "computedAt": "2026-10-14T15:15:33.063Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
@@ -139,7 +139,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T15:09:01.979Z",
+      "computedAt": "2026-10-14T15:15:33.064Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
@@ -217,7 +217,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T15:09:01.979Z",
+      "computedAt": "2026-10-14T15:15:33.064Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "postalCode": "46020",
@@ -299,7 +299,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T15:09:01.980Z",
+      "computedAt": "2026-10-14T15:15:33.065Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "postalCode": "08004",
@@ -382,7 +382,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T15:09:01.980Z",
+      "computedAt": "2026-10-14T15:15:33.065Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "postalCode": "28013",
@@ -468,7 +468,7 @@
       "min": 255,
       "max": 400,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T15:09:01.981Z",
+      "computedAt": "2026-10-14T15:15:33.065Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "postalCode": "18003",
@@ -549,7 +549,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T15:09:01.981Z",
+      "computedAt": "2026-10-14T15:15:33.066Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
@@ -627,7 +627,7 @@
       "min": 360,
       "max": 590,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T15:09:01.981Z",
+      "computedAt": "2026-10-14T15:15:33.068Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
@@ -699,7 +699,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T15:09:01.982Z",
+      "computedAt": "2026-10-14T15:15:33.069Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     }
   },
@@ -769,7 +769,75 @@
       "min": 315,
       "max": 495,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T15:09:01.983Z",
+      "computedAt": "2026-10-14T15:15:33.069Z",
+      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
+    }
+  },
+  {
+    "id": "0a37bcda810f",
+    "url": "https://es.wallapop.com/item/triumph-trident-660-1309089775",
+    "addedAt": "2026-10-14T15:15:33.043Z",
+    "favorite": false,
+    "manualFields": [
+      "brand",
+      "model",
+      "type",
+      "powerCv",
+      "powerKw",
+      "kbModel",
+      "description"
+    ],
+    "priceHistory": [],
+    "title": "Triumph Trident 660",
+    "brand": "Triumph",
+    "model": "Trident 660",
+    "type": "other",
+    "year": null,
+    "km": null,
+    "price": null,
+    "currency": "EUR",
+    "location": null,
+    "seller": null,
+    "powerKw": 59.6,
+    "powerCv": 81,
+    "cc": null,
+    "fuel": null,
+    "gearbox": null,
+    "color": null,
+    "carnet": null,
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": null,
+    "images": null,
+    "description": "Descripción ULTIMO PRECIO, sino se vende esta semana se entrega a compraventa Triumph Trident 660. - quick shifter para subir y bajar marchas - modos de conducción - dispone libro de mantenimientos sellados hechos en triumph - garantía oficial - en muy buen estado, ningun desperfecto - 81CV carnet A, limitable A2",
+    "availability": null,
+    "kbModel": {
+      "stockKw": 59.6,
+      "kg": 187,
+      "restrictedAvailable": true,
+      "type": "naked"
+    },
+    "scrapeStatus": "ok-pasted-text",
+    "httpStatus": 403,
+    "status": "active",
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot",
+      "filled from pasted ad text"
+    ],
+    "site": "es.wallapop.com",
+    "lastScrapedAt": "2026-10-14T15:15:32.950Z",
+    "a2": {
+      "legal": false,
+      "restricted": false,
+      "confidence": "low",
+      "reason": "Listed power 59.6 kW — needs official A2 restriction kit (stock 59.6 kW, kit exists)"
+    },
+    "insurance": {
+      "min": 400,
+      "max": 620,
+      "coverage": "terceros con grua",
+      "computedAt": "2026-10-14T15:15:33.070Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     }
   }
