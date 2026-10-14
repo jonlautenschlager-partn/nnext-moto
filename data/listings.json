@@ -50,7 +50,7 @@
       "extracted from AS24 soft page (detail blocked for bots)"
     ],
     "site": "autoscout24.es",
-    "lastScrapedAt": "2026-10-14T15:32:22.041Z",
+    "lastScrapedAt": "2026-10-14T15:40:09.686Z",
     "a2": {
       "legal": false,
       "restricted": false,
@@ -61,7 +61,7 @@
       "min": 360,
       "max": 590,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T15:39:21.932Z",
+      "computedAt": "2026-10-14T15:40:12.000Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
@@ -128,7 +128,7 @@
     "status": "active",
     "notes": [],
     "site": "moto-ocasion.com",
-    "lastScrapedAt": "2026-10-14T15:32:22.502Z",
+    "lastScrapedAt": "2026-10-14T15:40:10.145Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -139,7 +139,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T15:39:21.932Z",
+      "computedAt": "2026-10-14T15:40:12.000Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
@@ -202,13 +202,13 @@
       "type": "sport"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
     "notes": [
-      "filled from pasted ad text"
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
     ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-10-14T15:32:22.918Z",
+    "lastScrapedAt": "2026-10-14T15:40:10.704Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -219,7 +219,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T15:39:21.932Z",
+      "computedAt": "2026-10-14T15:40:12.001Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "postalCode": "46020",
@@ -286,11 +286,13 @@
       "type": "sport"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-10-14T15:32:23.349Z",
+    "lastScrapedAt": "2026-10-14T15:40:11.031Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -301,7 +303,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T15:39:21.932Z",
+      "computedAt": "2026-10-14T15:40:12.001Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "postalCode": "08004",
@@ -367,14 +369,13 @@
       "type": "classic"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
     "notes": [
-      "ad says 'limitada' — power capped to 35 kW (A2 restricted)",
-      "filled from pasted ad text"
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
     ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-10-14T15:32:23.628Z",
+    "lastScrapedAt": "2026-10-14T15:40:11.148Z",
     "a2": {
       "legal": true,
       "restricted": true,
@@ -385,7 +386,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T15:39:21.933Z",
+      "computedAt": "2026-10-14T15:40:12.001Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "postalCode": "28013",
@@ -454,14 +455,13 @@
       "type": "naked"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
     "notes": [
-      "ad says 'limitada' — power capped to 35 kW (A2 restricted)",
-      "filled from pasted ad text"
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
     ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-10-14T15:32:23.903Z",
+    "lastScrapedAt": "2026-10-14T15:40:11.158Z",
     "a2": {
       "legal": true,
       "restricted": true,
@@ -472,7 +472,7 @@
       "min": 255,
       "max": 400,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T15:39:21.933Z",
+      "computedAt": "2026-10-14T15:40:12.002Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "postalCode": "18003",
@@ -542,11 +542,9 @@
     "scrapeStatus": "ok",
     "httpStatus": 200,
     "status": "active",
-    "notes": [
-      "filled from pasted ad text"
-    ],
+    "notes": [],
     "site": "cuimo.com",
-    "lastScrapedAt": "2026-10-14T15:32:24.193Z",
+    "lastScrapedAt": "2026-10-14T15:40:11.168Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -557,7 +555,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T15:39:21.933Z",
+      "computedAt": "2026-10-14T15:40:12.002Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
@@ -624,7 +622,7 @@
     "status": "active",
     "notes": [],
     "site": "moto-ocasion.com",
-    "lastScrapedAt": "2026-10-14T15:32:24.672Z",
+    "lastScrapedAt": "2026-10-14T15:40:11.707Z",
     "a2": {
       "legal": false,
       "restricted": false,
@@ -635,7 +633,7 @@
       "min": 360,
       "max": 590,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T15:39:21.933Z",
+      "computedAt": "2026-10-14T15:40:12.002Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
@@ -704,14 +702,13 @@
       "type": "naked"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
     "notes": [
-      "ad says 'limitada' — power capped to 35 kW (A2 restricted)",
-      "filled from pasted ad text"
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
     ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-10-14T15:32:26.173Z",
+    "lastScrapedAt": "2026-10-14T15:40:11.958Z",
     "a2": {
       "legal": true,
       "restricted": true,
@@ -722,7 +719,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T15:39:21.933Z",
+      "computedAt": "2026-10-14T15:40:12.002Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
@@ -788,13 +785,13 @@
       "type": "naked"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
     "notes": [
-      "filled from pasted ad text"
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
     ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-10-14T15:32:27.511Z",
+    "lastScrapedAt": "2026-10-14T15:40:11.969Z",
     "a2": {
       "legal": false,
       "restricted": false,
@@ -805,7 +802,7 @@
       "min": 345,
       "max": 520,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T15:39:21.934Z",
+      "computedAt": "2026-10-14T15:40:12.003Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
@@ -871,13 +868,13 @@
       "type": "naked"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
     "notes": [
-      "filled from pasted ad text"
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
     ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-10-14T15:32:28.719Z",
+    "lastScrapedAt": "2026-10-14T15:40:11.979Z",
     "a2": {
       "legal": false,
       "restricted": false,
@@ -888,7 +885,7 @@
       "min": 400,
       "max": 620,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T15:39:21.934Z",
+      "computedAt": "2026-10-14T15:40:12.003Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
