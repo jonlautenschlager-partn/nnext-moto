@@ -58,9 +58,28 @@ export async function parseAdText(text) {
     if (!out.type || out.type === "other") out.type = mm.type;
   }
 
-  // title: first line up to ~90 chars if it looks like a title
-  const firstLine = t.split(/\n|·|\|/)[0];
-  if (firstLine && firstLine.length <= 120) out.title = cleanText(firstLine);
+  // title: first line that isn't a section header
+  const HEADERS = /^(descripci[oó]n|caracter[ií]sticas|detalles|datos|specs?)$/i;
+  let title = null;
+  for (const line of t.split(/\n|·|\|/)) {
+    const s = cleanText(line);
+    if (!s || HEADERS.test(s)) continue;
+    if (s.length <= 120) { title = s; break; }
+    break;
+  }
+  if (title) out.title = title;
+
+  // description: paste format is "Descripción\n<body>\n\nCaracterísticas\nKm\n..." or plain body
+  let desc = null;
+  const descM = t.match(/descripci[oó]n\s*\n([\s\S]*?)(?:\n\s*caracter[ií]sticas\b|$)/i);
+  if (descM) desc = descM[1].trim();
+  if (!desc && !/caracter[ií]sticas/i.test(t)) desc = t; // plain body text
+  if (desc) {
+    // drop title-ish first line if it repeats the listing title
+    const lines = desc.split("\n");
+    if (lines.length > 1 && out.title && lines[0].trim().toLowerCase() === out.title.trim().toLowerCase()) desc = lines.slice(1).join("\n").trim();
+    out.description = desc || null;
+  }
 
   return out;
 }

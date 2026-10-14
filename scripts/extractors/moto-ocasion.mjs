@@ -75,6 +75,27 @@ export function parse({ html, url, data }) {
   const productId = (html.match(/product_id=(\d+)/) || [])[1];
   if (productId) out.productId = productId;
 
+  // gallery: uploads images whose filename contains the product slug (from canonical URL)
+  const canon = (html.match(/rel="canonical" href="([^"]+)"/) || html.match(/property="og:url" content="([^"]+)"/) || [])[1];
+  if (canon) {
+    const slugFull = canon.replace(/\/$/, "").split("/").pop() || "";
+    const base = slugFull.replace(/-\d{4,7}[a-z]{0,3}\.?.*$/i, "").replace(/\.html?$/, "");
+    if (base.length > 4) {
+      const re = new RegExp(`https://www\\.moto-ocasion\\.com/wp-content/uploads/[^"'>\\s]+\\.(?:jpg|jpeg|png|webp)`, "g");
+      const found = [];
+      let mm;
+      while ((mm = re.exec(html))) {
+        const u = mm[0];
+        const fname = u.split("/").pop().toLowerCase();
+        if (fname.includes("icono") || fname.includes("placeholder")) continue;
+        if (fname.includes(base) && !found.includes(u)) found.push(u);
+      }
+      if (found.length) out.images = found.slice(0, 12);
+    }
+  }
+  const ogImg = (html.match(/property="og:image" content="([^"]+)"/) || [])[1];
+  if (ogImg && !out.images) out.images = [ogImg];
+
   const locM = html.match(/class="[^"]*badge-[^"]*location[^"]*"[^>]*>([^<]{0,80})</) || html.match(/(Ubicación|Provincia)[:\s<]*([^<]{3,60})</);
   if (locM) out.location = locM[2] ? locM[2].trim() : null;
 

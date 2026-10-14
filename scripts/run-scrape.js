@@ -139,7 +139,11 @@ async function main() {
     }
   }
 
-  // 3. Save
+  // 3. Archive images (survive ad deletion) + save
+  const { downloadImages } = await import("./download-images.mjs");
+  const archived = await downloadImages(listings);
+  if (archived) console.log(`images archived: ${archived} files`);
+
   await writeJson(join(DATA_DIR, "listings.json"), listings);
   await writeCsv(listings);
 

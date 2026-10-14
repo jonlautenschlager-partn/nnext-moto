@@ -50,9 +50,9 @@ export function parse({ html, url, data }) {
   const loc = item.location;
   if (loc?.city) out.location = loc.city;
   if (loc?.postalCode) out.postalCode = loc.postalCode;
-  if (item.description?.original) out.description = item.description.original.slice(0, 600);
+  if (item.description?.original) out.description = item.description.original;
   const imgs = (item.images || []).map((im) => im.urls?.big || im.urls?.medium).filter(Boolean);
-  if (imgs.length) out.images = imgs.slice(0, 8);
+  if (imgs.length) out.images = imgs.slice(0, 12);
   if (item.modifiedDate) out.lastModified = new Date(item.modifiedDate).toISOString();
   const seller = pp.itemSeller || {};
   out.seller = seller.type && /normal|particular/i.test(seller.type) ? "particular" : seller.type ? "professional" : null;

@@ -101,7 +101,7 @@ export function parseVehicleLd(html, url) {
             out.availability = ldText(o.availability);
           }
         }
-        if (out.description == null && node.description) out.description = cleanText(String(node.description)).slice(0, 600);
+        if (out.description == null && node.description) out.description = cleanText(String(node.description));
       }
     }
   }
@@ -131,7 +131,7 @@ export function parseMeta(html, url) {
   if (!title && !image) return null;
   return {
     title: title ? cleanText(title) : null,
-    description: description ? cleanText(description).slice(0, 600) : null,
+    description: description ? cleanText(description) : null,
     images: image ? [image] : null,
   };
 }
