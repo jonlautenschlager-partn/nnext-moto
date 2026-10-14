@@ -61,7 +61,7 @@
       "min": 360,
       "max": 590,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T14:44:45.974Z",
+      "computedAt": "2026-10-14T15:04:04.227Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
@@ -139,7 +139,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T14:44:45.974Z",
+      "computedAt": "2026-10-14T15:04:04.227Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
@@ -217,7 +217,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T14:44:45.975Z",
+      "computedAt": "2026-10-14T15:04:04.228Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "postalCode": "46020",
@@ -299,7 +299,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T14:44:45.975Z",
+      "computedAt": "2026-10-14T15:04:04.228Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "postalCode": "08004",
@@ -382,7 +382,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T14:44:45.975Z",
+      "computedAt": "2026-10-14T15:04:04.228Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "postalCode": "28013",
@@ -468,7 +468,7 @@
       "min": 255,
       "max": 400,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T14:44:45.976Z",
+      "computedAt": "2026-10-14T15:04:04.229Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "postalCode": "18003",
@@ -549,7 +549,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T14:44:45.976Z",
+      "computedAt": "2026-10-14T15:04:04.229Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
@@ -627,7 +627,7 @@
       "min": 360,
       "max": 590,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T14:44:45.977Z",
+      "computedAt": "2026-10-14T15:04:04.230Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
@@ -642,5 +642,65 @@
       "8.jpg",
       "9.jpg"
     ]
+  },
+  {
+    "id": "f1b21ac6ca9a",
+    "url": "https://es.wallapop.com/item/ducati-monster-797-roja-2018-1267168307",
+    "addedAt": "2026-10-14T15:04:04.203Z",
+    "favorite": false,
+    "manualFields": [
+      "brand",
+      "type",
+      "km",
+      "description"
+    ],
+    "priceHistory": [],
+    "title": "Ducati",
+    "brand": "Ducati",
+    "model": null,
+    "type": "other",
+    "year": null,
+    "km": 800,
+    "price": null,
+    "currency": "EUR",
+    "location": null,
+    "seller": null,
+    "powerKw": null,
+    "powerCv": null,
+    "cc": null,
+    "fuel": null,
+    "gearbox": null,
+    "color": null,
+    "carnet": null,
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": null,
+    "images": null,
+    "description": "- Estilo naked. - Limitada para carnet A2 - 19,800 Km - ITV al dia - Revisiones realizadas en servicio oficial Ducati - Historial de mantenimiento -Escape SC Project -Espejos y puños Rizoma -Protectores de ruedas -Bateria Nueva -Neumaticos recién cambiados -Kit de transmisión nuevo -Siempre guardada en garaje privado y usada principalmente para salidas de fin de semana -Ninguna caída. -Se entrega con 2 llaves - No cambios -Único dueño - Se entrega tambien con funda protectora caballete Retrovisores y escape de serie.",
+    "availability": null,
+    "kbModel": null,
+    "scrapeStatus": "ok-pasted-text",
+    "httpStatus": 403,
+    "status": "active",
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot",
+      "filled from pasted ad text"
+    ],
+    "site": "es.wallapop.com",
+    "lastScrapedAt": "2026-10-14T15:04:04.146Z",
+    "a2": {
+      "legal": null,
+      "restricted": false,
+      "confidence": "low",
+      "reason": "No power info and no model match"
+    },
+    "insurance": {
+      "min": 285,
+      "max": 420,
+      "coverage": "terceros con grua",
+      "computedAt": "2026-10-14T15:04:04.231Z",
+      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
+    }
   }
 ]
