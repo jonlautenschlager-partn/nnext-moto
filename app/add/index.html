@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NNext Moto — añadir</title>
+<link rel="stylesheet" href="../style.css">
+<style>
+  .wrap { max-width: 640px; margin: 0 auto; padding: 16px 18px 40px; }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; margin-bottom: 14px; }
+  .panel h2 { margin: 0 0 10px; font-size: 16px; }
+  .panel p { margin: 6px 0; font-size: 13.5px; color: var(--muted); }
+  input[type=text], input[type=url], textarea, input[type=file] {
+    width: 100%; background: var(--panel-2); color: var(--text); border: 1px solid var(--line);
+    border-radius: 10px; padding: 10px 12px; font-size: 15px; margin: 6px 0;
+  }
+  textarea { min-height: 110px; font: 13px/1.5 -apple-system, sans-serif; }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #06121f; font-weight: 700; padding: 12px 18px; width: 100%; font-size: 15px; }
+  .msg { margin-top: 10px; font-size: 13.5px; border-radius: 10px; padding: 10px 12px; display: none; }
+  .msg.ok { display: block; background: rgba(55,211,153,.12); color: var(--accent-2); border: 1px solid rgba(55,211,153,.35); }
+  .msg.err { display: block; background: rgba(255,107,107,.12); color: var(--danger); border: 1px solid rgba(255,107,107,.35); }
+  details { margin-top: 8px; }
+  summary { cursor: pointer; color: var(--accent); font-size: 13.5px; }
+  .steps { color: var(--muted); font-size: 13px; margin: 8px 0 4px 18px; line-height: 1.7; }
+  .row { display: flex; gap: 8px; align-items: center; }
+  .mini { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 9 9"/><path d="M12 12l4-2"/></svg>
+    <div><h1>Añadir moto</h1><span class="muted">se procesa solo, ~1 minuto</span></div>
+  </div>
+  <div class="actions"><a class="btn ghost" href="../">Ver panel</a></div>
+</header>
+
+<div class="wrap">
+  <div class="panel" id="tokenPanel" hidden>
+    <h2>Conectar tu repo (solo la primera vez, por dispositivo)</h2>
+    <ol class="steps">
+      <li>Abre <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" style="color:var(--accent)">github.com/settings/personal-access-tokens/new</a></li>
+      <li>Nombre: <b>nnext-moto</b> · Caducidad: <b>1 año</b></li>
+      <li><i>Repository access</i>: <b>Only select repositories</b> → elige <b>nnext-moto</b></li>
+      <li><i>Permissions → Contents</i>: <b>Read and write</b></li>
+      <li>Generate token → cópialo y pégalo abajo</li>
+    </ol>
+    <div class="row"><input id="tk" type="password" placeholder="github_pat_…"><button class="btn" id="saveTk">Guardar</button></div>
+    <p class="mini">El token vive solo en este navegador (localStorage), con permiso únicamente sobre tu repo privado nnext-moto.</p>
+  </div>
+
+  <div class="panel" id="formPanel" hidden>
+    <h2>1. Enlace del anuncio</h2>
+    <input id="urls" type="text" placeholder="Pega el enlace (o varios, uno por línea)">
+    <p>Pega también el <b>texto del anuncio</b> si la web bloquea la lectura automática (Milanuncios, Wallapop…): el sistema rellena los campos con él.</p>
+    <textarea id="paste" placeholder="(opcional) pega aquí el texto del anuncio…"></textarea>
+    <h2>2. Captura (opcional)</h2>
+    <p>Si el enlace falla del todo, una captura de pantalla del anuncio sirve para completar los datos luego.</p>
+    <input id="shot" type="file" accept="image/*">
+    <button class="btn primary" id="go" style="margin-top:12px">Añadir</button>
+    <div class="msg" id="msg"></div>
+  </div>
+</div>
+
+<script>
+const OWNER = "jonlautenschlager-partn";
+const REPO = "nnext-moto";
+const API = `https://api.github.com/repos/${OWNER}/${REPO}/contents/`;
+
+const $ = (id) => document.getElementById(id);
+
+function b64(str) { return btoa(unescape(encodeURIComponent(str))); }
+function utf8ToB64(bytes) {
+  let bin = "";
+  const arr = new Uint8Array(bytes);
+  for (let i = 0; i < arr.length; i++) bin += String.fromCharCode(arr[i]);
+  return btoa(bin);
+}
+async function sha1(str) {
+  const h = await crypto.subtle.digest("SHA-1", new TextEncoder().encode(str));
+  return [...new Uint8Array(h)].map((b) => b.toString(16).padStart(2, "0")).join("").slice(0, 12);
+}
+
+function getToken() { return localStorage.getItem("nnext-token"); }
+function needToken() { $("tokenPanel").hidden = false; $("formPanel").hidden = true; }
+
+async function api(method, path, body, token) {
+  const res = await fetch(API + path, {
+    method,
+    headers: { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json", "Content-Type": "application/json" },
+    body: body ? JSON.stringify(body) : undefined,
+  });
+  const j = await res.json().catch(() => ({}));
+  return { ok: res.ok, status: res.status, j };
+}
+
+async function putFile(path, contentB64, message, token) {
+  let sha;
+  const cur = await api("GET", path, null, token);
+  if (cur.ok) sha = cur.j.sha;
+  const body = { message, content: contentB64, branch: "main" };
+  if (sha) body.sha = sha;
+  return api("PUT", path, body, token);
+}
+
+async function appendLinks(urls, token) {
+  let existing = "";
+  const cur = await api("GET", "links.txt", null, token);
+  if (cur.ok && cur.j.content) {
+    existing = decodeURIComponent(escape(atob(cur.j.content.replace(/\s/g, ""))));
+  }
+  const lines = existing.split("\n").map((s) => s.trim()).filter(Boolean).filter((l) => !l.startsWith("#"));
+  const fresh = urls.filter((u) => !lines.includes(u));
+  if (!fresh.length) return { added: 0 };
+  const next = [...lines, ...fresh].join("\n") + "\n";
+  const put = await putFile("links.txt", b64(next), `add ${fresh.length} link(s)`, token);
+  if (!put.ok) throw new Error(`links.txt: ${put.status} ${JSON.stringify(put.j).slice(0, 120)}`);
+  return { added: fresh.length };
+}
+
+async function resizeImage(file, maxSide = 1280, quality = 0.8) {
+  const bmp = await createImageBitmap(file);
+  const scale = Math.min(1, maxSide / Math.max(bmp.width, bmp.height));
+  const w = Math.round(bmp.width * scale), h = Math.round(bmp.height * scale);
+  const canvas = new OffscreenCanvas(w, h);
+  canvas.getContext("2d").drawImage(bmp, 0, 0, w, h);
+  const blob = await canvas.convertToBlob({ type: "image/jpeg", quality });
+  return new Uint8Array(await blob.arrayBuffer());
+}
+
+function showMsg(kind, text) {
+  const m = $("msg");
+  m.className = "msg " + kind;
+  m.innerHTML = text;
+}
+
+$("saveTk").addEventListener("click", () => {
+  const v = $("tk").value.trim();
+  if (v.length > 20) { localStorage.setItem("nnext-token", v); location.reload(); }
+});
+
+$("go").addEventListener("click", async () => {
+  const token = getToken();
+  if (!token) return needToken();
+  const urls = $("urls").value.split("\n").map((s) => s.trim()).filter((s) => /^https?:\/\//.test(s));
+  if (!urls.length) return showMsg("err", "Pega al menos un enlace que empiece por http…");
+  const paste = $("paste").value.trim();
+  const shot = $("shot").files[0];
+  try {
+    $("go").disabled = true;
+    showMsg("ok", "Subiendo…");
+    const r = await appendLinks(urls, token);
+    for (const u of urls) {
+      const id = await sha1(u);
+      if (paste) {
+        const p = await putFile(`inbox/${id}.txt`, b64(paste), `paste text for ${id}`, token);
+        if (!p.ok) throw new Error(`inbox text: ${p.status}`);
+      }
+      if (shot) {
+        const bytes = await resizeImage(shot);
+        const p = await putFile(`inbox/${id}.jpg`, utf8ToB64(bytes), `screenshot for ${id}`, token);
+        if (!p.ok) throw new Error(`inbox image: ${p.status}`);
+      }
+    }
+    showMsg("ok", `Hecho: ${r.added} enlace(s) añadidos${paste ? " + texto" : ""}${shot ? " + captura" : ""}. El robot lo procesa en ~1 minuto. <a href="../" style="color:var(--accent)">Ver panel</a>`);
+    $("urls").value = ""; $("paste").value = ""; $("shot").value = "";
+  } catch (e) {
+    showMsg("err", "Error: " + (e.message || e));
+  } finally {
+    $("go").disabled = false;
+  }
+});
+
+if (!getToken()) needToken(); else { $("tokenPanel").hidden = true; $("formPanel").hidden = false; }
+</script>
+</body>
+</html>

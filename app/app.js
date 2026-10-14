@@ -1,5 +1,66 @@
-(() => {
-  const D = window.NNEXT || { listings: [], generatedAt: null };
+const OWNER = "jonlautenschlager-partn";
+const REPO = "nnext-moto";
+const LISTINGS_API = `https://api.github.com/repos/${OWNER}/${REPO}/contents/data/listings.json`;
+
+function b64ToUtf8(b64) {
+  const bin = atob(b64.replace(/\s/g, ""));
+  return new TextDecoder().decode(Uint8Array.from(bin, (c) => c.charCodeAt(0)));
+}
+
+async function loadData() {
+  if (window.NNEXT) return window.NNEXT; // local dev: app/data.js present
+  const token = localStorage.getItem("nnext-token");
+  if (!token) return { listings: [], generatedAt: null, needToken: true };
+  try {
+    const res = await fetch(`${LISTINGS_API}?ref=main`, {
+      headers: { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json" },
+    });
+    if (res.status === 401 || res.status === 403) return { listings: [], generatedAt: null, badToken: true };
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const j = await res.json();
+    return { listings: JSON.parse(b64ToUtf8(j.content)), generatedAt: new Date().toISOString() };
+  } catch (e) {
+    return { listings: [], generatedAt: null, loadError: String(e.message || e) };
+  }
+}
+
+function showBanner(kind) {
+  const old = document.getElementById("setup");
+  if (old) old.remove();
+  const div = document.createElement("div");
+  div.id = "setup";
+  div.style.cssText = "margin:8px 22px;padding:14px;border:1px solid #2a3340;border-radius:14px;background:#161b23;font-size:13.5px";
+  if (kind === "badToken") {
+    div.innerHTML = `<b style="color:#ff6b6b">Token no válido o caducado.</b> Genera uno nuevo (ver guía abajo) y pégalo aquí.<br><input id="tk" type="password" placeholder="github_pat_…" style="margin-top:8px;width:min(420px,100%);padding:8px;border-radius:8px;border:1px solid #2a3340;background:#0e1116;color:#e8edf4"> <button id="saveTk" class="btn" style="margin-top:8px">Guardar</button>`;
+  } else if (kind === "loadError") {
+    div.innerHTML = `<b style="color:#ffb347">No se pudieron cargar los datos</b> (${kind}). Comprueba tu conexión o reintenta.`;
+  } else {
+    div.innerHTML = `<b>Primer uso:</b> crea un token de GitHub y pégalo para ver tus motos.
+      <ol style="color:#8b96a5;margin:8px 0 4px 18px;line-height:1.6">
+        <li>Abre <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" style="color:#4da3ff">github.com/settings/personal-access-tokens/new</a></li>
+        <li>Nombre: <b>nnext-moto</b> · Caducidad: 1 año</li>
+        <li>En <i>Repository access</i>: <b>Only select repositories</b> → elige <b>nnext-moto</b></li>
+        <li>En <i>Permissions → Repository permissions → Contents</i>: <b>Read and write</b></li>
+        <li>Generate → copia el token (empieza por <b>github_pat_</b>) y pégalo aquí</li>
+      </ol>
+      <input id="tk" type="password" placeholder="github_pat_…" style="width:min(420px,100%);padding:8px;border-radius:8px;border:1px solid #2a3340;background:#0e1116;color:#e8edf4"> <button id="saveTk" class="btn" style="margin-top:6px">Guardar</button>`;
+  }
+  document.querySelector("header.top").after(div);
+  const btn = div.querySelector("#saveTk");
+  if (btn) btn.addEventListener("click", () => {
+    const v = div.querySelector("#tk").value.trim();
+    if (v.length > 20) {
+      localStorage.setItem("nnext-token", v);
+      location.reload();
+    }
+  });
+}
+
+(async () => {
+  const D = await loadData();
+  if (D.needToken) showBanner("needToken");
+  else if (D.badToken) showBanner("badToken");
+  else if (D.loadError) showBanner("loadError");
   const el = (id) => document.getElementById(id);
   const fmt = (n) => (n == null ? "—" : new Intl.NumberFormat("es-ES").format(n));
   const eur = (n) => (n == null ? "—" : new Intl.NumberFormat("es-ES", { style: "currency", currency: "EUR", maximumFractionDigits: 0 }).format(n));
@@ -240,3 +301,17 @@
 
   render();
 })();
+
+document.addEventListener("click", (e) => {
+  if (e.target?.id !== "manageToken") return;
+  const t = localStorage.getItem("nnext-token");
+  if (t) {
+    if (confirm("¿Borrar el token guardado en este dispositivo?")) {
+      localStorage.removeItem("nnext-token");
+      location.reload();
+    }
+  } else {
+    localStorage.removeItem("nnext-token");
+    location.reload();
+  }
+});

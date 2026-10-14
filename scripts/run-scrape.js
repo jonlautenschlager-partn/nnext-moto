@@ -138,6 +138,9 @@ async function main() {
   await writeJson(join(DATA_DIR, "listings.json"), listings);
   await writeCsv(listings);
 
+  const { buildDashboard } = await import("./build-dashboard.mjs");
+  await buildDashboard();
+
   const ok = listings.filter((l) => l.scrapeStatus === "ok" || l.scrapeStatus === "ok-pasted-text").length;
   const manual = listings.filter((l) => l.scrapeStatus === "needs-manual").length;
   const blocked = listings.filter((l) => l.scrapeStatus === "blocked").length;
