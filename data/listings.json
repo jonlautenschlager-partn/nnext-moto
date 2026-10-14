@@ -2,7 +2,7 @@
   {
     "id": "e85828e06aaa",
     "url": "https://www.autoscout24.es/anuncios/yamaha-mt-07-gasolina-negro-cat_ma50107mo70888-ea40448a-c3e0-472a-84c2-29dfef374eb3",
-    "addedAt": "2026-10-14T12:13:18.588Z",
+    "addedAt": "2026-10-14T14:11:32.634Z",
     "favorite": false,
     "manualFields": [],
     "priceHistory": [
@@ -27,6 +27,11 @@
     "fuel": null,
     "gearbox": "manual",
     "color": "Negro",
+    "carnet": null,
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": null,
     "images": [
       "https://prod.pictures.autoscout24.net/listing-images/ea40448a-c3e0-472a-84c2-29dfef374eb3_335d8ff5-a17f-4c3f-8456-288c87c98f9a.jpg/1280x960.webp"
     ],
@@ -45,11 +50,7 @@
       "extracted from AS24 soft page (detail blocked for bots)"
     ],
     "site": "autoscout24.es",
-<<<<<<< Updated upstream
-    "lastScrapedAt": "2026-10-14T13:37:12.227Z",
-=======
-    "lastScrapedAt": "2026-10-14T14:05:57.810Z",
->>>>>>> Stashed changes
+    "lastScrapedAt": "2026-10-14T14:11:34.439Z",
     "a2": {
       "legal": false,
       "restricted": false,
@@ -60,11 +61,7 @@
       "min": 360,
       "max": 590,
       "coverage": "terceros con grua",
-<<<<<<< Updated upstream
-      "computedAt": "2026-10-14T13:37:13.066Z",
-=======
-      "computedAt": "2026-10-14T14:05:58.296Z",
->>>>>>> Stashed changes
+      "computedAt": "2026-10-14T14:11:34.960Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
@@ -74,10 +71,15 @@
   {
     "id": "8725fb7b25e6",
     "url": "https://www.moto-ocasion.com/motos-de-ocasion/sport/honda-cbr-500-r-apta-a2-7142xx/",
-    "addedAt": "2026-10-14T13:21:46.094Z",
+    "addedAt": "2026-10-14T14:11:33.676Z",
     "favorite": false,
     "manualFields": [],
-    "priceHistory": [],
+    "priceHistory": [
+      {
+        "date": "2026-10-14",
+        "price": 3750
+      }
+    ],
     "title": "HONDA CBR 500 R -APTA A2-",
     "brand": "Honda",
     "model": "CBR500R",
@@ -94,6 +96,11 @@
     "fuel": null,
     "gearbox": null,
     "color": null,
+    "carnet": "A, A2",
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": "232768",
     "images": [
       "https://www.moto-ocasion.com/wp-content/uploads/2026/10/honda-cbr-500-r-apta-a2-copia-7529xxx-530-a-honda-cbr-500-r.jpg",
       "https://www.moto-ocasion.com/wp-content/uploads/2026/10/honda-cbr-500-r-apta-a2-copia-7529xxx-530-r2-1.jpg",
@@ -121,11 +128,7 @@
     "status": "active",
     "notes": [],
     "site": "moto-ocasion.com",
-<<<<<<< Updated upstream
-    "lastScrapedAt": "2026-10-14T13:37:13.066Z",
-=======
-    "lastScrapedAt": "2026-10-14T14:05:58.297Z",
->>>>>>> Stashed changes
+    "lastScrapedAt": "2026-10-14T14:11:34.960Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -136,15 +139,9 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-<<<<<<< Updated upstream
-      "computedAt": "2026-10-14T13:37:13.960Z",
-=======
-      "computedAt": "2026-10-14T14:06:00.169Z",
->>>>>>> Stashed changes
+      "computedAt": "2026-10-14T14:11:35.239Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
-    "carnet": "A, A2",
-    "productId": "232768",
     "localImages": [
       "0.jpg",
       "1.jpg",
@@ -161,44 +158,38 @@
   {
     "id": "00d1f772b974",
     "url": "https://es.wallapop.com/item/honda-cbr-500r-2019-a2-1297777809",
-    "addedAt": "2026-10-14T13:23:26.173Z",
+    "addedAt": "2026-10-14T14:11:33.813Z",
     "favorite": false,
     "manualFields": [
       "type",
-      "km"
+      "description"
     ],
     "priceHistory": [],
-    "title": "Honda CBR 500R 2019 A2",
-    "brand": "Honda",
-    "model": "CBR 500R",
+    "title": null,
+    "brand": null,
+    "model": null,
     "type": "other",
-    "year": 2019,
-    "km": 48000,
-    "price": 3800,
+    "year": null,
+    "km": null,
+    "price": null,
     "currency": "EUR",
-    "location": "Valencia",
-    "seller": "particular",
+    "location": null,
+    "seller": null,
     "powerKw": null,
     "powerCv": null,
     "cc": null,
     "fuel": null,
     "gearbox": null,
-    "color": "Rojo",
-    "images": [
-      "https://cdn.wallapop.com/images/10420/lg/nv/__/c10420p1297777809/i6726501618.jpg?pictureSize=W800",
-      "https://cdn.wallapop.com/images/10420/lg/nv/__/c10420p1297777809/i6726501744.jpg?pictureSize=W800",
-      "https://cdn.wallapop.com/images/10420/lg/nv/__/c10420p1297777809/i6726501677.jpg?pictureSize=W800",
-      "https://cdn.wallapop.com/images/10420/lg/nv/__/c10420p1297777809/i6726501704.jpg?pictureSize=W800",
-      "https://cdn.wallapop.com/images/10420/lg/nv/__/c10420p1297777809/i6726501657.jpg?pictureSize=W800"
-    ],
-    "description": "Moto en perfecto estado de funcionamiento. Fue reparada tras caida, desde entonces usada a diario. Se escuchan ofertas y cambios como parte de pago. Se puede probar y llevar a taller.\n\nCOSAS QUE SE LE HAN HECHO:\n-Neumaticos s21 completamente nuevos y kit de arrastre con menos de 1000km.\n-Puños nuevos originales.\n-Suspension delantera con aceite recién cambiado y barras de las horquillas nuevas.\n-Cambio del tornillo de soporte de tope anticaidas (se rompió dentro y hubo que llevarla al tornero para taladrar y cambiar).\n-Reparacion del tope de giro de manillar.\n-Semimanillares nuevos originales.\n\nDEFECTOS ESTETICOS: Deposito y tapas.",
-    "availability": "https://schema.org/InStock",
-    "kbModel": {
-      "stockKw": 35,
-      "kg": 192,
-      "restrictedAvailable": false,
-      "type": "sport"
-    },
+    "color": null,
+    "carnet": null,
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": null,
+    "images": null,
+    "description": "Descripción Moto en perfecto estado de funcionamiento. Fue reparada tras caida, desde entonces usada a diario. Se escuchan ofertas y cambios como parte de pago. Se puede probar y llevar a taller. COSAS QUE SE LE HAN HECHO: -Neumaticos s21 completamente nuevos y kit de arrastre con menos de 1000km. -Puños nuevos originales. -Suspension delantera con aceite recién cambiado y barras de las horquillas nuevas. -Cambio del tornillo de soporte de tope anticaidas (se rompió dentro y hubo que llevarla al tornero para taladrar y cambiar). -Reparacion del tope de giro de manillar. -Semimanillares nuevos originales. DEFECTOS ESTETICOS: Deposito y tapas.",
+    "availability": null,
+    "kbModel": null,
     "scrapeStatus": "blocked",
     "httpStatus": 403,
     "status": "active",
@@ -206,80 +197,59 @@
       "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
     ],
     "site": "es.wallapop.com",
-<<<<<<< Updated upstream
-    "lastScrapedAt": "2026-10-14T13:37:13.960Z",
-=======
-    "lastScrapedAt": "2026-10-14T14:06:00.169Z",
->>>>>>> Stashed changes
+    "lastScrapedAt": "2026-10-14T14:11:35.239Z",
     "a2": {
-      "legal": true,
+      "legal": null,
       "restricted": false,
-      "confidence": "high",
-      "reason": "Stock model CBR500R is 35 kW (naturally A2)"
+      "confidence": "low",
+      "reason": "No power info and no model match"
     },
     "insurance": {
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-<<<<<<< Updated upstream
-      "computedAt": "2026-10-14T13:37:14.030Z",
-=======
-      "computedAt": "2026-10-14T14:06:00.648Z",
->>>>>>> Stashed changes
+      "computedAt": "2026-10-14T14:11:35.249Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
-    },
-    "postalCode": "46020",
-    "lastModified": "2026-10-07T16:31:10.000Z",
-    "localImages": [
-      "0.jpg",
-      "1.jpg",
-      "2.jpg",
-      "3.jpg",
-      "4.jpg"
-    ]
+    }
   },
   {
     "id": "d211fad28b17",
     "url": "https://es.wallapop.com/item/honda-cbr-500r-apta-a2-blanca-y-amarilla-1284543502",
-    "addedAt": "2026-10-14T13:24:05.089Z",
+    "addedAt": "2026-10-14T14:11:33.824Z",
     "favorite": false,
     "manualFields": [
       "brand",
+      "model",
       "type",
       "year",
-      "km"
+      "km",
+      "kbModel"
     ],
     "priceHistory": [],
-    "title": "Honda CBR 500R Apta A2",
+    "title": null,
     "brand": "Honda",
-    "model": "CBR 500R",
+    "model": "CBR500R",
     "type": "other",
     "year": 2020,
     "km": 39000,
-    "price": 4990,
+    "price": null,
     "currency": "EUR",
-    "location": "Barcelona",
-    "seller": "particular",
+    "location": null,
+    "seller": null,
     "powerKw": null,
     "powerCv": null,
     "cc": null,
     "fuel": null,
     "gearbox": null,
-    "color": "Blanco",
-    "images": [
-      "https://cdn.wallapop.com/images/10420/l8/s8/__/c10420p1284543502/i6633738036.jpg?pictureSize=W800",
-      "https://cdn.wallapop.com/images/10420/l8/s8/__/c10420p1284543502/i6633738051.jpg?pictureSize=W800",
-      "https://cdn.wallapop.com/images/10420/l8/s8/__/c10420p1284543502/i6633738062.jpg?pictureSize=W800",
-      "https://cdn.wallapop.com/images/10420/l8/s8/__/c10420p1284543502/i6633738123.jpg?pictureSize=W800",
-      "https://cdn.wallapop.com/images/10420/l8/s8/__/c10420p1284543502/i6633738074.jpg?pictureSize=W800",
-      "https://cdn.wallapop.com/images/10420/l8/s8/__/c10420p1284543502/i6633738100.jpg?pictureSize=W800",
-      "https://cdn.wallapop.com/images/10420/l8/s8/__/c10420p1284543502/i6633738081.jpg?pictureSize=W800",
-      "https://cdn.wallapop.com/images/10420/l8/s8/__/c10420p1284543502/i6633738105.jpg?pictureSize=W800",
-      "https://cdn.wallapop.com/images/10420/l8/s8/__/c10420p1284543502/i6633738091.jpg?pictureSize=W800",
-      "https://cdn.wallapop.com/images/10420/l8/s8/__/c10420p1284543502/i6634424605.jpg?pictureSize=W800"
-    ],
-    "description": "Honda CBR 500R.APTA A2\n\n-Revisiones al dia\n- Neumaticos nuevos(MITTAS)\n- Kit transmision cambiado a los 35000km.\n- Pastillas delanteras y traseras \ncambiadas a los 35000km\n- Itv recien pasada\n- Apta para carnet A2.",
-    "availability": "https://schema.org/InStock",
+    "color": null,
+    "carnet": null,
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": null,
+    "images": null,
+    "description": null,
+    "availability": null,
     "kbModel": {
       "stockKw": 35,
       "kg": 192,
@@ -292,47 +262,25 @@
       "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
     ],
     "site": "es.wallapop.com",
-<<<<<<< Updated upstream
-    "lastScrapedAt": "2026-10-14T13:37:14.030Z",
-=======
-    "lastScrapedAt": "2026-10-14T14:06:00.648Z",
->>>>>>> Stashed changes
+    "lastScrapedAt": "2026-10-14T14:11:35.249Z",
     "a2": {
-      "legal": true,
+      "legal": null,
       "restricted": false,
-      "confidence": "high",
-      "reason": "Stock model CBR500R is 35 kW (naturally A2)"
+      "confidence": "low",
+      "reason": "No power info and no model match"
     },
     "insurance": {
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-<<<<<<< Updated upstream
-      "computedAt": "2026-10-14T13:37:14.038Z",
-=======
-      "computedAt": "2026-10-14T14:06:01.125Z",
->>>>>>> Stashed changes
+      "computedAt": "2026-10-14T14:11:35.266Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
-    },
-    "postalCode": "08004",
-    "lastModified": "2026-10-14T12:10:36.000Z",
-    "localImages": [
-      "0.jpg",
-      "1.jpg",
-      "2.jpg",
-      "3.jpg",
-      "4.jpg",
-      "5.jpg",
-      "6.jpg",
-      "7.jpg",
-      "8.jpg",
-      "9.jpg"
-    ]
+    }
   },
   {
     "id": "d36ab1aae252",
     "url": "https://es.wallapop.com/item/yamaha-xsr-700-a2-1281798633",
-    "addedAt": "2026-10-14T13:24:52.748Z",
+    "addedAt": "2026-10-14T14:11:33.835Z",
     "favorite": false,
     "manualFields": [
       "type",
@@ -340,37 +288,31 @@
       "km"
     ],
     "priceHistory": [],
-    "title": "Yamaha XSR 700 A2",
-    "brand": "Yamaha",
-    "model": "XSR 700",
+    "title": null,
+    "brand": null,
+    "model": null,
     "type": "other",
     "year": 2021,
     "km": 22000,
-    "price": 5000,
+    "price": null,
     "currency": "EUR",
-    "location": "Madrid",
-    "seller": "particular",
+    "location": null,
+    "seller": null,
     "powerKw": null,
     "powerCv": null,
     "cc": null,
     "fuel": null,
     "gearbox": null,
-    "color": "Rojo",
-    "images": [
-      "https://cdn.wallapop.com/images/10420/l7/5e/__/c10420p1281798633/i6617302982.jpg?pictureSize=W800",
-      "https://cdn.wallapop.com/images/10420/l7/5e/__/c10420p1281798633/i6617302998.jpg?pictureSize=W800",
-      "https://cdn.wallapop.com/images/10420/l7/5e/__/c10420p1281798633/i6617303004.jpg?pictureSize=W800",
-      "https://cdn.wallapop.com/images/10420/l7/5e/__/c10420p1281798633/i6617303015.jpg?pictureSize=W800",
-      "https://cdn.wallapop.com/images/10420/l7/5e/__/c10420p1281798633/i6617303027.jpg?pictureSize=W800"
-    ],
-    "description": "*Precio rebajado hasta final de año*\nNo negociable \nRevisiones al día\nBatería nueva \nNeumaticos al 90%\nLimitada A2",
-    "availability": "https://schema.org/InStock",
-    "kbModel": {
-      "stockKw": 54.8,
-      "kg": 188,
-      "restrictedAvailable": true,
-      "type": "classic"
-    },
+    "color": null,
+    "carnet": null,
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": null,
+    "images": null,
+    "description": null,
+    "availability": null,
+    "kbModel": null,
     "scrapeStatus": "blocked",
     "httpStatus": 403,
     "status": "active",
@@ -378,42 +320,25 @@
       "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
     ],
     "site": "es.wallapop.com",
-<<<<<<< Updated upstream
-    "lastScrapedAt": "2026-10-14T13:37:14.038Z",
-=======
-    "lastScrapedAt": "2026-10-14T14:06:01.125Z",
->>>>>>> Stashed changes
+    "lastScrapedAt": "2026-10-14T14:11:35.266Z",
     "a2": {
-      "legal": true,
-      "restricted": true,
-      "confidence": "medium",
-      "reason": "Assume A2-restricted version of XSR700 (stock 54.8 kW) — confirm \"35 kW\" in ad"
+      "legal": null,
+      "restricted": false,
+      "confidence": "low",
+      "reason": "No power info and no model match"
     },
     "insurance": {
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-<<<<<<< Updated upstream
-      "computedAt": "2026-10-14T13:37:14.046Z",
-=======
-      "computedAt": "2026-10-14T14:06:01.454Z",
->>>>>>> Stashed changes
+      "computedAt": "2026-10-14T14:11:35.275Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
-    },
-    "postalCode": "28013",
-    "lastModified": "2026-10-08T13:19:22.000Z",
-    "localImages": [
-      "0.jpg",
-      "1.jpg",
-      "2.jpg",
-      "3.jpg",
-      "4.jpg"
-    ]
+    }
   },
   {
     "id": "cbd086a57086",
     "url": "https://es.wallapop.com/item/ducati-monster-696-a2-1279821519",
-    "addedAt": "2026-10-14T13:24:52.768Z",
+    "addedAt": "2026-10-14T14:11:33.843Z",
     "favorite": false,
     "manualFields": [
       "brand",
@@ -421,44 +346,33 @@
       "type",
       "year",
       "km",
-      "price",
       "kbModel"
     ],
-    "priceHistory": [
-      {
-        "date": "2026-10-14",
-        "price": 2009
-      }
-    ],
-    "title": "Ducati Monster 696 A2",
+    "priceHistory": [],
+    "title": null,
     "brand": "Ducati",
-    "model": "Monster",
+    "model": "Monster 696",
     "type": "other",
     "year": 2009,
     "km": 42000,
-    "price": 3500,
+    "price": null,
     "currency": "EUR",
-    "location": "Granada",
-    "seller": "particular",
+    "location": null,
+    "seller": null,
     "powerKw": null,
     "powerCv": null,
     "cc": null,
     "fuel": null,
     "gearbox": null,
-    "color": "Blanco",
-    "images": [
-      "https://cdn.wallapop.com/images/10420/l5/z0/__/c10420p1279821519/i6605703518.jpg?pictureSize=W800",
-      "https://cdn.wallapop.com/images/10420/l5/z0/__/c10420p1279821519/i6605703582.jpg?pictureSize=W800",
-      "https://cdn.wallapop.com/images/10420/l5/z0/__/c10420p1279821519/i6605703534.jpg?pictureSize=W800",
-      "https://cdn.wallapop.com/images/10420/l5/z0/__/c10420p1279821519/i6605703576.jpg?pictureSize=W800",
-      "https://cdn.wallapop.com/images/10420/l5/z0/__/c10420p1279821519/i6605703545.jpg?pictureSize=W800",
-      "https://cdn.wallapop.com/images/10420/l5/z0/__/c10420p1279821519/i6605703557.jpg?pictureSize=W800",
-      "https://cdn.wallapop.com/images/10420/l5/z0/__/c10420p1279821519/i6605703550.jpg?pictureSize=W800",
-      "https://cdn.wallapop.com/images/10420/l5/z0/__/c10420p1279821519/i6605703539.jpg?pictureSize=W800",
-      "https://cdn.wallapop.com/images/10420/l5/z0/__/c10420p1279821519/i6605703567.jpg?pictureSize=W800"
-    ],
-    "description": "Ducati Monster 696 conversion a 1100s\n-En julio de 2024 se hizo la conversion: bomba de freno y embrague brembo, basculante monobrazo, latiguillos metalicos, escape termignoni, barras ohlins, filtro de alto flujo, llantas marchesini\n-Limitada para el carnet A2\n-ITV recien pasada \n-Correas con menos de 3.000kms con factura\n- Aceite nuevo con menos de 1.000kms \n-Todos los mantenimientos al dia\n-retenes de la barras con menos de 7000kms\n-Estriberas retrasadas \n-Se entregan muchas piezas de la 696 de serie: como pueden ser; basculante trasero original, estriberas originales, escapes originales, un tanque de repuesto y muchas piezas mas.",
-    "availability": "https://schema.org/InStock",
+    "color": null,
+    "carnet": null,
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": null,
+    "images": null,
+    "description": null,
+    "availability": null,
     "kbModel": {
       "stockKw": 58.8,
       "kg": 173,
@@ -471,32 +385,25 @@
       "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
     ],
     "site": "es.wallapop.com",
-<<<<<<< Updated upstream
-    "lastScrapedAt": "2026-10-14T13:37:14.046Z",
-=======
-    "lastScrapedAt": "2026-10-14T14:06:01.454Z",
->>>>>>> Stashed changes
+    "lastScrapedAt": "2026-10-14T14:11:35.275Z",
     "a2": {
-      "legal": true,
-      "restricted": true,
-      "confidence": "medium",
-      "reason": "Assume A2-restricted version of Monster 696 (stock 58.8 kW) — confirm \"35 kW\" in ad"
+      "legal": null,
+      "restricted": false,
+      "confidence": "low",
+      "reason": "No power info and no model match"
     },
     "insurance": {
       "min": 255,
       "max": 400,
       "coverage": "terceros con grua",
-<<<<<<< Updated upstream
-      "computedAt": "2026-10-14T13:37:14.053Z",
+      "computedAt": "2026-10-14T14:11:35.283Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
-    },
-    "postalCode": "18003",
-    "lastModified": "2026-09-30T22:35:47.000Z"
+    }
   },
   {
     "id": "c6bfdd12494f",
     "url": "https://www.cuimo.com/moto/HONDA-CBR-500-R-2021-797d35ce",
-    "addedAt": "2026-10-14T13:55:26.902Z",
+    "addedAt": "2026-10-14T14:11:34.439Z",
     "favorite": false,
     "manualFields": [],
     "priceHistory": [],
@@ -532,7 +439,7 @@
     "status": "active",
     "notes": [],
     "site": "cuimo.com",
-    "lastScrapedAt": "2026-10-14T13:55:26.013Z",
+    "lastScrapedAt": "2026-10-14T14:11:35.283Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -543,26 +450,11 @@
       "min": 260,
       "max": 400,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T13:55:26.904Z",
-      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
-    }
-=======
-      "computedAt": "2026-10-14T14:06:01.745Z",
+      "computedAt": "2026-10-14T14:11:35.444Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
-    "postalCode": "18003",
-    "lastModified": "2026-09-30T22:35:47.000Z",
     "localImages": [
-      "0.jpg",
-      "1.jpg",
-      "2.jpg",
-      "3.jpg",
-      "4.jpg",
-      "5.jpg",
-      "6.jpg",
-      "7.jpg",
-      "8.jpg"
+      "0.jpg"
     ]
->>>>>>> Stashed changes
   }
 ]
