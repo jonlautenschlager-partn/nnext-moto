@@ -56,8 +56,9 @@ function normalize(r) {
 // but never destroys better previous data and never overwrites manual edits
 function mergeRefresh(rec, r) {
   const manual = new Set(rec.manualFields || []);
+  const rank = { ok: 3, "ok-pasted-text": 2, "needs-manual": 1, blocked: 0, failed: 0, "removed-link": 0 };
   for (const [k, v] of Object.entries(normalize(r))) {
-    if (k === "status") continue;
+    if (k === "status" || k === "scrapeStatus") continue;
     if (k === "images") {
       // only grow: a worse/blocked fetch must not erase archived photo links
       if (Array.isArray(v) && (!Array.isArray(rec.images) || v.length > rec.images.length)) rec.images = v;
@@ -74,8 +75,8 @@ function mergeRefresh(rec, r) {
   if (r.status === "removed") rec.status = "removed";
   if (r.notes?.length) rec.notes = [...new Set([...(rec.notes || []), ...r.notes])].slice(-5);
   rec.lastScrapedAt = r.scrapedAt;
-  // never downgrade: a blocked fetch doesn't erase previously-good data
-  if (r.scrapeStatus !== "blocked") rec.scrapeStatus = r.scrapeStatus;
+  // never downgrade: blocked/needs-manual must not erase a previously-good state
+  if ((rank[r.scrapeStatus] ?? 0) > (rank[rec.scrapeStatus] ?? 0)) rec.scrapeStatus = r.scrapeStatus;
   rec.httpStatus = r.httpStatus;
 }
 
