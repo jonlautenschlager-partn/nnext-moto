@@ -45,7 +45,7 @@
       "extracted from AS24 soft page (detail blocked for bots)"
     ],
     "site": "autoscout24.es",
-    "lastScrapedAt": "2026-10-14T12:33:47.420Z",
+    "lastScrapedAt": "2026-10-14T12:35:31.277Z",
     "a2": {
       "legal": false,
       "restricted": false,
@@ -56,7 +56,7 @@
       "min": 360,
       "max": 590,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-14T12:33:48.769Z",
+      "computedAt": "2026-10-14T12:35:32.319Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     }
   }
