@@ -100,12 +100,8 @@ function showBanner(kind) {
     if (filters.brand.value) rows = rows.filter((l) => l.brand === filters.brand.value);
     if (filters.type.value) rows = rows.filter((l) => (l.type || "other") === filters.type.value);
     if (filters.seller.value) rows = rows.filter((l) => l.seller === filters.seller.value);
-    if (filters.status.value !== "" && filters.status.value !== undefined && filters.status.selectedIndex > -1) {
-      const v = filters.status.value;
-      if (v === "active") rows = rows.filter((l) => (l.status || "active") === "active");
-      else if (v === "removed") rows = rows.filter((l) => l.status === "removed");
-      // value "" (Todos) -> no filter; note the first option is also "" but text differs; selectedIndex distinguishes
-    }
+    if (filters.status.value === "active") rows = rows.filter((l) => (l.status || "active") === "active");
+    else if (filters.status.value === "removed") rows = rows.filter((l) => l.status === "removed");
     if (filters.a2.value === "yes") rows = rows.filter((l) => l.a2?.legal === true);
     if (filters.a2.value === "no") rows = rows.filter((l) => l.a2?.legal === false);
     if (filters.a2.value === "unknown") rows = rows.filter((l) => l.a2?.legal == null);
@@ -255,7 +251,7 @@ function showBanner(kind) {
   });
   el("f-reset").addEventListener("click", () => {
     for (const f of Object.values(filters)) f.value = "";
-    filters.status.selectedIndex = 0;
+    filters.status.value = "active";
     state.favOnly = false;
     el("f-fav").classList.remove("on");
     render();
