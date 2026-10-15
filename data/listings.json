@@ -61,7 +61,7 @@
       "min": 360,
       "max": 590,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-15T08:13:02.388Z",
+      "computedAt": "2026-10-15T08:20:10.966Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
@@ -139,7 +139,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-15T08:13:02.389Z",
+      "computedAt": "2026-10-15T08:20:10.967Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
@@ -219,7 +219,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-15T08:13:02.389Z",
+      "computedAt": "2026-10-15T08:20:10.967Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "postalCode": "46020",
@@ -303,7 +303,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-15T08:13:02.390Z",
+      "computedAt": "2026-10-15T08:20:10.968Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "postalCode": "08004",
@@ -386,7 +386,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-15T08:13:02.390Z",
+      "computedAt": "2026-10-15T08:20:10.968Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "postalCode": "28013",
@@ -472,7 +472,7 @@
       "min": 255,
       "max": 400,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-15T08:13:02.390Z",
+      "computedAt": "2026-10-15T08:20:10.969Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "postalCode": "18003",
@@ -555,7 +555,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-15T08:13:02.391Z",
+      "computedAt": "2026-10-15T08:20:10.970Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
@@ -633,7 +633,7 @@
       "min": 360,
       "max": 590,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-15T08:13:02.391Z",
+      "computedAt": "2026-10-15T08:20:10.970Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
@@ -719,7 +719,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-15T08:13:02.392Z",
+      "computedAt": "2026-10-15T08:20:10.970Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
@@ -802,7 +802,7 @@
       "min": 345,
       "max": 520,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-15T08:13:02.392Z",
+      "computedAt": "2026-10-15T08:20:10.971Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
@@ -885,7 +885,7 @@
       "min": 400,
       "max": 620,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-15T08:13:02.393Z",
+      "computedAt": "2026-10-15T08:20:10.971Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
@@ -955,7 +955,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-15T08:13:02.396Z",
+      "computedAt": "2026-10-15T08:20:10.972Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     }
   },
@@ -1024,7 +1024,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-15T08:13:02.396Z",
+      "computedAt": "2026-10-15T08:20:10.972Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     }
   },
@@ -1078,7 +1078,7 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-15T08:13:02.397Z",
+      "computedAt": "2026-10-15T08:20:10.972Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     }
   },
@@ -1146,7 +1146,65 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-15T08:13:02.398Z",
+      "computedAt": "2026-10-15T08:20:10.973Z",
+      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
+    }
+  },
+  {
+    "id": "fa2e91cafd33",
+    "url": "https://motos.coches.net/ocasion/honda/cbr_500_r/version_2019____2021-2020-en-vizcaya-10196787.htm",
+    "addedAt": "2026-10-15T08:20:10.947Z",
+    "favorite": false,
+    "manualFields": [
+      "type",
+      "description"
+    ],
+    "priceHistory": [],
+    "title": "Version 2019 2021 2020 En Vizcaya 10196787.htm",
+    "brand": null,
+    "model": "Version",
+    "type": "other",
+    "year": null,
+    "km": null,
+    "price": null,
+    "currency": "EUR",
+    "location": null,
+    "seller": null,
+    "powerKw": null,
+    "powerCv": null,
+    "cc": null,
+    "fuel": null,
+    "gearbox": null,
+    "color": null,
+    "carnet": null,
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": null,
+    "images": null,
+    "description": "No tiene foto - pero es interesante preguntar",
+    "availability": null,
+    "kbModel": null,
+    "scrapeStatus": "ok-pasted-text",
+    "httpStatus": 200,
+    "status": "active",
+    "notes": [
+      "bot challenge page returned 200 — no data extracted",
+      "filled from pasted ad text"
+    ],
+    "site": "motos.coches.net",
+    "lastScrapedAt": "2026-10-15T08:20:10.760Z",
+    "a2": {
+      "legal": null,
+      "restricted": false,
+      "confidence": "low",
+      "reason": "No power info and no model match"
+    },
+    "insurance": {
+      "min": 285,
+      "max": 420,
+      "coverage": "terceros con grua",
+      "computedAt": "2026-10-15T08:20:10.974Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     }
   }
