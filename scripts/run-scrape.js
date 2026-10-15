@@ -103,11 +103,11 @@ async function reparsePastesAll(listings) {
     for (const k of PASTE_FIELDS) {
       const v = parsed[k];
       // paste-derived junk: a value the improved parser now rejects (e.g. km 300
-      // from "más de 300km") reverts to null — never applies to real odometer data
-      if (k === "km" && v == null && manual.has("km") && rec.km != null && rec.km < 500) {
-        rec.km = null;
-        touched.push("km");
-        continue;
+      // from "más de 300km", price 500 from "presupuestado en 500 euros") reverts
+      // to null — never applies to real odometer/sale values
+      if (v == null && manual.has(k) && rec[k] != null) {
+        if (k === "km" && rec.km < 500) { rec.km = null; touched.push("km"); continue; }
+        if (k === "price" && rec.price < 1500) { rec.price = null; touched.push("price"); continue; }
       }
       if (v == null || v === "") continue;
       // a generic "other" type must never clobber a concrete classification

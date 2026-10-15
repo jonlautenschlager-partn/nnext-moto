@@ -76,9 +76,13 @@ export function parseEsNumber(str) {
 
 export function extractPrice(text) {
   if (!text) return null;
-  // prefer explicit price with currency
-  const eur = text.match(/(\d[\d\s\u00a0\u202f.]{0,9})(?:,\d{2})?\s*(?:€|eur\b|euros?\b)/i);
-  if (eur) {
+  // prefer explicit price with currency; skip repair-cost mentions
+  // ("presupuestado en 500 euros" is a quote, not the sale price)
+  const eurRe = /(\d[\d\s\u00a0\u202f.]{0,9})(?:,\d{2})?\s*(?:€|eur\b|euros?\b)/gi;
+  let eur;
+  while ((eur = eurRe.exec(text))) {
+    const before = text.slice(Math.max(0, eur.index - 30), eur.index).toLowerCase();
+    if (/presupuestad|presupuesto|reparaci[oó]n|coste|cost[óo]|se gast|cambio de/i.test(before)) continue;
     const n = parseEsNumber(eur[1]);
     if (n && n >= 300 && n <= 100000) return n;
   }

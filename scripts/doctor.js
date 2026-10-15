@@ -113,6 +113,7 @@ async function main() {
     ["c6bfdd12", "cuimo ad must be Honda CBR500R @5199 (not brand=Cuimo)", (l) => l.brand === "Honda" && l.model === "CBR500R" && l.price === 5199],
     ["d36ab1aa", "XSR700 must stay A2-legal-restricted", (l) => l.a2?.legal === true && l.a2?.restricted === true],
     ["0d06d2a5", "cochesnet year from URL slug (2017)", (l) => l.year === 2017 && l.brand === "Honda"],
+    ["0d58ab01", "repair-quote price ('presupuestado en 500€') must not be sale price", (l) => l.price !== 500],
   ];
   for (const [prefix, what, check] of canaries) {
     const l = listings.find((x) => x.id?.startsWith(prefix));
