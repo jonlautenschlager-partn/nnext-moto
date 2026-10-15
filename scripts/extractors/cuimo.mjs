@@ -14,6 +14,12 @@ const TYPE_MAP = {
 export async function parse({ html, url, data }) {
   const out = {};
 
+  // "Moto no encontrada o no disponible" = the ad is gone — mark removed so the
+  // error page never pollutes brand/model/price (its og:image is a generic icon)
+  if (/Moto no encontrada o no disponible/i.test(html)) {
+    return { scrapeStatus: "removed", notes: ["ad removed from Cuimo (no longer available)"] };
+  }
+
   // Criteo-style hidden block with clean per-field values
   const block = html.match(/<div class="cn_product_visited"[\s\S]*?<\/div>/i)?.[0] || "";
   const span = (cls) => {

@@ -281,6 +281,8 @@ function applyFilters() {
 function statusBadge(l) {
   const s = l.status || "active";
   if (s === "removed") return `<span class="badge status">vendida/eliminada</span>`;
+  if (l.availability === "reserved") return `<span class="badge status" title="El anuncio está marcado como reservado en el sitio original">reservada</span>`;
+  if (l.availability === "sold") return `<span class="badge status">vendida</span>`;
   if (l.scrapeStatus === "needs-manual" || l.scrapeStatus === "blocked") return `<span class="badge status">datos incompletos</span>`;
   return "";
 }
@@ -397,7 +399,7 @@ function specsGrid(l) {
     ["Vendedor", l.seller], ["Sitio", l.site],
     ["Añadida", l.addedAt ? new Date(l.addedAt).toLocaleDateString("es-ES") : null],
     ["Última copia", l.lastScrapedAt ? new Date(l.lastScrapedAt).toLocaleString("es-ES") : null],
-    ["Estado anuncio", l.status === "removed" ? "vendida/eliminada (datos conservados)" : "activa"],
+    ["Estado anuncio", l.status === "removed" ? "vendida/eliminada (datos conservados)" : l.availability === "reserved" ? "reservada en el sitio original" : l.availability === "sold" ? "vendida" : "activa"],
   ];
   return rows.map(([k, v]) => `<div class="spec ${v == null ? "spec-miss" : ""}"><span>${k}</span><b>${v == null ? "—" : esc(v)}</b></div>`).join("");
 }
@@ -485,12 +487,27 @@ function openDetail(id) {
   $("editCancel").addEventListener("click", () => refreshDetail(id));
   $("editSave").addEventListener("click", async () => {
     const status = $("editStatus");
+    // interpret user-typed numbers: "34,6" and "34.6" = 34.6; "5.250" = 5250
+    function parseUserNumber(s) {
+      const t = String(s).trim().replace(/\s/g, "");
+      if (!/^\d[\d.,]*$/.test(t)) return NaN;
+      const sep = Math.max(t.lastIndexOf("."), t.lastIndexOf(","));
+      if (sep === -1) return Number(t.replace(/[.,]/g, ""));
+      const dec = t.length - sep - 1;
+      const digits = t.replace(/[.,]/g, "");
+      if (dec === 3) return Number(digits); // "5.250" thousands
+      if (dec >= 1 && dec <= 2) return Number(digits.slice(0, -dec) + "." + digits.slice(-dec)); // "34,6" decimal
+      return Number(digits);
+    }
     const patch = {};
     document.querySelectorAll("#editPanel [data-edit]").forEach((el) => {
       const k = el.dataset.edit;
       let v = el.value;
-      if (el.type === "number" && v !== "") v = String(Number(v.replace(/\./g, "").replace(",", ".")));
-      if (String(l[k] ?? "") !== v && !(l[k] == null && v === "")) patch[k] = v;
+      if (el.type === "number" && v !== "") {
+        const n = parseUserNumber(v);
+        v = Number.isFinite(n) ? n : v;
+      }
+      if (String(l[k] ?? "") !== String(v) && !(l[k] == null && v === "")) patch[k] = v;
     });
     if (!Object.keys(patch).length) { status.textContent = "sin cambios"; return; }
     status.textContent = "guardando…";

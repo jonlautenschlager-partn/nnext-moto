@@ -67,6 +67,11 @@ async function main() {
     if (l.year != null && (l.year < 1980 || l.year > new Date().getFullYear() + 1)) fail(sid, `implausible year: ${l.year}`);
     if (l.price != null && (l.price < 100 || l.price > 100000)) warn(sid, `implausible price: ${l.price}`);
     if (l.powerKw != null && (l.powerKw < 1 || l.powerKw > 150)) fail(sid, `implausible powerKw: ${l.powerKw}`);
+    // numeric fields must be real numbers — string "346" (from a mangled edit)
+    // passes NaN-ish comparisons and breaks the A2 math silently
+    for (const k of ["km", "price", "year", "cc", "powerKw", "powerCv"]) {
+      if (l[k] != null && typeof l[k] !== "number") fail(sid, `${k} stored as ${typeof l[k]} ("${l[k]}") — must be a number`);
+    }
     if (l.type && !["naked","sport","classic","custom","trail","touring","scooter","enduro","other"].includes(l.type)) fail(sid, `unknown type: ${l.type}`);
     const imgCount = (l.images || []).length + (l.localImages || []).length;
     if (okish && l.site !== "motos.coches.net" && imgCount === 0) warn(sid, `no images archived`);
@@ -114,6 +119,7 @@ async function main() {
     ["d36ab1aa", "XSR700 must stay A2-legal-restricted", (l) => l.a2?.legal === true && l.a2?.restricted === true],
     ["0d06d2a5", "cochesnet year from URL slug (2017)", (l) => l.year === 2017 && l.brand === "Honda"],
     ["0d58ab01", "repair-quote price ('presupuestado en 500€') must not be sale price", (l) => l.price !== 500],
+    ["8725fb7b", "moto-ocasion CBR500R: real price 5250 (WooCommerce price, not related card) + kw 34.6 (not mangled 346)", (l) => l.price === 5250 && l.powerKw === 34.6],
   ];
   for (const [prefix, what, check] of canaries) {
     const l = listings.find((x) => x.id?.startsWith(prefix));

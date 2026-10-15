@@ -22,6 +22,14 @@ export const host = "moto-ocasion.com";
 export function parse({ html, url, data }) {
   const out = {};
 
+  // availability: dealer marks the ad "reservada" (reserved) / "vendida" (sold).
+  // When reserved/sold the shown price is unreliable (reservation fee, related
+  // cards) — skip price extraction so the stored real price survives.
+  const estado = (html.match(/data-estado="([a-z]+)"/) || [])[1];
+  if (estado === "reservada") out.availability = "reserved";
+  else if (estado === "vendida") out.availability = "sold";
+  const reserved = out.availability != null;
+
   const ogTitle = (html.match(/property="og:title" content="([^"]+)"/) || [])[1];
   if (ogTitle) out.title = ogTitle.replace(/\s*Moto-Ocasion\s*$/i, "").trim();
   if (out.title) {
@@ -31,23 +39,40 @@ export function parse({ html, url, data }) {
     }
   }
 
-  // main product price block = the one containing <span class="moto-price-top">
-  // (related-bike cards use plain moto-price with &euro; and no top span)
-  const priceRe = /class="(?:[^"]*\s)?moto-price(?![-\w])[^"]*"[^>]*>([\s\S]{0,600})/g;
-  let pm;
-  const mainSegs = [];
-  const otherSegs = [];
-  while ((pm = priceRe.exec(html))) {
-    const seg = pm[1];
-    if (/moto-price-top/.test(seg)) mainSegs.push(seg);
-    else if (!/yith-add-to-w|&euro;/.test(seg)) otherSegs.push(seg);
-  }
-  for (const seg of [...mainSegs, ...otherSegs]) {
-    const priceNum = parseNum(seg.replace(/<[^>]+>/g, " "));
-    if (priceNum && priceNum > 300) {
-      out.price = priceNum;
+  // MAIN product price: the WooCommerce price element
+  // ("5.250&nbsp;<span class="woocommerce-Price-cur...") is THIS bike's price.
+  // The moto-price spans include RELATED-bike cards — never trust them first.
+  const wooPrice = (html.match(/>([0-9][0-9.,]{1,9})&nbsp;<span class="woocommerce-Price-cur/) || [])[1];
+  const wooNum = parseNum(wooPrice);
+  if (wooNum && wooNum > 300) {
+    out.price = wooNum;
+    out.currency = "EUR";
+  } else if (!reserved) {
+    // fallback 1: the dealer's own Google-feed price for this product
+    const gtag = (html.match(/glaGtagData[\s\S]{0,400}?"products":\{[^{]*\{[^}]*"price":(\d+)/) || [])[1];
+    if (gtag && +gtag > 300) {
+      out.price = +gtag;
       out.currency = "EUR";
-      break;
+    } else {
+      // fallback 2 (legacy markup): moto-price-top block without a wishlist
+      // button = the main bike; then plain-€ span (no wishlist, no &euro;)
+      const priceRe = /class="(?:[^"]*\s)?moto-price(?![-\w])[^"]*"[^>]*>([\s\S]{0,600})/g;
+      let pm;
+      const mainSegs = [];
+      const otherSegs = [];
+      while ((pm = priceRe.exec(html))) {
+        const seg = pm[1];
+        if (/moto-price-top/.test(seg) && !/yith-add-to-w/.test(seg)) mainSegs.push(seg);
+        else if (!/yith-add-to-w|&euro;/.test(seg)) otherSegs.push(seg);
+      }
+      for (const seg of [...mainSegs, ...otherSegs]) {
+        const priceNum = parseNum(seg.replace(/<[^>]+>/g, " "));
+        if (priceNum && priceNum > 300) {
+          out.price = priceNum;
+          out.currency = "EUR";
+          break;
+        }
+      }
     }
   }
 
@@ -62,10 +87,17 @@ export function parse({ html, url, data }) {
   const carnet = classText(html, "badge-carnet");
   if (carnet) out.carnet = carnet; // e.g. "A, A2"
 
-  // power / cc from page text (first occurrences belong to this bike's spec table)
+  // power / cc from the bike's own spec TABLE (structured <th>/<td>), which is
+  // immune to related-bike cards; first-occurrence text only as fallback
+  const specVal = (label) => {
+    const m = html.match(new RegExp(`${label}\\s*</th>[\\s\\S]{0,200}?<td[^>]*>([\\s\\S]{0,40}?)</td>`, "i"));
+    return m ? m[1].replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim() : null;
+  };
   const text = html.replace(/<script[\s\S]*?<\/script>/gi, " ").replace(/<style[\s\S]*?<\/style>/gi, " ");
-  const cvM = text.match(/(\d{1,3})\s*(?:CV|cv|Cv)\b/);
-  const ccM = text.match(/(\d{2,4})\s*(?:CC|cc|Cc)\b/);
+  const potRaw = specVal("Potencia Máxima") || (text.match(/(\d{1,3})\s*(?:CV|cv|Cv)\b/) || [])[0];
+  const ccRaw = specVal("Cilindrada") || (text.match(/(\d{2,4})\s*(?:CC|cc|Cc)\b/) || [])[0];
+  const cvM = potRaw ? potRaw.match(/(\d{1,3})/) : null;
+  const ccM = ccRaw ? ccRaw.match(/(\d{2,4})/) : null;
   const kwM = text.match(/(\d{1,3})\s*kW\b/);
   if (cvM) out.powerCv = parseFloat(cvM[1]);
   if (kwM) out.powerKw = parseFloat(kwM[1]);

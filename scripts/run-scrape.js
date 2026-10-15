@@ -75,6 +75,10 @@ function mergeRefresh(rec, r) {
       continue;
     }
     if (manual.has(k)) continue;
+    if (k === "price" && v != null && v !== "" && rec.price != null && rec.price !== v) {
+      // record the change BEFORE overwriting (history tracks real price moves)
+      rec.priceHistory = [...(rec.priceHistory || []), { date: today(), price: v }];
+    }
     if (v != null && v !== "") rec[k] = v;
   }
   if (r.status === "removed") rec.status = "removed";

@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-15T08:40:40.459Z",
+ "generatedAt": "2026-10-15T09:37:28.817Z",
  "models": [
   {
    "make": "Yamaha",
@@ -480,6 +480,22 @@
    "kg": 218,
    "restrictedAvailable": true,
    "type": "classic"
+  },
+  {
+   "make": "Kawasaki",
+   "name": "ER-6F",
+   "stockKw": 52.9,
+   "kg": 196,
+   "restrictedAvailable": true,
+   "type": "touring"
+  },
+  {
+   "make": "Voge",
+   "name": "525 ACX",
+   "stockKw": 35,
+   "kg": 200,
+   "restrictedAvailable": true,
+   "type": "trail"
   }
  ]
 }
