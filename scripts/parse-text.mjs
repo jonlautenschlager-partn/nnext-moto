@@ -49,6 +49,13 @@ export async function parseAdText(text) {
   for (const p of provs) {
     if (t.includes(p)) { out.location = p; break; }
   }
+  // explicit label wins: "Ubicación: segovia" / "Localidad: Valencia"
+  const locLabel = raw.match(/(?:^|\n)\s*(?:ubicaci[oó]n|localidad|provincia)\s*:\s*([^\n]{2,40})/i);
+  if (locLabel) {
+    const loc = cleanText(locLabel[1]);
+    const canon = provs.find((p) => p.toLowerCase() === loc.toLowerCase());
+    out.location = canon || loc.charAt(0).toUpperCase() + loc.slice(1);
+  }
 
   // seller
   if (/\bparticular\b/i.test(t)) out.seller = "particular";
@@ -93,7 +100,7 @@ export async function parseAdText(text) {
   // title: first meaningful line that is not a header, not a bullet, not a
   // junk phrase; only if the text carries a brand/model context (structured
   // pastes without a title would otherwise promote feature lines to title)
-  const SKIP_TITLE = /^(no negociable|precio negociable|[úu]ltimo precio|se vende|vendo|hola|buenas|buenos d[ií]as|atenci[oó]n)\b/i;
+  const SKIP_TITLE = /^(?:no negociable|precio negociable|[úu]ltimo precio|se vende|vendo|hola|buenas|buenos d[ií]as|atenci[oó]n)\b|^ubicaci[oó]n\s*:|^localidad\s*:|^provincia\s*:/i;
   const FIELD_LABEL = /^(kms?|a[ñn]o|estilo|precio|color|cilindrada|potencia|marcas?|modelo|combustible|cambio|matriculaci[oó]n)\s*$/i;
   let title = null;
   if (out.brand || out.model) {

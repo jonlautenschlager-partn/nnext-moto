@@ -23,7 +23,7 @@
     "seller": null,
     "powerKw": 70,
     "powerCv": 95,
-    "cc": null,
+    "cc": 689,
     "fuel": null,
     "gearbox": "manual",
     "color": "Negro",
@@ -50,7 +50,7 @@
       "extracted from AS24 soft page (detail blocked for bots)"
     ],
     "site": "autoscout24.es",
-    "lastScrapedAt": "2026-10-15T07:58:06.819Z",
+    "lastScrapedAt": "2026-10-15T08:23:34.247Z",
     "a2": {
       "legal": false,
       "restricted": false,
@@ -58,10 +58,14 @@
       "reason": "Listed power 70 kW — needs official A2 restriction kit (stock 54.8 kW, kit exists)"
     },
     "insurance": {
-      "min": 360,
-      "max": 590,
+      "min": 310,
+      "max": 495,
       "coverage": "terceros con grua",
+<<<<<<< Updated upstream
       "computedAt": "2026-10-15T08:21:38.287Z",
+=======
+      "computedAt": "2026-10-15T08:23:38.305Z",
+>>>>>>> Stashed changes
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
@@ -128,7 +132,7 @@
     "status": "active",
     "notes": [],
     "site": "moto-ocasion.com",
-    "lastScrapedAt": "2026-10-15T07:58:07.212Z",
+    "lastScrapedAt": "2026-10-15T08:23:34.669Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -139,7 +143,11 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
+<<<<<<< Updated upstream
       "computedAt": "2026-10-15T08:21:38.288Z",
+=======
+      "computedAt": "2026-10-15T08:23:38.305Z",
+>>>>>>> Stashed changes
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
@@ -182,7 +190,7 @@
     "seller": "particular",
     "powerKw": 35,
     "powerCv": null,
-    "cc": null,
+    "cc": 471,
     "fuel": null,
     "gearbox": null,
     "color": "Rojo",
@@ -202,13 +210,11 @@
       "type": "sport"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 403,
+    "httpStatus": 200,
     "status": "active",
-    "notes": [
-      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
-    ],
+    "notes": [],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-10-15T07:58:08.174Z",
+    "lastScrapedAt": "2026-10-15T08:23:34.788Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -219,7 +225,11 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
+<<<<<<< Updated upstream
       "computedAt": "2026-10-15T08:21:38.288Z",
+=======
+      "computedAt": "2026-10-15T08:23:38.306Z",
+>>>>>>> Stashed changes
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "postalCode": "46020",
@@ -261,7 +271,7 @@
     "seller": "particular",
     "powerKw": 35,
     "powerCv": null,
-    "cc": null,
+    "cc": 471,
     "fuel": null,
     "gearbox": null,
     "color": "Blanco",
@@ -286,13 +296,11 @@
       "type": "sport"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 403,
+    "httpStatus": 200,
     "status": "active",
-    "notes": [
-      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
-    ],
+    "notes": [],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-10-15T07:58:08.383Z",
+    "lastScrapedAt": "2026-10-15T08:23:35.264Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -303,7 +311,11 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
+<<<<<<< Updated upstream
       "computedAt": "2026-10-15T08:21:38.289Z",
+=======
+      "computedAt": "2026-10-15T08:23:38.306Z",
+>>>>>>> Stashed changes
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "postalCode": "08004",
@@ -349,7 +361,7 @@
     "seller": "particular",
     "powerKw": 35,
     "powerCv": null,
-    "cc": null,
+    "cc": 689,
     "fuel": null,
     "gearbox": null,
     "color": "Rojo",
@@ -369,13 +381,13 @@
       "type": "classic"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 403,
+    "httpStatus": 200,
     "status": "active",
     "notes": [
-      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+      "ad says 'limitada' — power capped to 35 kW (A2 restricted)"
     ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-10-15T07:58:08.446Z",
+    "lastScrapedAt": "2026-10-15T08:23:35.586Z",
     "a2": {
       "legal": true,
       "restricted": true,
@@ -383,10 +395,14 @@
       "reason": "Restricted to 35 kW from stock 54.8 kW — legal if official A2 version"
     },
     "insurance": {
-      "min": 285,
-      "max": 420,
+      "min": 345,
+      "max": 520,
       "coverage": "terceros con grua",
+<<<<<<< Updated upstream
       "computedAt": "2026-10-15T08:21:38.289Z",
+=======
+      "computedAt": "2026-10-15T08:23:38.308Z",
+>>>>>>> Stashed changes
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "postalCode": "28013",
@@ -431,7 +447,7 @@
     "seller": "particular",
     "powerKw": 35,
     "powerCv": null,
-    "cc": null,
+    "cc": 696,
     "fuel": null,
     "gearbox": null,
     "color": "Blanco",
@@ -455,13 +471,13 @@
       "type": "naked"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 403,
+    "httpStatus": 200,
     "status": "active",
     "notes": [
-      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+      "ad says 'limitada' — power capped to 35 kW (A2 restricted)"
     ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-10-15T07:58:08.467Z",
+    "lastScrapedAt": "2026-10-15T08:23:36.017Z",
     "a2": {
       "legal": true,
       "restricted": true,
@@ -469,10 +485,14 @@
       "reason": "Restricted to 35 kW from stock 58.8 kW — legal if official A2 version"
     },
     "insurance": {
-      "min": 255,
-      "max": 400,
+      "min": 310,
+      "max": 495,
       "coverage": "terceros con grua",
+<<<<<<< Updated upstream
       "computedAt": "2026-10-15T08:21:38.290Z",
+=======
+      "computedAt": "2026-10-15T08:23:38.309Z",
+>>>>>>> Stashed changes
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "postalCode": "18003",
@@ -544,7 +564,7 @@
     "status": "active",
     "notes": [],
     "site": "cuimo.com",
-    "lastScrapedAt": "2026-10-15T07:58:08.488Z",
+    "lastScrapedAt": "2026-10-15T08:23:36.324Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -555,7 +575,11 @@
       "min": 285,
       "max": 420,
       "coverage": "terceros con grua",
+<<<<<<< Updated upstream
       "computedAt": "2026-10-15T08:21:38.290Z",
+=======
+      "computedAt": "2026-10-15T08:23:38.309Z",
+>>>>>>> Stashed changes
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
@@ -622,7 +646,7 @@
     "status": "active",
     "notes": [],
     "site": "moto-ocasion.com",
-    "lastScrapedAt": "2026-10-15T07:58:09.312Z",
+    "lastScrapedAt": "2026-10-15T08:23:36.760Z",
     "a2": {
       "legal": false,
       "restricted": false,
@@ -633,7 +657,11 @@
       "min": 360,
       "max": 590,
       "coverage": "terceros con grua",
+<<<<<<< Updated upstream
       "computedAt": "2026-10-15T08:21:38.290Z",
+=======
+      "computedAt": "2026-10-15T08:23:38.310Z",
+>>>>>>> Stashed changes
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
@@ -673,7 +701,7 @@
     "seller": "particular",
     "powerKw": 35,
     "powerCv": null,
-    "cc": null,
+    "cc": 803,
     "fuel": null,
     "gearbox": null,
     "color": "Rojo",
@@ -693,7 +721,7 @@
       "https://cdn.wallapop.com/images/10420/ky/ft/__/c10420p1267168307/i6526668456.jpg?pictureSize=W800",
       "https://cdn.wallapop.com/images/10420/ky/ft/__/c10420p1267168307/i6645035405.jpg?pictureSize=W800"
     ],
-    "description": "- Estilo naked.\n- Limitada para carnet A2\n- 19,800 Km\n- ITV al dia\n- Revisiones realizadas en servicio oficial Ducati\n- Historial de mantenimiento\n-Escape SC Project\n-Espejos y puños Rizoma\n-Protectores de ruedas\n-Bateria Nueva\n-Neumaticos recién cambiados\n-Kit de transmisión nuevo\n-Siempre guardada en garaje privado y usada principalmente para salidas de fin de semana\n-Ninguna caída.\n-Se entrega con 2 llaves\n- No cambios\n-Único dueño\n- Se entrega tambien con funda protectora\ncaballete Retrovisores y escape de serie.",
+    "description": "Moto Ducati Monster 797 del año 2018 en color rojo. Un modelo icónico de la marca italiana.\n\n- Estilo naked.\n- Limitada para carnet A2\n- 19,800 Km\n- ITV al dia\n- Revisiones realizadas en servicio oficial Ducati\n- Historial de mantenimiento \n-Escape SC Project\n-Espejos y puños Rizoma\n-Protectores de ruedas \n-Bateria Nueva \n-Neumaticos recién cambiados\n-Kit de transmisión nuevo\n-Siempre guardada en garaje privado y usada principalmente para salidas de fin de semana \n-Ninguna caída. \n-Se entrega con 2 llaves\n- No cambios \n-Único dueño\n- Se entrega tambien con funda protectora\n caballete Retrovisores y escape de serie. \n",
     "availability": "https://schema.org/InStock",
     "kbModel": {
       "stockKw": 53.7,
@@ -702,13 +730,13 @@
       "type": "naked"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 403,
+    "httpStatus": 200,
     "status": "active",
     "notes": [
-      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+      "ad says 'limitada' — power capped to 35 kW (A2 restricted)"
     ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-10-15T07:58:09.694Z",
+    "lastScrapedAt": "2026-10-15T08:23:36.818Z",
     "a2": {
       "legal": true,
       "restricted": true,
@@ -716,10 +744,14 @@
       "reason": "Restricted to 35 kW from stock 53.7 kW — legal if official A2 version"
     },
     "insurance": {
-      "min": 285,
-      "max": 420,
+      "min": 400,
+      "max": 620,
       "coverage": "terceros con grua",
+<<<<<<< Updated upstream
       "computedAt": "2026-10-15T08:21:38.291Z",
+=======
+      "computedAt": "2026-10-15T08:23:38.310Z",
+>>>>>>> Stashed changes
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
@@ -776,7 +808,7 @@
       "https://cdn.wallapop.com/images/10420/ld/2c/__/c10420p1291734767/i6679444950.jpg?pictureSize=W800",
       "https://cdn.wallapop.com/images/10420/ld/2c/__/c10420p1291734767/i6679444977.jpg?pictureSize=W800"
     ],
-    "description": "Suzuki SV650 (No Limitada) modelo 2020 estilo naked. con solo 30.000 km. sus mantenimientos al dia en la casa oficial aceite de motor, liquido de frenos recién cambiados, Levas Retractiles color rojo, Doble freno Disco de la marca Tokico, sistema de ABS, tiene el neumatico trasero recien cambiado de la marca Bridgestone La moto está en perfectas condiciones con su ITV hasta el 2027 vendo o permuto por otra moto menor CC, depende cual sea. Precio negociable\n- Motor V-Twin de 645cc\n⁃ Diseño deportivo y ágil\n⁃ Ideal para ciudad y carretera.\n⁃ Chasis tubular",
+    "description": "Suzuki SV650 (No Limitada) modelo 2020 estilo naked. con solo 30.000 km. sus mantenimientos al dia en la casa oficial aceite de motor, liquido de frenos recién cambiados, Levas Retractiles color rojo, Doble freno Disco de la marca Tokico, sistema de ABS, tiene el neumatico trasero recien cambiado de la marca Bridgestone La moto está en perfectas condiciones con su ITV hasta el 2027 vendo o permuto por otra moto menor CC, depende cual sea. Precio negociable\n- Motor V-Twin de 645cc \n⁃ Diseño deportivo y ágil\n ⁃ Ideal para ciudad y carretera. \n⁃ Chasis tubular\n\nVendo por motivo de viaje\nviaje, precio negociable ",
     "availability": "https://schema.org/InStock",
     "kbModel": {
       "stockKw": 56,
@@ -785,13 +817,11 @@
       "type": "naked"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 403,
+    "httpStatus": 200,
     "status": "active",
-    "notes": [
-      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
-    ],
+    "notes": [],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-10-15T07:58:09.716Z",
+    "lastScrapedAt": "2026-10-15T08:23:37.099Z",
     "a2": {
       "legal": false,
       "restricted": false,
@@ -802,7 +832,11 @@
       "min": 345,
       "max": 520,
       "coverage": "terceros con grua",
+<<<<<<< Updated upstream
       "computedAt": "2026-10-15T08:21:38.291Z",
+=======
+      "computedAt": "2026-10-15T08:23:38.313Z",
+>>>>>>> Stashed changes
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
@@ -838,7 +872,7 @@
     "seller": "particular",
     "powerKw": 59.6,
     "powerCv": 81,
-    "cc": null,
+    "cc": 660,
     "fuel": null,
     "gearbox": null,
     "color": "Negro",
@@ -859,7 +893,7 @@
       "https://cdn.wallapop.com/images/10420/ln/ec/__/c10420p1309089775/i6781699322.jpg?pictureSize=W800",
       "https://cdn.wallapop.com/images/10420/ln/ec/__/c10420p1309089775/i6781699407.jpg?pictureSize=W800"
     ],
-    "description": "ULTIMO PRECIO, sino se vende esta semana se entrega a compraventa\nTriumph Trident 660.\n- quick shifter para subir y bajar marchas\n- modos de conducción\n- dispone libro de mantenimientos sellados hechos en triumph\n- garantía oficial\n- en muy buen estado, ningun desperfecto\n- 81CV carnet A, limitable A2",
+    "description": "ULTIMO PRECIO, sino se vende esta semana se entrega a compraventa\n\n\n\nTriumph Trident 660.\n- quick shifter para subir y bajar marchas\n- modos de conducción\n- dispone libro de mantenimientos sellados hechos en triumph\n- garantía oficial\n- en muy buen estado, ningun desperfecto\n- 81CV carnet A, limitable A2\n\n\n\n\nGraciass",
     "availability": "https://schema.org/InStock",
     "kbModel": {
       "stockKw": 59.6,
@@ -868,13 +902,11 @@
       "type": "naked"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 403,
+    "httpStatus": 200,
     "status": "active",
-    "notes": [
-      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
-    ],
+    "notes": [],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-10-15T07:58:09.737Z",
+    "lastScrapedAt": "2026-10-15T08:23:37.450Z",
     "a2": {
       "legal": false,
       "restricted": false,
@@ -882,10 +914,14 @@
       "reason": "Listed power 59.6 kW — needs official A2 restriction kit (stock 59.6 kW, kit exists)"
     },
     "insurance": {
-      "min": 400,
-      "max": 620,
+      "min": 345,
+      "max": 520,
       "coverage": "terceros con grua",
+<<<<<<< Updated upstream
       "computedAt": "2026-10-15T08:21:38.292Z",
+=======
+      "computedAt": "2026-10-15T08:23:38.314Z",
+>>>>>>> Stashed changes
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "localImages": [
@@ -912,19 +948,19 @@
       "description"
     ],
     "priceHistory": [],
-    "title": "Version 2019 2021 2019 En Valencia 10184533.htm",
-    "brand": null,
-    "model": "Version",
-    "type": "other",
-    "year": null,
-    "km": 300,
+    "title": "Honda CBR500R (Valencia)",
+    "brand": "Honda",
+    "model": "CBR500R",
+    "type": "sport",
+    "year": 2019,
+    "km": null,
     "price": null,
     "currency": "EUR",
-    "location": null,
+    "location": "Valencia",
     "seller": null,
-    "powerKw": null,
+    "powerKw": 35,
     "powerCv": null,
-    "cc": null,
+    "cc": 471,
     "fuel": null,
     "gearbox": null,
     "color": null,
@@ -936,7 +972,12 @@
     "images": null,
     "description": "Moto en perfecto estado de funcionamiento. Fue reparada tras caida, desde entonces le he hecho ya mas de 300km. Se escuchan ofertas y cambios como parte de pago.\nCOSAS QUE SE LE HAN HECHO:\n-Neumaticos s21 completamente nuevos y kit de arrastre con menos de 1000km.\n-Puños nuevos originales.\n-Suspension delantera con aceite recién cambiado y barras de las horquillas nuevas.\n-Cambio del tornillo de soporte de tope anticaidas (se rompió dentro y hubo que llevarla al tornero para taladrar y cambiar).\n-Reparacion del tope de giro de manillar.\n-Semimanillares y contrapesos internos nuevos originales.\n-Batería nueva.\nDEFECTOS ESTETICOS: Deposito y tapas.",
     "availability": null,
-    "kbModel": null,
+    "kbModel": {
+      "stockKw": 35,
+      "kg": 192,
+      "restrictedAvailable": false,
+      "type": "sport"
+    },
     "scrapeStatus": "ok-pasted-text",
     "httpStatus": 200,
     "status": "active",
@@ -944,18 +985,22 @@
       "bot challenge page returned 200 — no data extracted"
     ],
     "site": "motos.coches.net",
-    "lastScrapedAt": "2026-10-15T07:58:09.757Z",
+    "lastScrapedAt": "2026-10-15T08:23:37.742Z",
     "a2": {
-      "legal": null,
+      "legal": true,
       "restricted": false,
-      "confidence": "low",
-      "reason": "No power info and no model match"
+      "confidence": "high",
+      "reason": "35 kW naturally <= 35 kW"
     },
     "insurance": {
-      "min": 285,
-      "max": 420,
+      "min": 260,
+      "max": 400,
       "coverage": "terceros con grua",
+<<<<<<< Updated upstream
       "computedAt": "2026-10-15T08:21:38.294Z",
+=======
+      "computedAt": "2026-10-15T08:23:38.316Z",
+>>>>>>> Stashed changes
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     }
   },
@@ -976,7 +1021,7 @@
       "description"
     ],
     "priceHistory": [],
-    "title": "Ubicación: segovia",
+    "title": "Honda CBR500R (Segovia)",
     "brand": "Honda",
     "model": "CBR500R",
     "type": "sport",
@@ -984,11 +1029,11 @@
     "km": null,
     "price": null,
     "currency": "EUR",
-    "location": null,
+    "location": "Segovia",
     "seller": null,
     "powerKw": 34.6,
     "powerCv": 47,
-    "cc": null,
+    "cc": 471,
     "fuel": null,
     "gearbox": null,
     "color": null,
@@ -1013,7 +1058,7 @@
       "bot challenge page returned 200 — no data extracted"
     ],
     "site": "motos.coches.net",
-    "lastScrapedAt": "2026-10-15T07:58:09.848Z",
+    "lastScrapedAt": "2026-10-15T08:23:37.925Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -1021,10 +1066,14 @@
       "reason": "34.6 kW naturally <= 35 kW"
     },
     "insurance": {
-      "min": 285,
-      "max": 420,
+      "min": 260,
+      "max": 400,
       "coverage": "terceros con grua",
+<<<<<<< Updated upstream
       "computedAt": "2026-10-15T08:21:38.295Z",
+=======
+      "computedAt": "2026-10-15T08:23:38.316Z",
+>>>>>>> Stashed changes
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     }
   },
@@ -1035,19 +1084,19 @@
     "favorite": false,
     "manualFields": [],
     "priceHistory": [],
-    "title": "Version 2019 2021 2021 En Barcelona 10156293.htm",
-    "brand": null,
-    "model": "Version",
-    "type": "other",
-    "year": null,
+    "title": "Honda CBR500R (Barcelona)",
+    "brand": "Honda",
+    "model": "CBR500R",
+    "type": "sport",
+    "year": 2021,
     "km": null,
     "price": null,
     "currency": "EUR",
-    "location": null,
+    "location": "Barcelona",
     "seller": null,
-    "powerKw": null,
+    "powerKw": 35,
     "powerCv": null,
-    "cc": null,
+    "cc": 471,
     "fuel": null,
     "gearbox": null,
     "color": null,
@@ -1059,7 +1108,12 @@
     "images": null,
     "description": null,
     "availability": null,
-    "kbModel": null,
+    "kbModel": {
+      "stockKw": 35,
+      "kg": 192,
+      "restrictedAvailable": false,
+      "type": "sport"
+    },
     "scrapeStatus": "blocked",
     "httpStatus": 200,
     "status": "active",
@@ -1067,18 +1121,22 @@
       "bot challenge page returned 200 — no data extracted"
     ],
     "site": "motos.coches.net",
-    "lastScrapedAt": "2026-10-15T07:58:09.965Z",
+    "lastScrapedAt": "2026-10-15T08:23:38.095Z",
     "a2": {
-      "legal": null,
+      "legal": true,
       "restricted": false,
-      "confidence": "low",
-      "reason": "No power info and no model match"
+      "confidence": "high",
+      "reason": "35 kW naturally <= 35 kW"
     },
     "insurance": {
-      "min": 285,
-      "max": 420,
+      "min": 260,
+      "max": 400,
       "coverage": "terceros con grua",
+<<<<<<< Updated upstream
       "computedAt": "2026-10-15T08:21:38.296Z",
+=======
+      "computedAt": "2026-10-15T08:23:38.317Z",
+>>>>>>> Stashed changes
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     }
   },
@@ -1105,11 +1163,11 @@
     "km": null,
     "price": null,
     "currency": "EUR",
-    "location": null,
+    "location": "Pontevedra",
     "seller": null,
     "powerKw": 35,
     "powerCv": null,
-    "cc": null,
+    "cc": 471,
     "fuel": null,
     "gearbox": null,
     "color": null,
@@ -1131,11 +1189,10 @@
     "httpStatus": 200,
     "status": "active",
     "notes": [
-      "bot challenge page returned 200 — no data extracted",
-      "filled from pasted ad text"
+      "bot challenge page returned 200 — no data extracted"
     ],
     "site": "motos.coches.net",
-    "lastScrapedAt": "2026-10-15T08:12:40.219Z",
+    "lastScrapedAt": "2026-10-15T08:23:38.237Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -1143,9 +1200,10 @@
       "reason": "35 kW naturally <= 35 kW"
     },
     "insurance": {
-      "min": 285,
-      "max": 420,
+      "min": 260,
+      "max": 400,
       "coverage": "terceros con grua",
+<<<<<<< Updated upstream
       "computedAt": "2026-10-15T08:21:38.296Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     }
@@ -1278,6 +1336,9 @@
       "max": 420,
       "coverage": "terceros con grua",
       "computedAt": "2026-10-15T08:21:38.297Z",
+=======
+      "computedAt": "2026-10-15T08:23:38.317Z",
+>>>>>>> Stashed changes
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     }
   }

@@ -99,7 +99,7 @@ export function extractKm(text) {
   let m;
   while ((m = re.exec(text))) {
     const before = text.slice(Math.max(0, m.index - 24), m.index).toLowerCase();
-    if (/menos de|a los|cambiad|aceite|correas?|kit|cadena|neum|frenos?|bater/.test(before)) continue;
+    if (/menos de|mas de|más de|a los|cambiad|aceite|correas?|kit|cadena|neum|frenos?|bater/.test(before)) continue;
     const n = parseEsNumber(m[1]);
     if (n == null) continue;
     // odometer values are either 0 (nueva) or >= 100; ignore round small numbers like 1000 unless labeled
@@ -238,17 +238,23 @@ export function saysRestricted(text) {
 
 // derive a title from the URL path slug: ".../ducati-monster-797-roja-2018-1267168307"
 // -> "Ducati Monster 797 Roja 2018" (generic fallback when a site blocks scraping)
+// Returns null for slugs that carry no usable title (portal "version_" slugs,
+// bare ids) — callers then fall back to brand+model or URL-path enrichment.
 export function titleFromUrlSlug(url) {
   try {
     const path = new URL(url).pathname;
     const seg = path.split("/").filter(Boolean).pop() || "";
     let s = seg
+      .replace(/\.x?html?$/i, "")
       .replace(/[-_]?[0-9a-f]{6,}$/i, "") // trailing id: -1267168307, -797d35ce
       .replace(/[-_]+/g, " ")
       .trim();
     if (!s) return null;
     const words = s.split(/\s+/).filter(Boolean);
     if (words.length < 2) return null;
+    // portal-internal slugs ("version_2019____2021-2019-en-valencia") hold no
+    // human title — parsing them yields junk like "Version 2019 2021 2019"
+    if (/^version\b/i.test(s) || /^\d/.test(words[0])) return null;
     return words
       .map((w) => (/^\d/.test(w) ? w : w.charAt(0).toUpperCase() + w.slice(1)))
       .join(" ");

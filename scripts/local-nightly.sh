@@ -8,6 +8,7 @@ cd "$HOME/nnext-moto" || exit 1
 {
   echo "=== $(date '+%F %T') local nightly scrape ==="
   npm run scrape 2>&1 | tail -12
+  node scripts/doctor.js || echo "DOCTOR FOUND ISSUES (see above)"
   node scripts/sync-app.mjs
   git add -A data app inbox 2>/dev/null
   if ! git diff --cached --quiet; then

@@ -8,7 +8,8 @@
     "add": "node scripts/add-link.js",
     "scrape": "node scripts/run-scrape.js",
     "build": "node scripts/build-dashboard.mjs",
-    "parse-text": "node scripts/parse-text.js"
+    "parse-text": "node scripts/parse-text.js",
+    "doctor": "node scripts/doctor.js"
   },
   "engines": {
     "node": ">=20"

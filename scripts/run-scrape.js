@@ -5,6 +5,10 @@ import { a2Check, matchModel } from "./a2.mjs";
 import { estimateInsurance } from "./insurance.mjs";
 import { parseAdText } from "./parse-text.mjs";
 import { readListings, writeJson, listingId, DATA_DIR, ROOT, today, nowIso, diffPrice, extractBrand, extractModelFromTitle, brandIsSiteSelf, canonicalBrand, saysRestricted, titleFromUrlSlug, detectType } from "./lib.mjs";
+import { cochesnetEnrichFromUrl } from "./extractors/cochesnet.mjs";
+
+// slugs/promoted lines that carry no human title — rebuild from brand+model
+const JUNK_TITLE = /(^version\b|\bhtm\b|^ubicaci[oó]n:|^localidad:)/i;
 
 const args = process.argv.slice(2);
 const newOnly = args.includes("--new-only");
@@ -98,6 +102,13 @@ async function reparsePastesAll(listings) {
     const touched = [];
     for (const k of PASTE_FIELDS) {
       const v = parsed[k];
+      // paste-derived junk: a value the improved parser now rejects (e.g. km 300
+      // from "más de 300km") reverts to null — never applies to real odometer data
+      if (k === "km" && v == null && manual.has("km") && rec.km != null && rec.km < 500) {
+        rec.km = null;
+        touched.push("km");
+        continue;
+      }
       if (v == null || v === "") continue;
       // a generic "other" type must never clobber a concrete classification
       if (k === "type" && (v === "other" || v == null) && rec.type && rec.type !== "other") continue;
@@ -137,9 +148,29 @@ async function reenrichAll(listings) {
       rec.brand = canonicalBrand(rec.brand);
     }
 
-    // title missing or just the brand: rebuild from the URL slug (generic fallback)
-    if (!rec.title || rec.title.trim().toLowerCase() === (rec.brand || "").trim().toLowerCase()) {
-      rec.title = titleFromUrlSlug(rec.url) || `${rec.brand || ""} ${rec.model || ""}`.trim() || rec.title || null;
+    // URL-path enrichment (motos.coches.net hides brand/model/year/location in
+    // the path — fills nulls only, never overwrites manual edits or scrapes)
+    if (!manual.has("model") && (rec.model === "Version" || JUNK_TITLE.test(rec.model || ""))) rec.model = null;
+    const urlEnrich = rec.site?.endsWith("motos.coches.net") ? cochesnetEnrichFromUrl(rec.url) : null;
+    if (urlEnrich) {
+      if (!manual.has("brand") && !rec.brand && urlEnrich.brand) rec.brand = urlEnrich.brand;
+      if (urlEnrich.modelText) {
+        const mmUrl = matchModel(rec.brand || urlEnrich.brand, urlEnrich.modelText);
+        if (!manual.has("model") && !rec.model && mmUrl) {
+          rec.model = mmUrl.name;
+          rec.kbModel ??= { stockKw: mmUrl.stockKw, kg: mmUrl.kg, restrictedAvailable: mmUrl.restrictedAvailable, type: mmUrl.type };
+        }
+      }
+      if (!manual.has("year") && rec.year == null && urlEnrich.year) rec.year = urlEnrich.year;
+      if (!manual.has("location") && !rec.location && urlEnrich.location) rec.location = urlEnrich.location;
+    }
+
+    // title missing, brand-only, or junk from a portal slug: rebuild
+    if (!rec.title || JUNK_TITLE.test(rec.title) || rec.title.trim().toLowerCase() === (rec.brand || "").trim().toLowerCase()) {
+      rec.title = titleFromUrlSlug(rec.url)
+        || (rec.brand && rec.model ? `${rec.brand} ${rec.model}${rec.location ? ` (${rec.location})` : ""}` : null)
+        || rec.title
+        || null;
     }
 
     // undo an earlier wrong 'limitada' cap (e.g. "(No Limitada)" ads): reset the
@@ -164,6 +195,7 @@ async function reenrichAll(listings) {
         // otherwise keep the ad's fuller phrasing (e.g. "MT-07 Naked")
       }
       if (!manual.has("powerKw") && rec.powerKw == null && mm.stockKw != null) rec.powerKw = mm.stockKw;
+      if (!manual.has("cc") && rec.cc == null && mm.cc) rec.cc = mm.cc;
       // ad says the bike IS A2-restricted: cap power at 35 kW
       if (!manual.has("powerKw") && saysRestricted(source) && rec.powerKw != null && rec.powerKw > 35 && mm.restrictedAvailable) {
         rec.powerKw = 35;
