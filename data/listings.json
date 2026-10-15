@@ -76,7 +76,8 @@
     "manualFields": [
       "km",
       "powerKw",
-      "seller"
+      "seller",
+      "price"
     ],
     "priceHistory": [
       {
@@ -89,8 +90,8 @@
     "model": "CBR500R",
     "type": "sport",
     "year": 2021,
-    "km": "5247",
-    "price": 3750,
+    "km": "38000",
+    "price": "5250",
     "currency": "EUR",
     "location": null,
     "seller": "particular",
