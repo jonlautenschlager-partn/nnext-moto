@@ -191,6 +191,7 @@ async function reenrichAll(listings) {
     const mm = matchModel(rec.brand, `${rec.title || ""} ${rec.model || ""} ${source.slice(0, 400)}`);
     if (mm) {
       rec.kbModel = { stockKw: mm.stockKw, kg: mm.kg, restrictedAvailable: mm.restrictedAvailable, type: mm.type };
+      if (!manual.has("model") && !rec.model && mm.name) rec.model = mm.name; // KB fills a missing model
       if (!manual.has("model") && rec.model) {
         const normRec = rec.model.replace(/\s+/g, "").toLowerCase();
         const normKb = (mm.name || "").replace(/\s+/g, "").toLowerCase();
