@@ -1,0 +1,24 @@
+Especificaciones técnicas
+
+  - Estilo: Naked
+  - Color: Blanco
+  - Cilindrada: 696 cc
+  - Plazas: 2
+  - Distintivo ambiental: C
+  - Estado de componentes:
+      - Neumáticos (delantero y trasero): 80%
+      - Frenos (discos delantero y trasero): 80%
+      - Pastillas de freno (delanteras y traseras): 100%
+      - Filtro de aire: 100%
+      - Distribución, kit de transmisión y batería: 70%
+
+Historial y documentación
+
+  - País de origen: España
+  - Número de llaves: 2
+  - ITV válida hasta: 16 de julio de 2026
+  - Tipo de IVA: No deducible
+  - Última revisión (29 de abril de 2026 - Mundimoto, 46.289 km):
+      - Inspección general
+      - Cambio de aceite y filtro de aceite
+      - Cambio de filtro de aire
