@@ -73,7 +73,11 @@
     "url": "https://www.moto-ocasion.com/motos-de-ocasion/sport/honda-cbr-500-r-apta-a2-7142xx/",
     "addedAt": "2026-10-14T14:11:33.676Z",
     "favorite": false,
-    "manualFields": [],
+    "manualFields": [
+      "km",
+      "powerKw",
+      "seller"
+    ],
     "priceHistory": [
       {
         "date": "2026-10-14",
@@ -85,12 +89,12 @@
     "model": "CBR500R",
     "type": "sport",
     "year": 2021,
-    "km": 38000,
+    "km": "5247",
     "price": 3750,
     "currency": "EUR",
     "location": null,
-    "seller": null,
-    "powerKw": 34.6,
+    "seller": "particular",
+    "powerKw": "346",
     "powerCv": 47,
     "cc": 471,
     "fuel": null,
