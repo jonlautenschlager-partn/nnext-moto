@@ -101,16 +101,23 @@ export function extractKm(text) {
   }
   const re = /(\d[\d\s\u00a0\u202f.,]{0,9})\s*kms?\b/gi;
   let m;
+  const candidates = [];
   while ((m = re.exec(text))) {
-    const before = text.slice(Math.max(0, m.index - 24), m.index).toLowerCase();
-    if (/menos de|mas de|más de|a los|cambiad|aceite|correas?|kit|cadena|neum|frenos?|bater/.test(before)) continue;
+    const before = text.slice(Math.max(0, m.index - 40), m.index).toLowerCase();
+    if (/menos de|mas de|más de|a los|cambiad|aceite|correas?|kit|cadena|neum|frenos?|bater|cada|revis|mantenim|intervalo|garant/.test(before)) continue;
     const n = parseEsNumber(m[1]);
     if (n == null) continue;
     // odometer values are either 0 (nueva) or >= 100; ignore round small numbers like 1000 unless labeled
     if (n === 0) return 0;
-    if (n >= 100 && n <= 300000) return n;
+    if (n >= 100 && n <= 300000) candidates.push({ n, before });
   }
-  return null;
+  if (!candidates.length) return null;
+  // Ads often state the purchase mileage first and the current mileage later:
+  // "comprada con 3300 kms (actualmente tiene 21000 kms)". Prefer the explicit
+  // current value; otherwise the largest plausible odometer.
+  const current = candidates.find((c) => /actualmente|ahora|hoy|en la actualidad/.test(c.before));
+  if (current) return current.n;
+  return Math.max(...candidates.map((c) => c.n));
 }
 
 export function extractYear(text) {

@@ -624,6 +624,16 @@
       "type": "touring"
     },
     {
+      "make": "Kawasaki",
+      "name": "ER-6N",
+      "cc": 649,
+      "stockKw": 52.9,
+      "stockCv": 72,
+      "kg": 204,
+      "restrictedAvailable": true,
+      "type": "naked"
+    },
+    {
       "make": "Voge",
       "name": "525 ACX",
       "cc": 522,

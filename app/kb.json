@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-17T11:26:04.473Z",
+ "generatedAt": "2026-10-17T11:49:36.112Z",
  "models": [
   {
    "make": "Yamaha",
@@ -488,6 +488,14 @@
    "kg": 196,
    "restrictedAvailable": true,
    "type": "touring"
+  },
+  {
+   "make": "Kawasaki",
+   "name": "ER-6N",
+   "stockKw": 52.9,
+   "kg": 204,
+   "restrictedAvailable": true,
+   "type": "naked"
   },
   {
    "make": "Voge",

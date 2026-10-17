@@ -1,6 +1,6 @@
 import {
   extractPrice, extractKm, extractYear, extractCvKw, extractCc,
-  extractBrand, extractModelFromTitle, detectType, cleanText,
+  extractBrand, extractModelFromTitle, detectType, saysRestricted, cleanText,
 } from "./lib.mjs";
 import { matchModel } from "./a2.mjs";
 
@@ -71,6 +71,13 @@ export async function parseAdText(text) {
   }
   if (out.brand && out.model == null) {
     out.model = extractModelFromTitle(t.slice(0, 160), out.brand);
+  }
+
+  // "LIMITADA PARA CARNET A2" with the stock power in the text: the paste
+  // gives the original CV, but the bike is sold restricted. Store 35 kW so
+  // the A2 verdict is legal-restricted instead of illegal.
+  if (out.powerKw != null && out.powerKw > 35 && saysRestricted(t) && out.kbModel?.restrictedAvailable) {
+    out.powerKw = 35;
   }
 
   // ---- structure from RAW text (newlines preserved) ----

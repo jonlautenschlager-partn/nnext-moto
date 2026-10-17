@@ -1,4 +1,5 @@
 import { readJson, writeJson, listingId, siteOf, cleanText, extractPrice, extractKm, extractYear, extractCvKw, extractCc, extractBrand, extractModelFromTitle, brandIsSiteSelf, titleFromUrlSlug, saysRestricted, detectType, parseEsNumber, nowIso } from "./lib.mjs";
+import { isListingPage } from "./extractors/cochesnet.mjs";
 import { a2Check, matchModel } from "./a2.mjs";
 import { estimateInsurance } from "./insurance.mjs";
 import { parseAdText } from "./parse-text.mjs";
@@ -18,6 +19,27 @@ export async function fetchPage(url) {
     const res = await fetch(url, { headers: HEADERS, redirect: "follow", signal: AbortSignal.timeout(20000) });
     const html = await res.text();
     return { ok: res.ok, status: res.status, html, finalUrl: res.url };
+  } catch (e) {
+    return { ok: false, status: 0, html: "", error: String(e.message || e) };
+  }
+}
+
+// motos.coches.net blocks datacenter IPs with a JS/captcha interstitial. The
+// reader renders the page from a browser-capable backend, so the extractor can
+// still get price/km/description/gallery. Best-effort: only used when the
+// direct page is a challenge and the reader returns the actual listing.
+const JINA_ENABLED = process.env.NNEXT_JINA_FALLBACK !== "0";
+async function fetchViaReader(url) {
+  const headers = { "X-Return-Format": "html", accept: "text/html,application/xhtml+xml" };
+  if (process.env.JINA_API_KEY) headers.authorization = `Bearer ${process.env.JINA_API_KEY}`;
+  try {
+    const res = await fetch(`https://r.jina.ai/${url}`, {
+      headers,
+      redirect: "follow",
+      signal: AbortSignal.timeout(Number(process.env.NNEXT_JINA_TIMEOUT_MS || 60000)),
+    });
+    const html = await res.text();
+    return { ok: res.ok, status: res.status, html };
   } catch (e) {
     return { ok: false, status: 0, html: "", error: String(e.message || e) };
   }
@@ -241,13 +263,30 @@ export async function extract(url) {
     return result;
   }
 
-  const html = page.html;
+  let html = page.html;
 
   // bot-challenge pages (200 with challenge markup): never enrich from them
-  if (/cf-chl|challenge-platform|Just a moment|Attention Required|captcha|Enable JavaScript and cookies/i.test(html.slice(0, 5000))) {
-    result.scrapeStatus = "blocked";
-    result.notes.push("bot challenge page returned 200 — no data extracted");
-    return result;
+  const challenged = /cf-chl|challenge-platform|Just a moment|Attention Required|captcha|Enable JavaScript and cookies|Ups! Parece que algo no va bien/i.test(html.slice(0, 5000));
+  if (challenged) {
+    if (site.endsWith("motos.coches.net") && JINA_ENABLED) {
+      const reader = await fetchViaReader(url);
+      if (reader.ok && isListingPage(reader.html, url)) {
+        html = reader.html;
+        result.notes.push("datos vía lector externo (r.jina.ai)");
+      } else {
+        result.scrapeStatus = "blocked";
+        result.notes.push(
+          reader.ok
+            ? "lector externo devolvió una página sin anuncio (quizá eliminado)"
+            : `lector externo no disponible (${reader.error || reader.status})`
+        );
+        return result;
+      }
+    } else {
+      result.scrapeStatus = "blocked";
+      result.notes.push("bot challenge page returned 200 — no data extracted");
+      return result;
+    }
   }
 
   // tier 1: JSON-LD

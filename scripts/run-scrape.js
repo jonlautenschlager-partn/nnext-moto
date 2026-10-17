@@ -12,9 +12,27 @@ const JUNK_TITLE = /(^version\b|\bhtm\b|^ubicaci[oó]n:|^localidad:)/i;
 
 const args = process.argv.slice(2);
 const newOnly = args.includes("--new-only");
+const localNew = args.includes("--local-new");
 const quiet = args.includes("--quiet");
 const reenrichOnly = args.includes("--reenrich-only");
 const reparsePastes = args.includes("--reparse-pastes");
+
+// A listing created by CI (Wallapop 403, coches.net challenge) looks "known"
+// but still lacks the data only the Mac/reader can fetch. The 15-minute import
+// job refreshes those instead of waiting for the next full nightly.
+function needsLocalRefresh(rec) {
+  if (rec.status === "removed") return false;
+  const hasImages = (rec.images?.length || 0) > 0 || (rec.localImages?.length || 0) > 0;
+  if (rec.site === "es.wallapop.com") {
+    return rec.scrapeStatus !== "ok" || !hasImages || rec.price == null;
+  }
+  if (rec.site === "motos.coches.net") {
+    const last = Date.parse(rec.lastScrapedAt || 0);
+    const stale = !Number.isFinite(last) || Date.now() - last > 6 * 60 * 60 * 1000;
+    return stale && (rec.scrapeStatus !== "ok" || !hasImages || rec.price == null || rec.km == null);
+  }
+  return false;
+}
 
 async function exists(p) {
   try { await access(p); return true; } catch { return false; }
@@ -59,8 +77,18 @@ function normalize(r) {
 // merge extracted refresh data into existing record; refresh always wins over
 // paste-filled data (extractors are the source of truth once they work),
 // but never destroys better previous data and never overwrites manual edits
+// A successful scrape may replace paste-derived values for these structured
+// fields (the ad is the source of truth). Free-text fields such as title and
+// seller stay paste-derived unless the user edits them from the dashboard.
+const SCRAPE_OVER_PASTE = new Set([
+  "price", "km", "year", "powerKw", "powerCv", "cc",
+  "location", "postalCode", "condition", "availability", "lastModified",
+]);
+
 function mergeRefresh(rec, r) {
   const manual = new Set(rec.manualFields || []);
+  const paste = new Set(rec.pasteFields || []);
+  const user = new Set(rec.userFields || []);
   const rank = { ok: 3, "ok-pasted-text": 2, "needs-manual": 1, blocked: 0, failed: 0, "removed-link": 0 };
   for (const [k, v] of Object.entries(normalize(r))) {
     if (k === "status" || k === "scrapeStatus") continue;
@@ -74,7 +102,8 @@ function mergeRefresh(rec, r) {
       if (v && (!rec.description || String(rec.description).trim().length < String(v).trim().length)) rec.description = v;
       continue;
     }
-    if (manual.has(k)) continue;
+    if (user.has(k)) continue;
+    if (manual.has(k) && !(paste.has(k) && SCRAPE_OVER_PASTE.has(k))) continue;
     if (k === "price" && v != null && v !== "" && rec.price != null && rec.price !== v) {
       // record the change BEFORE overwriting (history tracks real price moves)
       rec.priceHistory = [...(rec.priceHistory || []), { date: today(), price: v }];
@@ -97,34 +126,52 @@ const PASTE_FIELDS = ["title","brand","model","type","year","km","price","cc","p
 const STATUS_RANK = { ok: 3, "ok-pasted-text": 2, "needs-manual": 1, blocked: 0, failed: 0, "removed-link": 0 };
 async function reparsePastesAll(listings) {
   let n = 0;
+  const SAFE = new Set(["km", "price", "year", "powerKw", "powerCv", "cc"]);
   for (const rec of listings) {
     const pastePath = join(ROOT, "inbox", `${rec.id}.txt`);
     if (!(await exists(pastePath))) continue;
     const text = await readFile(pastePath, "utf8");
     const parsed = await parseAdText(text);
     const manual = new Set(rec.manualFields || []);
+    const paste = new Set(rec.pasteFields || []);
+    const user = new Set(rec.userFields || []);
     const touched = [];
     for (const k of PASTE_FIELDS) {
       const v = parsed[k];
-      // paste-derived junk: a value the improved parser now rejects (e.g. km 300
-      // from "más de 300km", price 500 from "presupuestado en 500 euros") reverts
-      // to null — never applies to real odometer/sale values
-      if (v == null && manual.has(k) && rec[k] != null) {
-        if (k === "km" && rec.km < 500) { rec.km = null; touched.push("km"); continue; }
-        if (k === "price" && rec.price < 1500) { rec.price = null; touched.push("price"); continue; }
+      // stale paste flag: marked manual but the field is empty and the parser
+      // has no value (e.g. price from an old repair-quote mis-parse)
+      if (v == null || v === "") {
+        if (manual.has(k) && (rec[k] == null || rec[k] === "")) { manual.delete(k); paste.delete(k); }
+        // paste-derived junk the improved parser now rejects reverts to null,
+        // so a working scrape can fill it (km 300, price 500 from a quote)
+        if (manual.has(k) && rec[k] != null) {
+          if (k === "km" && rec.km < 500) { rec.km = null; manual.delete(k); paste.delete(k); touched.push("km"); continue; }
+          if (k === "price" && rec.price < 1500) { rec.price = null; manual.delete(k); paste.delete(k); touched.push("price"); continue; }
+        }
+        continue;
       }
-      if (v == null || v === "") continue;
       // a generic "other" type must never clobber a concrete classification
-      if (k === "type" && (v === "other" || v == null) && rec.type && rec.type !== "other") continue;
-      const isPasteDerived = manual.has(k);
+      if (k === "type" && v === "other" && rec.type && rec.type !== "other") continue;
+      if (user.has(k)) continue;
+      const isManual = manual.has(k);
       const isMissing = rec[k] == null || rec[k] === "";
-      if (!isPasteDerived && !isMissing) continue; // scraped value wins
-      if (String(rec[k] ?? "") === String(v)) continue; // unchanged
+      const same = String(rec[k] ?? "") === String(v);
+      if (!isManual && !isMissing) {
+        if (same) paste.add(k); // record provenance; scraped value still wins
+        continue;
+      }
+      if (isManual && !isMissing && !same && !SAFE.has(k)) continue; // preserve free-text paste/user value
+      // a successful scrape is fresher than the paste: never replace its value
+      if (rec.scrapeStatus === "ok" && !isMissing && !same) continue;
+      if (same) { paste.add(k); continue; }
       rec[k] = v;
       touched.push(k);
+      manual.add(k);
+      paste.add(k);
     }
+    rec.manualFields = [...manual];
+    rec.pasteFields = [...paste];
     if (!touched.length) continue;
-    rec.manualFields = [...new Set([...(rec.manualFields || []), ...touched])];
     if ((STATUS_RANK[rec.scrapeStatus] ?? 0) < STATUS_RANK["ok-pasted-text"]) rec.scrapeStatus = "ok-pasted-text";
     if (!rec.notes?.includes("filled from pasted ad text")) {
       rec.notes = [...new Set([...(rec.notes || []), "filled from pasted ad text"])].slice(-5);
@@ -142,6 +189,7 @@ async function reenrichAll(listings) {
   const LIMITADA_NOTE = "ad says 'limitada' — power capped to 35 kW (A2 restricted)";
   for (const rec of listings) {
     const manual = new Set(rec.manualFields || []);
+    const user = new Set(rec.userFields || []);
     const before = JSON.stringify([rec.brand, rec.model, rec.type, rec.powerKw, rec.kbModel, rec.title]);
     const source = `${rec.title || ""} ${rec.model || ""} ${rec.description || ""}`;
 
@@ -179,7 +227,7 @@ async function reenrichAll(listings) {
 
     // undo an earlier wrong 'limitada' cap (e.g. "(No Limitada)" ads): reset the
     // power so the KB can fill the real stock value again
-    if (!manual.has("powerKw") && (rec.notes || []).includes(LIMITADA_NOTE) && !saysRestricted(source)) {
+    if (!user.has("powerKw") && (rec.notes || []).includes(LIMITADA_NOTE) && !saysRestricted(source)) {
       rec.powerKw = null;
       rec.notes = (rec.notes || []).filter((x) => x !== LIMITADA_NOTE);
     }
@@ -199,10 +247,10 @@ async function reenrichAll(listings) {
         else if (normKb.includes(normRec)) rec.model = mm.name; // "Monster" -> KB "Monster 696"
         // otherwise keep the ad's fuller phrasing (e.g. "MT-07 Naked")
       }
-      if (!manual.has("powerKw") && rec.powerKw == null && mm.stockKw != null) rec.powerKw = mm.stockKw;
+      if (!user.has("powerKw") && rec.powerKw == null && mm.stockKw != null) rec.powerKw = mm.stockKw;
       if (!manual.has("cc") && rec.cc == null && mm.cc) rec.cc = mm.cc;
       // ad says the bike IS A2-restricted: cap power at 35 kW
-      if (!manual.has("powerKw") && saysRestricted(source) && rec.powerKw != null && rec.powerKw > 35 && mm.restrictedAvailable) {
+      if (!user.has("powerKw") && saysRestricted(source) && rec.powerKw != null && rec.powerKw > 35 && mm.restrictedAvailable) {
         rec.powerKw = 35;
         if (!rec.notes?.includes(LIMITADA_NOTE)) {
           rec.notes = [...(rec.notes || []), LIMITADA_NOTE].slice(-5);
@@ -230,16 +278,16 @@ async function applyManualPaste(rec, id) {
   if (!(await exists(pastePath))) return;
   const text = await readFile(pastePath, "utf8");
   const parsed = await parseAdText(text);
-  let touched = false;
+  const applied = [];
   for (const [k, v] of Object.entries(parsed)) {
-    if (v != null && rec[k] == null) { rec[k] = v; touched = true; }
+    if (v != null && rec[k] == null) { rec[k] = v; applied.push(k); }
   }
+  if (!applied.length) return;
+  rec.manualFields = [...new Set([...(rec.manualFields || []), ...applied])];
+  rec.pasteFields = [...new Set([...(rec.pasteFields || []), ...applied])];
   if (parsed.kbModel) rec.kbModel = parsed.kbModel;
-  if (touched) {
-    rec.manualFields = [...new Set([...(rec.manualFields || []), ...Object.keys(parsed).filter((k) => parsed[k] != null)])];
-    rec.scrapeStatus = "ok-pasted-text";
-    rec.notes = [...new Set([...(rec.notes || []), "filled from pasted ad text"])].slice(-5);
-  }
+  rec.scrapeStatus = "ok-pasted-text";
+  rec.notes = [...new Set([...(rec.notes || []), "filled from pasted ad text"])].slice(-5);
 }
 
 async function main() {
@@ -274,9 +322,15 @@ async function main() {
       console.log(`     -> ${rec.scrapeStatus} | ${rec.brand ?? "?"} ${rec.model ?? ""} ${rec.price ? rec.price + " eur" : ""} ${rec.km ? rec.km + " km" : ""} ${rec.year ?? ""}`);
     }
 
-    // 2. Refresh existing
-    if (!newOnly) {
-      for (const rec of listings) {
+    // 2. Refresh existing (all on full runs; only incomplete local imports on
+    // the 15-minute job)
+    const refreshList = localNew
+      ? listings.filter((rec) => needsLocalRefresh(rec))
+      : newOnly
+        ? []
+        : listings;
+    if (refreshList.length) {
+      for (const rec of refreshList) {
         if (rec.status === "removed") continue;
         console.log(`CHK  ${rec.url}`);
         const r = await extract(rec.url);

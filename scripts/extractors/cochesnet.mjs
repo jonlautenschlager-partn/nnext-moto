@@ -25,6 +25,35 @@ export function isChallengePage(html) {
   return false;
 }
 
+// Full gallery from a rendered listing page. Coches.net repeats the same image
+// at several sizes (/95x71cut/, /712x535cut/); keep one base URL per image id.
+export function galleryFromHtml(html) {
+  if (!html) return [];
+  const found = [...html.matchAll(/https:\/\/a\.mcdn\.es\/mnet\/[^"'\s\\]+?\/\d+_g\.jpg/g)].map((m) => m[0]);
+  return [...new Set(found)];
+}
+
+// The reader fallback can silently land on a catalog page when the ad is gone
+// (or when the reader is rate-limited). Only accept a page whose canonical URL
+// still points to the listing we asked for.
+export function isListingPage(html, url) {
+  if (!html) return false;
+  let wantedPath;
+  try { wantedPath = new URL(url).pathname; } catch { return false; }
+  const canonical = html.match(/<link[^>]+rel=["']canonical["'][^>]+href=["']([^"']+)["']/i)?.[1]
+    || html.match(/<meta[^>]+property=["']og:url["'][^>]+content=["']([^"']+)["']/i)?.[1];
+  if (canonical) {
+    try {
+      const gotPath = new URL(canonical, "https://motos.coches.net").pathname;
+      if (gotPath.replace(/\/+$/, "") !== wantedPath.replace(/\/+$/, "")) return false;
+    } catch {
+      return false;
+    }
+  }
+  // A real listing carries either JSON-LD offers or its own gallery images.
+  return /"offers"|itemcondition|vehicleModelDate/i.test(html) || galleryFromHtml(html).length > 0;
+}
+
 // parse a real page (tier 2): JSON-LD + og images layered over tier-1 data
 export function parse({ html, url, data }) {
   if (isChallengePage(html)) {
@@ -66,10 +95,11 @@ export function parse({ html, url, data }) {
       if (typeof o.description === "string" && !out.description) out.description = o.description.trim();
     }
   }
-  const imgs = [...html.matchAll(/<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/gi)]
+  const og = [...html.matchAll(/<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/gi)]
     .map((m) => m[1])
     .filter((u) => /^https?:\/\//.test(u));
-  if (imgs.length) out.images = [...new Set(imgs)];
+  const imgs = [...galleryFromHtml(html), ...og];
+  if (imgs.length) out.images = [...new Set(imgs)].slice(0, 12);
   return out;
 }
 

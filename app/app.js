@@ -620,8 +620,13 @@ async function saveListingEdits(id, patch) {
     if (!rec) throw new Error("listado no encontrado en listings.json");
     for (const [k, v] of Object.entries(patch)) {
       rec[k] = v === "" ? null : v;
-      if (v !== "" && v != null) rec.manualFields = [...new Set([...(rec.manualFields || []), k])];
-      else rec.manualFields = (rec.manualFields || []).filter((f) => f !== k);
+      if (v !== "" && v != null) {
+        rec.manualFields = [...new Set([...(rec.manualFields || []), k])];
+        rec.userFields = [...new Set([...(rec.userFields || []), k])];
+      } else {
+        rec.manualFields = (rec.manualFields || []).filter((f) => f !== k);
+        rec.userFields = (rec.userFields || []).filter((f) => f !== k);
+      }
     }
     const put = await fetch(LISTINGS_API, {
       method: "PUT",

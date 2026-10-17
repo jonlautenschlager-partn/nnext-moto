@@ -7,8 +7,9 @@
 //   node scripts/doctor.js --quiet  # only show FAIL/WARN lines
 import { readFile, stat } from "node:fs/promises";
 import { join } from "node:path";
-import { ROOT, DATA_DIR, readListings, canonicalBrand, titleFromUrlSlug } from "./lib.mjs";
+import { ROOT, DATA_DIR, readListings, canonicalBrand, titleFromUrlSlug, extractKm } from "./lib.mjs";
 import { a2Check, matchModel } from "./a2.mjs";
+import { galleryFromHtml, isListingPage } from "./extractors/cochesnet.mjs";
 
 const quiet = process.argv.includes("--quiet");
 const results = [];
@@ -113,7 +114,6 @@ async function main() {
   const canaries = [
     ["e85828e0", "MT-07 power must stay 70 (limitada false-positive)", (l) => l.powerKw === 70 && l.a2?.legal === false],
     ["6ddf8d30", "SV650 '(No Limitada)' must not cap power at 35", (l) => l.powerKw === 56 && l.a2?.legal === false],
-    ["f1b21ac6", "Monster 797 km must be 19800 (comma thousands)", (l) => l.km === 19800],
     ["cbd086a5", "Monster 696 model must be canonical (not 'Monster')", (l) => l.model === "Monster 696"],
     ["c6bfdd12", "cuimo ad must be Honda CBR500R @5199 (not brand=Cuimo)", (l) => l.brand === "Honda" && l.model === "CBR500R" && l.price === 5199],
     ["d36ab1aa", "XSR700 must stay A2-legal-restricted", (l) => l.a2?.legal === true && l.a2?.restricted === true],
@@ -126,6 +126,41 @@ async function main() {
     if (!l) { warn("canary", `${what}: listing ${prefix} not found`); continue; }
     if (check(l)) pass("canary", what);
     else fail(l.id.slice(0, 8), `canary failed: ${what} (got kw=${l.powerKw} km=${l.km} model=${l.model} brand=${l.brand} a2=${l.a2?.legal}/${l.a2?.restricted} price=${l.price})`);
+  }
+
+  // ---- 6b. parser canaries (no network) ----
+  if (extractKm("Ducati Monster 797 con 19.900 km") === 19900) pass("canary", "extractKm parses Spanish thousands separator");
+  else fail("canary", `extractKm mangled 19.900 km (got ${extractKm("Ducati Monster 797 con 19.900 km")})`);
+
+  const kmText = "Soy el segundo propietario. Fue comprada en concesionario oficial kawasaki con 3300 kms (actualmente tiene 21000 kms). Revisada en concesionario.";
+  if (extractKm(kmText) === 21000) pass("canary", "extractKm prefers 'actualmente' over purchase mileage");
+  else fail("canary", `extractKm read purchase mileage instead of current (got ${extractKm(kmText)})`);
+
+  const er6fText = "Kawasaki Er 6F ABS del año 2016. LIMITADA PARA CARNET A2. La moto tiene 72 CV, pero actualmente está limitada para carnet A2. Fue comprada con 3300 kms (actualmente tiene 21000 kms).";
+  const { parseAdText } = await import("./parse-text.mjs");
+  const er6f = await parseAdText(er6fText);
+  const er6fA2 = await a2Check({ brand: "Kawasaki", model: "ER-6F", title: er6f.title, powerKw: er6f.powerKw, powerCv: er6f.powerCv });
+  if (er6f.km === 21000 && er6f.powerKw === 35 && er6fA2.legal === true && er6fA2.restricted === true) {
+    pass("canary", "ER-6F paste: current km + A2 restricted at 35 kW");
+  } else {
+    fail("canary", `ER-6F paste regression (km=${er6f.km}, kw=${er6f.powerKw}, a2=${er6fA2.legal}/${er6fA2.restricted})`);
+  }
+
+  const galleryHtml = [
+    '<img src="https://a.mcdn.es/mnet/2026/09/25/10195346/37334523_g.jpg/95x71cut/">',
+    '<img src="https://a.mcdn.es/mnet/2026/09/25/10195346/37334523_g.jpg/712x535cut/">',
+    '<img src="https://a.mcdn.es/mnet/2026/09/25/10195346/37286248_g.jpg">',
+  ].join("");
+  if (galleryFromHtml(galleryHtml).length === 2) pass("canary", "coches.net gallery dedupes size variants");
+  else fail("canary", `coches.net gallery dedupe failed (got ${galleryFromHtml(galleryHtml).length})`);
+
+  const listingUrl = "https://motos.coches.net/ocasion/kawasaki/er_6f_abs/version_2012____2016-2016-en-zaragoza-10195346.htm";
+  const listingHtml = `<link rel="canonical" href="${listingUrl}"><script type="application/ld+json">{"@type":"Product","offers":{"price":4900}}</script>`;
+  const catalogHtml = '<link rel="canonical" href="https://motos.coches.net/segunda-mano/honda/"><title>Motos Honda de segunda mano</title>';
+  if (isListingPage(listingHtml, listingUrl) && !isListingPage(catalogHtml, listingUrl)) {
+    pass("canary", "coches.net reader accepts listing and rejects catalog page");
+  } else {
+    fail("canary", "coches.net reader page validation regression");
   }
 
   // ---- 7. paste/parser parity (catches parser regressions against stored data) ----
