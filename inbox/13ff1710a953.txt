@@ -1,0 +1,8 @@
+Modelo	SCRAMBLER CAFÉ RACER
+Año	2018
+Kilómetros	14000
+Carnet	A, A2
+Cilindrada	803 CC
+Potencia Máxima	73 CV
+Transmisión	Manual
+Combustible	Gasolina
