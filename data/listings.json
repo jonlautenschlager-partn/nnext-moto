@@ -2788,7 +2788,7 @@
     ],
     "priceHistory": [],
     "title": "Ruedas s22 no llegará a 1.000km nuevas.",
-    "brand": "Honda",
+    "brand": "Suzuki",
     "model": "GSX-R 600 K5",
     "type": "sport",
     "year": 2005,
@@ -2855,6 +2855,9 @@
       "3.jpg",
       "4.jpg",
       "5.jpg"
+    ],
+    "userFields": [
+      "brand"
     ]
   },
   {
