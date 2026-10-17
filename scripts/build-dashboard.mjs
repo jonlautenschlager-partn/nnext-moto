@@ -3,14 +3,28 @@ import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { join } from "node:path";
 import { DATA_DIR, ROOT, nowIso } from "./lib.mjs";
 
+async function previousJson(path, marker = "") {
+  try {
+    const text = await readFile(path, "utf8");
+    const i = marker ? text.indexOf(marker) : 0;
+    if (i < 0) return null;
+    const body = marker ? text.slice(i + marker.length) : text;
+    return JSON.parse(body.trim().replace(/;\s*$/, ""));
+  } catch {
+    return null;
+  }
+}
+
 export async function buildDashboard() {
   let listings = [];
   try {
     listings = JSON.parse(await readFile(join(DATA_DIR, "listings.json"), "utf8"));
   } catch {}
 
+  const prev = await previousJson(join(ROOT, "app", "data.js"), "window.NNEXT = ");
+  const unchanged = prev && JSON.stringify(prev.listings) === JSON.stringify(listings);
   const payload = {
-    generatedAt: nowIso(),
+    generatedAt: unchanged && prev.generatedAt ? prev.generatedAt : nowIso(),
     listings,
   };
   await mkdir(join(ROOT, "app"), { recursive: true });
@@ -24,12 +38,15 @@ export async function buildDashboard() {
   // dashboard can recompute the A2 verdict right after an edit
   try {
     const kb = JSON.parse(await readFile(join(ROOT, "knowledge-base", "models.json"), "utf8"));
+    const models = (kb.models || []).map((m) => ({
+      make: m.make, name: m.name, stockKw: m.stockKw, kg: m.kg,
+      restrictedAvailable: m.restrictedAvailable, type: m.type,
+    }));
+    const prevKb = await previousJson(join(ROOT, "app", "kb.json"));
+    const kbUnchanged = prevKb && JSON.stringify(prevKb.models) === JSON.stringify(models);
     const slim = {
-      generatedAt: nowIso(),
-      models: (kb.models || []).map((m) => ({
-        make: m.make, name: m.name, stockKw: m.stockKw, kg: m.kg,
-        restrictedAvailable: m.restrictedAvailable, type: m.type,
-      })),
+      generatedAt: kbUnchanged && prevKb.generatedAt ? prevKb.generatedAt : nowIso(),
+      models,
     };
     await writeFile(join(ROOT, "app", "kb.json"), JSON.stringify(slim, null, 1) + "\n");
     console.log(`app/kb.json written (${slim.models.length} models)`);

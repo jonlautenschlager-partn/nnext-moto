@@ -19,7 +19,7 @@ const CLASS_BASES = [
   [701, 1200, 400, 620],
 ];
 
-export async function estimateInsurance(listing) {
+export async function estimateInsurance(listing, previous = null) {
   const profile = await getProfile();
   const cc = listing.cc ?? null;
   const kw = listing.powerKw ?? (listing.powerCv ? listing.powerCv / 1.36 : null);
@@ -51,11 +51,17 @@ export async function estimateInsurance(listing) {
   if (listing.type === "scooter") { min *= 0.92; max *= 0.95; }
   if (listing.type === "trail" || listing.type === "touring") { min *= 1.03; max *= 1.05; }
 
-  return {
+  const next = {
     min: Math.round(min / 5) * 5,
     max: Math.round(max / 5) * 5,
     coverage: profile.coverageWanted || "terceros con grua",
     computedAt: new Date().toISOString(),
     disclaimer: "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile.",
   };
+  // keep the timestamp stable when the estimate did not change, so the
+  // 15-minute local job does not create commit-only churn
+  if (previous?.computedAt && previous.min === next.min && previous.max === next.max && previous.coverage === next.coverage) {
+    next.computedAt = previous.computedAt;
+  }
+  return next;
 }

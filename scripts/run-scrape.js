@@ -267,7 +267,7 @@ async function reenrichAll(listings) {
       rec.title = `${rec.brand || ""} ${rec.model || ""}`.trim() || null;
     }
     rec.a2 = await a2Check(rec);
-    rec.insurance = await estimateInsurance(rec);
+    rec.insurance = await estimateInsurance(rec, rec.insurance);
     if (JSON.stringify([rec.brand, rec.model, rec.type, rec.powerKw, rec.kbModel, rec.title]) !== before) changed++;
   }
   return changed;
@@ -317,7 +317,7 @@ async function main() {
       if (r.scrapeStatus !== "ok") await applyManualPaste(rec, id);
       if (rec.price) rec.priceHistory = [{ date: today(), price: rec.price }];
       rec.a2 = await a2Check(rec);
-      rec.insurance = await estimateInsurance(rec);
+      rec.insurance = await estimateInsurance(rec, rec.insurance);
       listings.push(rec);
       console.log(`     -> ${rec.scrapeStatus} | ${rec.brand ?? "?"} ${rec.model ?? ""} ${rec.price ? rec.price + " eur" : ""} ${rec.km ? rec.km + " km" : ""} ${rec.year ?? ""}`);
     }
@@ -349,7 +349,7 @@ async function main() {
           console.log(`     -> price change ${old} -> ${r.price} (${diffPrice(old, r.price)}%)`);
         }
         rec.a2 = await a2Check(rec);
-        rec.insurance = await estimateInsurance(rec);
+        rec.insurance = await estimateInsurance(rec, rec.insurance);
         console.log(`     -> ${rec.scrapeStatus} | status=${rec.status}`);
       }
     }
