@@ -1,0 +1,9 @@
+Modelo	SPEED 400
+Año	2024
+Kilómetros	6000
+Carnet	A, A2
+Cilindrada	398 CC
+Potencia Máxima	39 CV
+Transmisión	Manual
+Combustible	Gasolina
+Color	ROJO
