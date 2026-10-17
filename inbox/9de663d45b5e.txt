@@ -1,0 +1,8 @@
+Modelo	CBR 650 F
+Año	2020
+Kilómetros	26000
+Carnet	A, A2
+Cilindrada	649 CC
+Potencia Máxima	47 CV
+Transmisión	Manual
+Combustible	Gasolina
