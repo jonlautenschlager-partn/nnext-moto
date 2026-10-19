@@ -3300,26 +3300,29 @@
       "brand",
       "model",
       "km",
-      "description"
+      "description",
+      "year",
+      "seller",
+      "carnet"
     ],
     "priceHistory": [],
     "title": "Yamaha R6 Limitada A2 48 000kms",
     "brand": "Yamaha",
     "model": "R6",
     "type": "sport",
-    "year": null,
+    "year": 4500,
     "km": 40000,
     "price": null,
     "currency": "EUR",
     "location": null,
-    "seller": null,
+    "seller": "particular",
     "powerKw": null,
     "powerCv": null,
     "cc": null,
     "fuel": null,
     "gearbox": null,
     "color": null,
-    "carnet": null,
+    "carnet": "A2",
     "postalCode": null,
     "lastModified": null,
     "condition": null,
@@ -3355,7 +3358,12 @@
       "coverage": "terceros con grua",
       "computedAt": "2026-10-19T09:27:13.536Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
-    }
+    },
+    "userFields": [
+      "year",
+      "seller",
+      "carnet"
+    ]
   },
   {
     "id": "00e2f157e7c1",
