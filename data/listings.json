@@ -3353,10 +3353,10 @@
       "reason": "No power info and no model match"
     },
     "insurance": {
-      "min": 285,
-      "max": 420,
+      "min": 300,
+      "max": 440,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-19T09:27:13.536Z",
+      "computedAt": "2026-10-19T09:34:35.284Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "userFields": [
