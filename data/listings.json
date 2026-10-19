@@ -3368,7 +3368,10 @@
       "model",
       "year",
       "km",
-      "description"
+      "description",
+      "price",
+      "seller",
+      "carnet"
     ],
     "priceHistory": [],
     "title": "Tambie entrego el escape original para la itv.",
@@ -3377,17 +3380,17 @@
     "type": "other",
     "year": 2014,
     "km": 14000,
-    "price": null,
+    "price": 4250,
     "currency": "EUR",
     "location": null,
-    "seller": null,
+    "seller": "particular",
     "powerKw": null,
     "powerCv": null,
     "cc": null,
     "fuel": null,
     "gearbox": null,
     "color": null,
-    "carnet": null,
+    "carnet": "A",
     "postalCode": null,
     "lastModified": null,
     "condition": null,
@@ -3425,6 +3428,11 @@
       "coverage": "terceros con grua",
       "computedAt": "2026-10-19T09:27:13.557Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
-    }
+    },
+    "userFields": [
+      "price",
+      "seller",
+      "carnet"
+    ]
   }
 ]
