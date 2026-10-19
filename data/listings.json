@@ -3303,16 +3303,17 @@
       "description",
       "year",
       "seller",
-      "carnet"
+      "carnet",
+      "price"
     ],
     "priceHistory": [],
     "title": "Yamaha R6 Limitada A2 48 000kms",
     "brand": "Yamaha",
     "model": "R6",
     "type": "sport",
-    "year": 4500,
+    "year": 2006,
     "km": 40000,
-    "price": null,
+    "price": 4500,
     "currency": "EUR",
     "location": null,
     "seller": "particular",
@@ -3362,7 +3363,8 @@
     "userFields": [
       "year",
       "seller",
-      "carnet"
+      "carnet",
+      "price"
     ]
   },
   {
