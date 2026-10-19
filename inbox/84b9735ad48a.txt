@@ -1,0 +1,8 @@
+Modelo	XSR 700
+Año	2019
+Kilómetros	20000
+Carnet	A, A2
+Cilindrada	689 CC
+Potencia Máxima	47 CV
+Transmisión	Manual
+Combustible	Gasolina
