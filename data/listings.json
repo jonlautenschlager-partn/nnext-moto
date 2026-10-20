@@ -3396,13 +3396,14 @@
       "description",
       "price",
       "seller",
-      "carnet"
+      "carnet",
+      "type"
     ],
     "priceHistory": [],
     "title": "Tambie entrego el escape original para la itv.",
     "brand": "Suzuki",
     "model": "GSR 750",
-    "type": "other",
+    "type": "naked",
     "year": 2014,
     "km": 14000,
     "price": 4250,
@@ -3460,7 +3461,8 @@
     "userFields": [
       "price",
       "seller",
-      "carnet"
+      "carnet",
+      "type"
     ],
     "localImages": [
       "0.jpg",
