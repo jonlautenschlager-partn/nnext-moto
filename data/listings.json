@@ -3964,7 +3964,7 @@
     ],
     "priceHistory": [],
     "title": "Honda Cbr 500r",
-    "brand": null,
+    "brand": "Honda",
     "model": "Honda Cbr 500r",
     "type": "sport",
     "year": 2021,
@@ -4018,6 +4018,72 @@
       "max": 400,
       "coverage": "terceros con grua",
       "computedAt": "2026-10-20T13:29:43.773Z",
+      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
+    }
+  },
+  {
+    "id": "cdaaca9b6fd8",
+    "url": "https://es.wallapop.com/item/honda-cb500f-2016-hrc-1233921975",
+    "addedAt": "2026-10-20T13:31:23.325Z",
+    "favorite": false,
+    "manualFields": [
+      "brand",
+      "model",
+      "year",
+      "description"
+    ],
+    "priceHistory": [],
+    "title": "Honda Cb500f 2016 Hrc",
+    "brand": "Honda",
+    "model": "CB500",
+    "type": "other",
+    "year": 2016,
+    "km": null,
+    "price": null,
+    "currency": "EUR",
+    "location": null,
+    "seller": null,
+    "powerKw": null,
+    "powerCv": null,
+    "cc": null,
+    "fuel": null,
+    "gearbox": null,
+    "color": null,
+    "carnet": null,
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": null,
+    "images": null,
+    "description": "Se vende Honda CB500 del año 2016 con los colores HRC. Tiene todos los mantenimientos hechos, Km 60.000. Lista para coger y no preocuparse de nada en muchos kilometros. ITV pasada hasta 2028.\n*Kit de arrastre Nuevo\n*Aceite y filtros\n*Rueda delantera Nueva\n*Pastillas de freno cambiadas\n*Liquido refrigerante cambiado\n*Cúpula negra Givi\n*Escape homologado sin problemas en ITV\nEs una moto perfecta para iniciación o gente que busque buenos consumos en un segmento del A2. Tiene un mínimo abollón en el deposito de una caída a baja velocidad.",
+    "availability": null,
+    "kbModel": null,
+    "scrapeStatus": "ok-pasted-text",
+    "httpStatus": 403,
+    "status": "active",
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot",
+      "filled from pasted ad text"
+    ],
+    "site": "es.wallapop.com",
+    "lastScrapedAt": "2026-10-20T13:31:23.242Z",
+    "pasteFields": [
+      "brand",
+      "model",
+      "year",
+      "description"
+    ],
+    "a2": {
+      "legal": null,
+      "restricted": false,
+      "confidence": "low",
+      "reason": "No power info and no model match"
+    },
+    "insurance": {
+      "min": 255,
+      "max": 400,
+      "coverage": "terceros con grua",
+      "computedAt": "2026-10-20T13:31:23.332Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     }
   }
