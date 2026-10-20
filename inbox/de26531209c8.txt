@@ -1,0 +1,8 @@
+Modelo	MONSTER 797
+Año	2017
+Kilómetros	36000
+Carnet	A, A2
+Cilindrada	803 CC
+Potencia Máxima	73 CV
+Transmisión	Manual
+Combustible	Gasolina
