@@ -4041,26 +4041,31 @@
       "brand",
       "model",
       "year",
-      "description"
+      "description",
+      "type",
+      "km",
+      "price",
+      "seller",
+      "carnet"
     ],
     "priceHistory": [],
     "title": "Honda Cb500f 2016 Hrc",
     "brand": "Honda",
     "model": "CB500",
-    "type": "other",
+    "type": "naked",
     "year": 2016,
-    "km": null,
-    "price": null,
+    "km": 60000,
+    "price": 3200,
     "currency": "EUR",
     "location": null,
-    "seller": null,
+    "seller": "particular",
     "powerKw": null,
     "powerCv": null,
     "cc": null,
     "fuel": null,
     "gearbox": null,
     "color": null,
-    "carnet": null,
+    "carnet": "A2",
     "postalCode": null,
     "lastModified": null,
     "condition": null,
@@ -4095,6 +4100,13 @@
       "coverage": "terceros con grua",
       "computedAt": "2026-10-20T13:31:23.332Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
-    }
+    },
+    "userFields": [
+      "type",
+      "km",
+      "price",
+      "seller",
+      "carnet"
+    ]
   }
 ]
