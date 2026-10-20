@@ -3666,7 +3666,11 @@
     "favorite": false,
     "manualFields": [
       "year",
-      "description"
+      "description",
+      "km",
+      "price",
+      "seller",
+      "carnet"
     ],
     "priceHistory": [],
     "title": "Aprilia Tuono 457",
@@ -3674,18 +3678,18 @@
     "model": "Aprilia Tuono 457",
     "type": "naked",
     "year": 2026,
-    "km": null,
-    "price": null,
+    "km": 200,
+    "price": 4790,
     "currency": "EUR",
     "location": null,
-    "seller": null,
+    "seller": "particular",
     "powerKw": 35,
     "powerCv": null,
     "cc": 457,
     "fuel": null,
     "gearbox": null,
     "color": null,
-    "carnet": null,
+    "carnet": "A2",
     "postalCode": null,
     "lastModified": null,
     "condition": null,
@@ -3724,7 +3728,13 @@
       "coverage": "terceros con grua",
       "computedAt": "2026-10-20T13:10:32.530Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
-    }
+    },
+    "userFields": [
+      "km",
+      "price",
+      "seller",
+      "carnet"
+    ]
   },
   {
     "id": "b70d613d9f69",
