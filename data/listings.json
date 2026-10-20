@@ -3658,5 +3658,72 @@
       "6.jpg",
       "7.jpg"
     ]
+  },
+  {
+    "id": "fd1bd53eb8b1",
+    "url": "https://es.wallapop.com/item/aprilia-tuono-457-1315265345",
+    "addedAt": "2026-10-20T13:10:32.464Z",
+    "favorite": false,
+    "manualFields": [
+      "year",
+      "description"
+    ],
+    "priceHistory": [],
+    "title": "Aprilia Tuono 457",
+    "brand": null,
+    "model": "Aprilia Tuono 457",
+    "type": "naked",
+    "year": 2026,
+    "km": null,
+    "price": null,
+    "currency": "EUR",
+    "location": null,
+    "seller": null,
+    "powerKw": 35,
+    "powerCv": null,
+    "cc": 457,
+    "fuel": null,
+    "gearbox": null,
+    "color": null,
+    "carnet": null,
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": null,
+    "images": null,
+    "description": "- Año: 2026\n- Kilómetros: 200\n- Estado: Muy Bueno\n- Garantía: 12 meses\n- Precio: 4.790&euro; (no negociable)\n- Financiación: Hasta el 100%\n- Seguro opcional\n- Tipo: NAKED\n- Carnet: A2\n- Aceptamos tu moto como parte de pago",
+    "availability": null,
+    "kbModel": {
+      "stockKw": 35,
+      "kg": 175,
+      "restrictedAvailable": false,
+      "type": "naked"
+    },
+    "scrapeStatus": "ok-pasted-text",
+    "httpStatus": 403,
+    "status": "active",
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot",
+      "filled from pasted ad text"
+    ],
+    "site": "es.wallapop.com",
+    "lastScrapedAt": "2026-10-20T13:10:32.376Z",
+    "pasteFields": [
+      "year",
+      "description"
+    ],
+    "a2": {
+      "legal": true,
+      "restricted": false,
+      "confidence": "high",
+      "reason": "35 kW naturally <= 35 kW"
+    },
+    "insurance": {
+      "min": 275,
+      "max": 420,
+      "coverage": "terceros con grua",
+      "computedAt": "2026-10-20T13:10:32.530Z",
+      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
+    }
   }
 ]
