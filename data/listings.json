@@ -3670,7 +3670,7 @@
     ],
     "priceHistory": [],
     "title": "Aprilia Tuono 457",
-    "brand": null,
+    "brand": "Aprilia",
     "model": "Aprilia Tuono 457",
     "type": "naked",
     "year": 2026,
@@ -3725,5 +3725,69 @@
       "computedAt": "2026-10-20T13:10:32.530Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     }
+  },
+  {
+    "id": "b70d613d9f69",
+    "url": "https://motos.coches.net/ocasion/kawasaki/ninja-500/version-2024-2024-en-madrid-10207982.htm",
+    "addedAt": "2026-10-20T13:14:29.127Z",
+    "favorite": false,
+    "manualFields": [],
+    "priceHistory": [
+      {
+        "date": "2026-10-20",
+        "price": 4990
+      }
+    ],
+    "title": "KAWASAKI Ninja 500 Versión 2024",
+    "brand": "Kawasaki",
+    "model": "NINJA 500",
+    "type": "other",
+    "year": 2024,
+    "km": 6667,
+    "price": 4990,
+    "currency": "EUR",
+    "location": "Madrid",
+    "seller": null,
+    "powerKw": null,
+    "powerCv": null,
+    "cc": 451,
+    "fuel": "Gasolina",
+    "gearbox": null,
+    "color": null,
+    "carnet": null,
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": null,
+    "images": [
+      "https://a.mcdn.es/mnet/vehicles/20952458/adf003f1-c210-420b-a79b-fee77e1cc57a.jpg"
+    ],
+    "description": "KAWASAKI Versión 2024 del 2024, disponible en Madrid por 4.990 €. 6.667 km, 451 cc. Las mejores ofertas de sport en Motos.net.",
+    "availability": "https://schema.org/InStock",
+    "kbModel": null,
+    "scrapeStatus": "ok",
+    "httpStatus": 200,
+    "status": "active",
+    "notes": [
+      "datos vía lector externo (r.jina.ai)"
+    ],
+    "site": "motos.coches.net",
+    "lastScrapedAt": "2026-10-20T13:14:28.237Z",
+    "a2": {
+      "legal": null,
+      "restricted": false,
+      "confidence": "low",
+      "reason": "No power info and no model match"
+    },
+    "insurance": {
+      "min": 285,
+      "max": 420,
+      "coverage": "terceros con grua",
+      "computedAt": "2026-10-20T13:14:29.129Z",
+      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
+    },
+    "localImages": [
+      "0.jpg"
+    ]
   }
 ]
