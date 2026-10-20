@@ -3673,15 +3673,15 @@
       "carnet"
     ],
     "priceHistory": [],
-    "title": "Aprilia Tuono 457",
+    "title": "APRILIA TUONO 457",
     "brand": "Aprilia",
-    "model": "Aprilia Tuono 457",
+    "model": "Tuono 457",
     "type": "naked",
     "year": 2026,
     "km": 200,
     "price": 4790,
     "currency": "EUR",
-    "location": null,
+    "location": "Alicante/Alacant",
     "seller": "particular",
     "powerKw": 35,
     "powerCv": null,
@@ -3690,27 +3690,33 @@
     "gearbox": null,
     "color": null,
     "carnet": "A2",
-    "postalCode": null,
-    "lastModified": null,
+    "postalCode": "03016",
+    "lastModified": "2026-10-20T13:04:17.000Z",
     "condition": null,
     "productId": null,
-    "images": null,
-    "description": "- Año: 2026\n- Kilómetros: 200\n- Estado: Muy Bueno\n- Garantía: 12 meses\n- Precio: 4.790&euro; (no negociable)\n- Financiación: Hasta el 100%\n- Seguro opcional\n- Tipo: NAKED\n- Carnet: A2\n- Aceptamos tu moto como parte de pago",
-    "availability": null,
+    "images": [
+      "https://cdn.wallapop.com/images/10420/lr/2p/__/c10420p1315265345/i6809206915.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lr/2p/__/c10420p1315265345/i6809206932.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lr/2p/__/c10420p1315265345/i6809206961.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lr/2p/__/c10420p1315265345/i6809206990.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lr/2p/__/c10420p1315265345/i6809207011.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lr/2p/__/c10420p1315265345/i6809207035.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lr/2p/__/c10420p1315265345/i6809207061.jpg?pictureSize=W800"
+    ],
+    "description": "APRILIA TUONO 457\n\nENVIO a toda la península, GRATUITO entre nuestras tiendas\n- Año: 2026\n- Kilómetros: 200\n- Estado: Muy Bueno\n- Garantía: 12 meses\n- Precio: 4.790&euro;  (no negociable)\n- Financiación: Hasta el 100%\n- Seguro opcional\n- Tipo: NAKED\n- Carnet: A2\n- Aceptamos tu moto como parte de pago\n*Cambio de nombre no incluido en el precio\n\nTeléfono / Whatsapp:\n\n- Motick Madrid + alrededores + zona norte de España: 670599172\n\n- Motick C. Valenciana y Cast. la Mancha: 661813193\n\n- Motick Andalucía y Murcia: 661812985\n\n- Motick Cataluña: 649461943\n\nEste anuncio es meramente informativo y carece de valor contractual, dado que pod...",
+    "availability": "https://schema.org/InStock",
     "kbModel": {
       "stockKw": 35,
       "kg": 175,
       "restrictedAvailable": false,
       "type": "naked"
     },
-    "scrapeStatus": "ok-pasted-text",
-    "httpStatus": 403,
+    "scrapeStatus": "ok",
+    "httpStatus": 200,
     "status": "active",
-    "notes": [
-      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
-    ],
+    "notes": [],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-10-20T13:23:09.386Z",
+    "lastScrapedAt": "2026-10-20T13:23:25.601Z",
     "pasteFields": [
       "year",
       "description"
@@ -3733,6 +3739,15 @@
       "price",
       "seller",
       "carnet"
+    ],
+    "localImages": [
+      "0.jpg",
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
     ]
   },
   {
