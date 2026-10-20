@@ -3858,5 +3858,74 @@
     "localImages": [
       "0.jpg"
     ]
+  },
+  {
+    "id": "b4b928608553",
+    "url": "https://motos.coches.net/ocasion/honda/cbr-650-r/version-2019---2020-2019-en-alicante-10212791.htm",
+    "addedAt": "2026-10-20T13:17:19.460Z",
+    "favorite": false,
+    "manualFields": [],
+    "priceHistory": [
+      {
+        "date": "2026-10-20",
+        "price": 4690
+      }
+    ],
+    "title": "HONDA CBR 650 R Versión 2019 - 2020",
+    "brand": "Honda",
+    "model": "CBR650R",
+    "type": "sport",
+    "year": 2019,
+    "km": 14026,
+    "price": 4690,
+    "currency": "EUR",
+    "location": "Alicante",
+    "seller": null,
+    "powerKw": 70,
+    "powerCv": null,
+    "cc": 649,
+    "fuel": "Gasolina",
+    "gearbox": null,
+    "color": null,
+    "carnet": null,
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": null,
+    "images": [
+      "https://a.mcdn.es/mnet/vehicles/20973383/adcc250e-30fd-470f-955f-4799f3b9ad35.jpg"
+    ],
+    "description": "HONDA Versión 2019 - 2020 del 2019, disponible en Alicante por 4.690 €. 14.026 km, 649 cc. Las mejores ofertas de sport en Motos.net.",
+    "availability": "https://schema.org/InStock",
+    "kbModel": {
+      "stockKw": 70,
+      "kg": 213,
+      "restrictedAvailable": true,
+      "type": "sport"
+    },
+    "scrapeStatus": "ok",
+    "httpStatus": 200,
+    "status": "active",
+    "notes": [
+      "datos vía lector externo (r.jina.ai)"
+    ],
+    "site": "motos.coches.net",
+    "lastScrapedAt": "2026-10-20T13:17:17.842Z",
+    "a2": {
+      "legal": false,
+      "restricted": false,
+      "confidence": "low",
+      "reason": "Listed power 70 kW — needs official A2 restriction kit (stock 70 kW, kit exists)"
+    },
+    "insurance": {
+      "min": 345,
+      "max": 520,
+      "coverage": "terceros con grua",
+      "computedAt": "2026-10-20T13:17:19.462Z",
+      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
+    },
+    "localImages": [
+      "0.jpg"
+    ]
   }
 ]
