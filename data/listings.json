@@ -3556,5 +3556,67 @@
       "8.jpg",
       "9.jpg"
     ]
+  },
+  {
+    "id": "3a454f65543a",
+    "url": "https://es.wallapop.com/item/suzuki-bandit-650-a2-1277713399",
+    "addedAt": "2026-10-20T12:37:51.030Z",
+    "favorite": false,
+    "manualFields": [
+      "year",
+      "description"
+    ],
+    "priceHistory": [],
+    "title": "Suzuki Bandit 650 A2",
+    "brand": null,
+    "model": "Suzuki Bandit 650",
+    "type": "other",
+    "year": 2027,
+    "km": null,
+    "price": null,
+    "currency": "EUR",
+    "location": null,
+    "seller": null,
+    "powerKw": null,
+    "powerCv": null,
+    "cc": null,
+    "fuel": null,
+    "gearbox": null,
+    "color": null,
+    "carnet": null,
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": null,
+    "images": null,
+    "description": "- Limitada para carnet A2 (con 2 centralitas)\n-ITV pasada,hasta octubre de 2027\n-Mantenimientos al dia(aceite y filtros recién cambiados)\n-Neumáticos Michelin Pilot Sport 2ct\n-Escape Mivv Oval carbono\n-Portamatrículas corto R&G\n-Intermitentes led Barracuda\n-Entrego las piezas de serie",
+    "availability": null,
+    "kbModel": null,
+    "scrapeStatus": "ok-pasted-text",
+    "httpStatus": 403,
+    "status": "active",
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot",
+      "filled from pasted ad text"
+    ],
+    "site": "es.wallapop.com",
+    "lastScrapedAt": "2026-10-20T12:37:50.942Z",
+    "pasteFields": [
+      "year",
+      "description"
+    ],
+    "a2": {
+      "legal": null,
+      "restricted": false,
+      "confidence": "low",
+      "reason": "No power info and no model match"
+    },
+    "insurance": {
+      "min": 300,
+      "max": 440,
+      "coverage": "terceros con grua",
+      "computedAt": "2026-10-20T12:37:51.040Z",
+      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
+    }
   }
 ]
