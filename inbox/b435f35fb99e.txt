@@ -1,0 +1,10 @@
+Modelo	Z 500
+Año	2024
+Kilómetros	8000
+Carnet	A, A2
+Cilindrada	451 CC
+Potencia Máxima	45 CV
+Transmisión	Manual
+Combustible	Gasolina
+
+.ÚNICO PROPIETARIO.
