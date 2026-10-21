@@ -1,0 +1,8 @@
+Modelo	YZF-R3
+Año	2022
+Kilómetros	9000
+Carnet	A, A2
+Cilindrada	321 CC
+Potencia Máxima	42 CV
+Transmisión	Manual
+Combustible	Gasolina
