@@ -5161,5 +5161,299 @@
       "8.jpg",
       "9.jpg"
     ]
+  },
+  {
+    "id": "31a2c481a29f",
+    "url": "https://es.wallapop.com/item/kawasaki-ninja-500-2025-1313160132",
+    "addedAt": "2026-10-21T11:59:32.015Z",
+    "favorite": false,
+    "manualFields": [],
+    "priceHistory": [
+      {
+        "date": "2026-10-21",
+        "price": 5500
+      }
+    ],
+    "title": "Kawasaki Ninja 500 (2025)",
+    "brand": "Kawasaki",
+    "model": "Ninja 500",
+    "type": "other",
+    "year": 2025,
+    "km": 17000,
+    "price": 5500,
+    "currency": "EUR",
+    "location": "Urbanitzacio Vall de Flors",
+    "seller": "particular",
+    "powerKw": null,
+    "powerCv": null,
+    "cc": null,
+    "fuel": null,
+    "gearbox": null,
+    "color": "Negro",
+    "carnet": null,
+    "postalCode": "46117",
+    "lastModified": "2026-10-15T10:40:26.000Z",
+    "condition": null,
+    "productId": null,
+    "images": [
+      "https://cdn.wallapop.com/images/10420/lp/tk/__/c10420p1313160132/i6797847215.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lp/tk/__/c10420p1313160132/i6797848829.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lp/tk/__/c10420p1313160132/i6797848278.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lp/tk/__/c10420p1313160132/i6797848762.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lp/tk/__/c10420p1313160132/i6797847513.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lp/tk/__/c10420p1313160132/i6797847795.jpg?pictureSize=W800"
+    ],
+    "description": "Kawasaki Ninja 500 2025 | 17.000 km | Impecable\n\n💰 Precio: 5.500 € negociables\n\nVendo Kawasaki Ninja 500 del año 2025, versión básica, en excelente estado y muy cuidada.\n\n🏍️ Características y ventajas:\n\n* Año 2025.\n* 17.000 km.\n* Versión básica.\n* Topes anticaída instalados.\n* Revisiones oficiales pagadas hasta los 36.000 km.\n* Siempre guardada en garaje.\n* Rueda trasera con pinchazo ya reparado.\n\nLa moto está impecable y lista para disfrutar. Se ha cuidado y mantenido correctamente. El mantenimiento oficial incluido hasta los 36.000 km supone una ventaja para el próximo propietario.\nLa compre en Madrid y la use ahí, ahora me mude.",
+    "availability": "https://schema.org/InStock",
+    "kbModel": null,
+    "scrapeStatus": "ok",
+    "httpStatus": 200,
+    "status": "active",
+    "notes": [],
+    "site": "es.wallapop.com",
+    "lastScrapedAt": "2026-10-21T11:59:31.528Z",
+    "a2": {
+      "legal": null,
+      "restricted": false,
+      "confidence": "low",
+      "reason": "No power info and no model match"
+    },
+    "insurance": {
+      "min": 300,
+      "max": 440,
+      "coverage": "terceros con grua",
+      "computedAt": "2026-10-21T11:59:32.017Z",
+      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
+    },
+    "localImages": [
+      "0.jpg",
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg"
+    ]
+  },
+  {
+    "id": "0f2ab042b92a",
+    "url": "https://es.wallapop.com/item/kawasaki-ninja-500-se-2025-1313033731",
+    "addedAt": "2026-10-21T11:59:32.417Z",
+    "favorite": false,
+    "manualFields": [],
+    "priceHistory": [
+      {
+        "date": "2026-10-21",
+        "price": 5300
+      }
+    ],
+    "title": "Kawasaki Ninja 500 SE 2025",
+    "brand": "Kawasaki",
+    "model": "Ninja 500 SE",
+    "type": "other",
+    "year": 2025,
+    "km": 14942,
+    "price": 5300,
+    "currency": "EUR",
+    "location": "Sabadell",
+    "seller": "professional",
+    "powerKw": null,
+    "powerCv": null,
+    "cc": null,
+    "fuel": null,
+    "gearbox": null,
+    "color": "Verde",
+    "carnet": null,
+    "postalCode": "08200",
+    "lastModified": "2026-10-20T14:52:54.000Z",
+    "condition": null,
+    "productId": null,
+    "images": [
+      "https://cdn.wallapop.com/images/10420/lp/qv/__/c10420p1313033731/i6797181845.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lp/qv/__/c10420p1313033731/i6797182109.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lp/qv/__/c10420p1313033731/i6797182183.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lp/qv/__/c10420p1313033731/i6797182186.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lp/qv/__/c10420p1313033731/i6797182158.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lp/qv/__/c10420p1313033731/i6797182204.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lp/qv/__/c10420p1313033731/i6797182354.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lp/qv/__/c10420p1313033731/i6797182327.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lp/qv/__/c10420p1313033731/i6797182539.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lp/qv/__/c10420p1313033731/i6797182522.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lp/qv/__/c10420p1313033731/i6797182460.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lp/qv/__/c10420p1313033731/i6797182830.jpg?pictureSize=W800"
+    ],
+    "description": "-Moto Marca: Kawasaki \n-Modelo: Ninja 500 SE\n-Año 2025\n-Kms: 14.942\n-ITV Valida hasta 06/29\n-Extras: Escape Remus, portamatriculas, intermitentes puig, solo seat, cupula.\npartes originales\n-Garantia oficial Kawasaki\n-Etiqueta Medio ambiental C Valida para circular por Barcelona\n-CAMBIO DE NOMBRE NO INCLUIDO EN EL PRECIO 175€\n-1 Año garantia\n-Financiación a medida sin dar ninguna entrada\n-Entrega INMEDIATA\n-Aceptamos moto a cambio\n-Envíos a toda España\n-Compramos motos al contado\n-Telefono/WhatsApp: 683471785\n-Mas unidades a la venta en Instagram @dmpmotosbcn\n\n-No leer: Mt07 A2, mt09, street triple, z900, z800, z650, naked, Yamaha",
+    "availability": "https://schema.org/InStock",
+    "kbModel": null,
+    "scrapeStatus": "ok",
+    "httpStatus": 200,
+    "status": "active",
+    "notes": [],
+    "site": "es.wallapop.com",
+    "lastScrapedAt": "2026-10-21T11:59:32.018Z",
+    "a2": {
+      "legal": null,
+      "restricted": false,
+      "confidence": "low",
+      "reason": "No power info and no model match"
+    },
+    "insurance": {
+      "min": 300,
+      "max": 440,
+      "coverage": "terceros con grua",
+      "computedAt": "2026-10-21T11:59:32.418Z",
+      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
+    },
+    "localImages": [
+      "0.jpg",
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg",
+      "7.jpg",
+      "8.jpg",
+      "9.jpg"
+    ]
+  },
+  {
+    "id": "cf5fd4ff4c7f",
+    "url": "https://es.wallapop.com/item/kawasaki-ninja-500-abs-2024-negra-1282648198",
+    "addedAt": "2026-10-21T11:59:32.661Z",
+    "favorite": false,
+    "manualFields": [],
+    "priceHistory": [
+      {
+        "date": "2026-10-21",
+        "price": 5600
+      }
+    ],
+    "title": "Kawasaki Ninja 500 ABS 2024 Negra",
+    "brand": "Kawasaki",
+    "model": "Ninja 500 ABS",
+    "type": "other",
+    "year": 2024,
+    "km": 6667,
+    "price": 5600,
+    "currency": "EUR",
+    "location": "Madrid",
+    "seller": "particular",
+    "powerKw": null,
+    "powerCv": null,
+    "cc": null,
+    "fuel": null,
+    "gearbox": null,
+    "color": "Negro",
+    "carnet": null,
+    "postalCode": "28014",
+    "lastModified": "2026-08-27T10:33:48.000Z",
+    "condition": null,
+    "productId": null,
+    "images": [
+      "https://cdn.wallapop.com/images/10420/l7/nl/__/c10420p1282648198/i6622574039.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/l7/nl/__/c10420p1282648198/i6622574093.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/l7/nl/__/c10420p1282648198/i6622574105.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/l7/nl/__/c10420p1282648198/i6622574078.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/l7/nl/__/c10420p1282648198/i6622574123.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/l7/nl/__/c10420p1282648198/i6622574136.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/l7/nl/__/c10420p1282648198/i6622574060.jpg?pictureSize=W800"
+    ],
+    "description": "Kawasaki Ninja 500 ABS 2024 – Solo 6.667 km – Estado impecable\n\nVendo Kawasaki Ninja 500 ABS matriculada en 2024. La moto está como nueva, con solo 6.667 km, siempre cuidada al máximo y utilizada únicamente para salidas ocasionales.\n\nNunca ha sufrido caídas ni accidentes, siempre ha dormido en garaje y se encuentra en un estado impecable tanto de mecánica como de estética.\n\nEquipamiento y estado:\n\n✅ Solo 6.667 km\n✅ Garantía oficial de Kawasaki vigente\n✅ Todas las revisiones realizadas al día\n✅ Pastillas de freno recién cambiadas\n✅ Neumáticos en perfecto estado\n✅ Totalmente original, sin modificaciones\nWhatsapp 634604672",
+    "availability": "https://schema.org/InStock",
+    "kbModel": null,
+    "scrapeStatus": "ok",
+    "httpStatus": 200,
+    "status": "active",
+    "notes": [],
+    "site": "es.wallapop.com",
+    "lastScrapedAt": "2026-10-21T11:59:32.418Z",
+    "a2": {
+      "legal": null,
+      "restricted": false,
+      "confidence": "low",
+      "reason": "No power info and no model match"
+    },
+    "insurance": {
+      "min": 285,
+      "max": 420,
+      "coverage": "terceros con grua",
+      "computedAt": "2026-10-21T11:59:32.661Z",
+      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
+    },
+    "localImages": [
+      "0.jpg",
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ]
+  },
+  {
+    "id": "1386ea38abcf",
+    "url": "https://es.wallapop.com/item/kawasaki-ninja-500-negra-1281495877",
+    "addedAt": "2026-10-21T11:59:33.020Z",
+    "favorite": false,
+    "manualFields": [],
+    "priceHistory": [
+      {
+        "date": "2026-10-21",
+        "price": 5200
+      }
+    ],
+    "title": "Kawasaki Ninja 500 Negra",
+    "brand": "Kawasaki",
+    "model": "Ninja 500",
+    "type": "other",
+    "year": 2024,
+    "km": 45000,
+    "price": 5200,
+    "currency": "EUR",
+    "location": "La Cañada",
+    "seller": "particular",
+    "powerKw": null,
+    "powerCv": null,
+    "cc": null,
+    "fuel": null,
+    "gearbox": null,
+    "color": "Negro",
+    "carnet": null,
+    "postalCode": "46182",
+    "lastModified": "2026-10-12T14:36:43.000Z",
+    "condition": null,
+    "productId": null,
+    "images": [
+      "https://cdn.wallapop.com/images/10420/l6/yw/__/c10420p1281495877/i6615517895.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/l6/yw/__/c10420p1281495877/i6615517923.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/l6/yw/__/c10420p1281495877/i6615517934.jpg?pictureSize=W800"
+    ],
+    "description": "Moto deportiva Kawasaki Ninja 500 del año 2024. Diseño moderno y líneas aerodinámicas. Precio negociable. \n\n- Color negro brillante.\n- Estilo sportbike.\n- Ruedas Bridgestone S 22 nuevas.\n- Kit de arrastre y cadena nueva.\n- Revisiones todas en taller oficial kawasaki.\n- Un año de garantía oficial. \n- Siempre en garaje, supercuidada, un único dueño. \n- Tubo de escape Arrow Pro Race (tengo el de serie).\n- Cúpula ahumada original Kawasaki.",
+    "availability": "https://schema.org/InStock",
+    "kbModel": null,
+    "scrapeStatus": "ok",
+    "httpStatus": 200,
+    "status": "active",
+    "notes": [],
+    "site": "es.wallapop.com",
+    "lastScrapedAt": "2026-10-21T11:59:32.661Z",
+    "a2": {
+      "legal": null,
+      "restricted": false,
+      "confidence": "low",
+      "reason": "No power info and no model match"
+    },
+    "insurance": {
+      "min": 285,
+      "max": 420,
+      "coverage": "terceros con grua",
+      "computedAt": "2026-10-21T11:59:33.020Z",
+      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
+    },
+    "localImages": [
+      "0.jpg",
+      "1.jpg",
+      "2.jpg"
+    ]
   }
 ]

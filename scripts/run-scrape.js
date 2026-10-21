@@ -273,6 +273,23 @@ async function reenrichAll(listings) {
   return changed;
 }
 
+// A listing the pipeline could not identify must not block the whole batch:
+// quarantine it as needs-manual so doctor can still publish every good listing.
+const QUARANTINE_NOTE = "no brand after scrape/paste — marked needs-manual";
+function quarantineUnidentified(listings) {
+  let n = 0;
+  for (const rec of listings) {
+    if (rec.status === "removed") continue;
+    const okish = rec.scrapeStatus === "ok" || rec.scrapeStatus === "ok-pasted-text";
+    if (!okish || rec.brand) continue;
+    rec.scrapeStatus = "needs-manual";
+    rec.notes = [...new Set([...(rec.notes || []), QUARANTINE_NOTE])].slice(-5);
+    console.log(`QUARANTINE ${rec.id}: no brand — marked needs-manual`);
+    n++;
+  }
+  return n;
+}
+
 async function applyManualPaste(rec, id) {
   const pastePath = join(ROOT, "inbox", `${id}.txt`);
   if (!(await exists(pastePath))) return;
@@ -364,6 +381,9 @@ async function main() {
   if (reparsePastes) await reparsePastesAll(listings);
   const changed = await reenrichAll(listings);
   if (changed) console.log(`reenrich: updated fields on ${changed} listing(s)`);
+
+  const quarantined = quarantineUnidentified(listings);
+  if (quarantined) console.log(`quarantine: ${quarantined} listing(s) marked needs-manual`);
 
   await writeJson(join(DATA_DIR, "listings.json"), listings);
   await writeCsv(listings);
