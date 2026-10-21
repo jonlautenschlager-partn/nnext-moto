@@ -4198,5 +4198,76 @@
       "6.jpg",
       "7.jpg"
     ]
+  },
+  {
+    "id": "c6a424bf99d1",
+    "url": "https://es.wallapop.com/item/yamaha-r3-sportbike-1308654006",
+    "addedAt": "2026-10-21T10:07:35.478Z",
+    "favorite": false,
+    "manualFields": [
+      "year",
+      "km",
+      "price",
+      "description"
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-10-21",
+        "price": 4200
+      }
+    ],
+    "title": "Yamaha R3 Sportbike",
+    "brand": null,
+    "model": null,
+    "type": "sport",
+    "year": 2016,
+    "km": 32000,
+    "price": 4200,
+    "currency": "EUR",
+    "location": null,
+    "seller": null,
+    "powerKw": null,
+    "powerCv": null,
+    "cc": null,
+    "fuel": null,
+    "gearbox": null,
+    "color": null,
+    "carnet": null,
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": null,
+    "images": null,
+    "description": "Color\nAzul\nKm\n32000 km\nAño\n2016",
+    "availability": null,
+    "kbModel": null,
+    "scrapeStatus": "ok-pasted-text",
+    "httpStatus": 403,
+    "status": "active",
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot",
+      "filled from pasted ad text"
+    ],
+    "site": "es.wallapop.com",
+    "lastScrapedAt": "2026-10-21T10:07:35.359Z",
+    "pasteFields": [
+      "year",
+      "km",
+      "price",
+      "description"
+    ],
+    "a2": {
+      "legal": null,
+      "restricted": false,
+      "confidence": "low",
+      "reason": "No power info and no model match"
+    },
+    "insurance": {
+      "min": 255,
+      "max": 400,
+      "coverage": "terceros con grua",
+      "computedAt": "2026-10-21T10:07:35.482Z",
+      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
+    }
   }
 ]
