@@ -4597,5 +4597,73 @@
       "7.jpg",
       "8.jpg"
     ]
+  },
+  {
+    "id": "f36afade4974",
+    "url": "https://es.wallapop.com/item/kawasaki-ninja-400-1313615107",
+    "addedAt": "2026-10-21T10:15:29.449Z",
+    "favorite": false,
+    "manualFields": [
+      "title",
+      "brand",
+      "year",
+      "km",
+      "description"
+    ],
+    "priceHistory": [],
+    "title": "Tremendo rallón en el tanque",
+    "brand": "Kawasaki",
+    "model": "Tremendo",
+    "type": "other",
+    "year": 2018,
+    "km": 23000,
+    "price": null,
+    "currency": "EUR",
+    "location": null,
+    "seller": null,
+    "powerKw": null,
+    "powerCv": null,
+    "cc": null,
+    "fuel": null,
+    "gearbox": null,
+    "color": null,
+    "carnet": null,
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": null,
+    "images": null,
+    "description": "Km\n23000 km\nAño\n2018\nEstilo\nSport",
+    "availability": null,
+    "kbModel": null,
+    "scrapeStatus": "ok-pasted-text",
+    "httpStatus": 403,
+    "status": "active",
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot",
+      "filled from pasted ad text"
+    ],
+    "site": "es.wallapop.com",
+    "lastScrapedAt": "2026-10-21T10:15:28.999Z",
+    "pasteFields": [
+      "title",
+      "brand",
+      "year",
+      "km",
+      "description"
+    ],
+    "a2": {
+      "legal": null,
+      "restricted": false,
+      "confidence": "low",
+      "reason": "No power info and no model match"
+    },
+    "insurance": {
+      "min": 285,
+      "max": 420,
+      "coverage": "terceros con grua",
+      "computedAt": "2026-10-21T10:15:29.453Z",
+      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
+    }
   }
 ]
