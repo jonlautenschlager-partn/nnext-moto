@@ -5699,5 +5699,91 @@
       "8.jpg",
       "9.jpg"
     ]
+  },
+  {
+    "id": "6b458b27cf3d",
+    "url": "https://es.wallapop.com/item/kawasaki-ninja-650-a2-1315547567",
+    "addedAt": "2026-10-22T20:02:33.758Z",
+    "favorite": false,
+    "manualFields": [],
+    "priceHistory": [
+      {
+        "date": "2026-10-22",
+        "price": 5500
+      }
+    ],
+    "title": "KAWASAKI NINJA 650 ¿A2?",
+    "brand": "Kawasaki",
+    "model": "Ninja 650   (2017-2019)",
+    "type": "sport",
+    "year": 2017,
+    "km": 13000,
+    "price": 5500,
+    "currency": "EUR",
+    "location": "Madrid",
+    "seller": "professional",
+    "powerKw": 50.2,
+    "powerCv": null,
+    "cc": 649,
+    "fuel": null,
+    "gearbox": null,
+    "color": "Verde",
+    "carnet": null,
+    "postalCode": "28010",
+    "lastModified": "2026-10-21T09:02:21.000Z",
+    "condition": null,
+    "productId": null,
+    "images": [
+      "https://cdn.wallapop.com/images/10420/lr/8q/__/c10420p1315547567/i6810919642.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lr/8q/__/c10420p1315547567/i6810919698.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lr/8q/__/c10420p1315547567/i6810919788.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lr/8q/__/c10420p1315547567/i6810919929.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lr/8q/__/c10420p1315547567/i6810920019.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lr/8q/__/c10420p1315547567/i6810920067.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lr/8q/__/c10420p1315547567/i6810920129.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lr/8q/__/c10420p1315547567/i6810920213.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lr/8q/__/c10420p1315547567/i6810920314.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lr/8q/__/c10420p1315547567/i6810920383.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lr/8q/__/c10420p1315547567/i6810920419.jpg?pictureSize=W800"
+    ],
+    "description": "((MOTO OCASION))\n\n-13000KM-AÑO2017-\n\n- KAWASAKI NINJA 650\n\n- ESTUPENDA.\n\n- SE ENTREGA CON GARANTÍA Y TOTALMENTE REVISADA.\n\n- POSIBILIDAD DE LIMITAR PARA CARNET A2.\n\n- SE ENTREGA CON JUEGO DE LLAVES.\n\n- EQUIPADA CON:\n\n- ABS, CÚPULA, TOPES ANTICAÍDA, ETC.\n\n- ACEPTAMOS SU MOTO COMO PARTE DE PAGO.\n\n- FINANCIACIÓN INSTANTÁNEA SIN ENTRADA.\n\n- ENVÍO GRATUITO A TODA ESPAÑA GARANTIZADO*.\n\n- PREGUNTE SIN COMPROMISO. ASESORAMIENTO TELEFÓNICO DE CONFIANZA.\n\n- *Excepto islas. Consultar tarifas.\n\nTLF: 6.2.6.2.1.0.0.5.6",
+    "availability": "https://schema.org/InStock",
+    "kbModel": {
+      "stockKw": 50.2,
+      "kg": 196,
+      "restrictedAvailable": true,
+      "type": "sport"
+    },
+    "scrapeStatus": "ok",
+    "httpStatus": 200,
+    "status": "active",
+    "notes": [],
+    "site": "es.wallapop.com",
+    "lastScrapedAt": "2026-10-22T20:02:33.417Z",
+    "a2": {
+      "legal": false,
+      "restricted": false,
+      "confidence": "low",
+      "reason": "Listed power 50.2 kW — needs official A2 restriction kit (stock 50.2 kW, kit exists)"
+    },
+    "insurance": {
+      "min": 345,
+      "max": 520,
+      "coverage": "terceros con grua",
+      "computedAt": "2026-10-22T20:02:33.759Z",
+      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
+    },
+    "localImages": [
+      "0.jpg",
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg",
+      "7.jpg",
+      "8.jpg",
+      "9.jpg"
+    ]
   }
 ]
