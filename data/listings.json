@@ -6338,5 +6338,82 @@
       "computedAt": "2026-10-22T20:09:56.296Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     }
+  },
+  {
+    "id": "85d9067651a8",
+    "url": "https://es.wallapop.com/item/honda-cbr500r-negra-1315695252",
+    "addedAt": "2026-10-22T20:11:33.282Z",
+    "favorite": false,
+    "manualFields": [
+      "title",
+      "brand",
+      "model",
+      "year",
+      "km",
+      "kbModel",
+      "description"
+    ],
+    "priceHistory": [],
+    "title": "Motocicleta Honda CBR500R con un diseño estilizado y acabado en color negro mate.",
+    "brand": "Honda",
+    "model": "CBR500R",
+    "type": "sport",
+    "year": 2024,
+    "km": 15400,
+    "price": null,
+    "currency": "EUR",
+    "location": null,
+    "seller": null,
+    "powerKw": 35,
+    "powerCv": null,
+    "cc": 471,
+    "fuel": null,
+    "gearbox": null,
+    "color": null,
+    "carnet": null,
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": null,
+    "images": null,
+    "description": "Km\n15400 km\nAño\n2024\nEstilo\nSport",
+    "availability": null,
+    "kbModel": {
+      "stockKw": 35,
+      "kg": 192,
+      "restrictedAvailable": false,
+      "type": "sport"
+    },
+    "scrapeStatus": "ok-pasted-text",
+    "httpStatus": 403,
+    "status": "active",
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot",
+      "filled from pasted ad text"
+    ],
+    "site": "es.wallapop.com",
+    "lastScrapedAt": "2026-10-22T20:11:33.201Z",
+    "pasteFields": [
+      "title",
+      "brand",
+      "model",
+      "year",
+      "km",
+      "kbModel",
+      "description"
+    ],
+    "a2": {
+      "legal": true,
+      "restricted": false,
+      "confidence": "high",
+      "reason": "35 kW naturally <= 35 kW"
+    },
+    "insurance": {
+      "min": 260,
+      "max": 400,
+      "coverage": "terceros con grua",
+      "computedAt": "2026-10-22T20:11:33.335Z",
+      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
+    }
   }
 ]
