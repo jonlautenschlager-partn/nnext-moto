@@ -4728,11 +4728,13 @@
     "url": "https://es.wallapop.com/item/kawasaki-ninja-400-sportbike-negra-y-verde-1312349073",
     "addedAt": "2026-10-21T10:16:09.103Z",
     "favorite": false,
-    "manualFields": [],
+    "manualFields": [
+      "model"
+    ],
     "priceHistory": [],
     "title": "Kawasaki Ninja  400 Sportbike Negra y Verde",
     "brand": "Kawasaki",
-    "model": "Ninja 500",
+    "model": "Ninja 400",
     "type": "sport",
     "year": 2023,
     "km": 11200,
@@ -4792,6 +4794,9 @@
       "4.jpg",
       "5.jpg",
       "6.jpg"
+    ],
+    "userFields": [
+      "model"
     ]
   },
   {
