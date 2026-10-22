@@ -5600,5 +5600,84 @@
       "7.jpg",
       "8.jpg"
     ]
+  },
+  {
+    "id": "c6e7f7cb833c",
+    "url": "https://es.wallapop.com/item/honda-cbr-500-r-1311165814",
+    "addedAt": "2026-10-22T10:43:12.519Z",
+    "favorite": false,
+    "manualFields": [
+      "title",
+      "brand",
+      "model",
+      "year",
+      "location",
+      "seller",
+      "kbModel",
+      "description"
+    ],
+    "priceHistory": [],
+    "title": "HONDA CBR 500 R",
+    "brand": "Honda",
+    "model": "CBR500R",
+    "type": "sport",
+    "year": 2020,
+    "km": null,
+    "price": null,
+    "currency": "EUR",
+    "location": "Madrid",
+    "seller": "professional",
+    "powerKw": 35,
+    "powerCv": null,
+    "cc": 471,
+    "fuel": null,
+    "gearbox": null,
+    "color": null,
+    "carnet": null,
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": null,
+    "images": null,
+    "description": "HONDA CBR 500 R\nENVIO a toda la península, GRATUITO entre nuestras tiendas\n- Año: 2020\n- Kilómetros: 23.200\n- Estado: Muy Bueno\n- Garantía: 12 meses\n- Precio: 5.490&euro; (no negociable)\n- Financiación: Hasta el 100%\n- Seguro opcional\n- Tipo: DEPORTIVAS\n- Carnet: A2\n- Aceptamos tu moto como parte de pago\n*Cambio de nombre no incluido en el precio\nTeléfono / Whatsapp:\n- Motick Madrid + alrededores + zona norte de España: 670599172",
+    "availability": null,
+    "kbModel": {
+      "stockKw": 35,
+      "kg": 192,
+      "restrictedAvailable": false,
+      "type": "sport"
+    },
+    "scrapeStatus": "ok-pasted-text",
+    "httpStatus": 403,
+    "status": "active",
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot",
+      "filled from pasted ad text"
+    ],
+    "site": "es.wallapop.com",
+    "lastScrapedAt": "2026-10-22T10:43:12.405Z",
+    "pasteFields": [
+      "title",
+      "brand",
+      "model",
+      "year",
+      "location",
+      "seller",
+      "kbModel",
+      "description"
+    ],
+    "a2": {
+      "legal": true,
+      "restricted": false,
+      "confidence": "high",
+      "reason": "35 kW naturally <= 35 kW"
+    },
+    "insurance": {
+      "min": 260,
+      "max": 400,
+      "coverage": "terceros con grua",
+      "computedAt": "2026-10-22T10:43:12.581Z",
+      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
+    }
   }
 ]
