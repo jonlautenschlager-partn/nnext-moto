@@ -6264,5 +6264,79 @@
       "computedAt": "2026-10-22T20:08:17.644Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     }
+  },
+  {
+    "id": "bb59f081b9bb",
+    "url": "https://es.wallapop.com/item/triumph-trident-660-a2-garantia-oficial-1313943949",
+    "addedAt": "2026-10-22T20:09:56.213Z",
+    "favorite": false,
+    "manualFields": [
+      "brand",
+      "model",
+      "km",
+      "kbModel",
+      "description"
+    ],
+    "priceHistory": [],
+    "title": "Triumph Trident 660 A2 Garantia Oficial",
+    "brand": "Triumph",
+    "model": "Trident 660",
+    "type": "naked",
+    "year": null,
+    "km": 24000,
+    "price": null,
+    "currency": "EUR",
+    "location": null,
+    "seller": null,
+    "powerKw": 35,
+    "powerCv": null,
+    "cc": 660,
+    "fuel": null,
+    "gearbox": null,
+    "color": null,
+    "carnet": null,
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": null,
+    "images": null,
+    "description": "-24000KM-AÑO2024-\n- TRIUMPH TRIDENT 660\n- ESTUPENDA.\n- SE ENTREGA CON GARANTÍA OFICIAL Y TOTALMENTE REVISADA.\n- ÚNICO PROPIETARIO.\n- LIMITADA PARA CARNET A2.\n- SE ENTREGA CON JUEGO DE LLAVES.\n- EQUIPADA CON:\n- ABS, CONTROL DE TRACCIÓN, MODOS DE CONDUCCIÓN, ILUMINACIÓN LED, ETC.",
+    "availability": null,
+    "kbModel": {
+      "stockKw": 59.6,
+      "kg": 187,
+      "restrictedAvailable": true,
+      "type": "naked"
+    },
+    "scrapeStatus": "ok-pasted-text",
+    "httpStatus": 403,
+    "status": "active",
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot",
+      "filled from pasted ad text",
+      "ad says 'limitada' — power capped to 35 kW (A2 restricted)"
+    ],
+    "site": "es.wallapop.com",
+    "lastScrapedAt": "2026-10-22T20:09:56.148Z",
+    "pasteFields": [
+      "brand",
+      "model",
+      "km",
+      "kbModel",
+      "description"
+    ],
+    "a2": {
+      "legal": true,
+      "restricted": true,
+      "confidence": "medium",
+      "reason": "Restricted to 35 kW from stock 59.6 kW — legal if official A2 version"
+    },
+    "insurance": {
+      "min": 315,
+      "max": 495,
+      "coverage": "terceros con grua",
+      "computedAt": "2026-10-22T20:09:56.296Z",
+      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
+    }
   }
 ]
