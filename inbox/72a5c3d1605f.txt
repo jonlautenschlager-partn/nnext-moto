@@ -1,0 +1,8 @@
+Modelo	ER-6N
+Año	2012
+Kilómetros	26000
+Carnet	A, A2
+Cilindrada	649 CC
+Potencia Máxima	72 CV
+Transmisión	Manual
+Combustible	Gasolina
