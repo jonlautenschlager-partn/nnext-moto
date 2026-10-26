@@ -7073,40 +7073,46 @@
     "model": "CBR500R",
     "type": "sport",
     "year": 2021,
-    "km": null,
+    "km": 20000,
     "price": 5700,
     "currency": "EUR",
-    "location": null,
-    "seller": null,
+    "location": "San Sebastián de Los Reyes",
+    "seller": "particular",
     "powerKw": 35,
     "powerCv": null,
     "cc": 471,
     "fuel": null,
     "gearbox": null,
-    "color": null,
+    "color": "Rojo",
     "carnet": null,
-    "postalCode": null,
-    "lastModified": null,
+    "postalCode": "28700",
+    "lastModified": "2026-10-13T18:08:44.000Z",
     "condition": null,
     "productId": null,
-    "images": null,
+    "images": [
+      "https://cdn.wallapop.com/images/10420/lp/lh/__/c10420p1312782634/i6795259602.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lp/lh/__/c10420p1312782634/i6795259702.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lp/lh/__/c10420p1312782634/i6795259894.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lp/lh/__/c10420p1312782634/i6795260033.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lp/lh/__/c10420p1312782634/i6795259811.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lp/lh/__/c10420p1312782634/i6795260107.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lp/lh/__/c10420p1312782634/i6795260192.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lp/lh/__/c10420p1312782634/i6795260260.jpg?pictureSize=W800"
+    ],
     "description": "Motocicleta Honda CBR 500R del año 2021, con un diseño deportivo y estilizado en color rojo.\n- Escape deportivo MIVV instalado.\n- Carenado completo.\n- Asiento biplaza.\n5700€",
-    "availability": null,
+    "availability": "https://schema.org/InStock",
     "kbModel": {
       "stockKw": 35,
       "kg": 192,
       "restrictedAvailable": false,
       "type": "sport"
     },
-    "scrapeStatus": "ok-pasted-text",
-    "httpStatus": 403,
+    "scrapeStatus": "ok",
+    "httpStatus": 200,
     "status": "active",
-    "notes": [
-      "HTTP 403 — site blocked automated access; needs paste-text or screenshot",
-      "filled from pasted ad text"
-    ],
+    "notes": [],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-10-26T10:10:54.319Z",
+    "lastScrapedAt": "2026-10-26T10:24:56.533Z",
     "pasteFields": [
       "title",
       "brand",
@@ -7128,6 +7134,16 @@
       "coverage": "terceros con grua",
       "computedAt": "2026-10-26T10:10:54.413Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
-    }
+    },
+    "localImages": [
+      "0.jpg",
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg",
+      "7.jpg"
+    ]
   }
 ]
