@@ -1,0 +1,8 @@
+Modelo	CBR 650 F
+Año	2018
+Kilómetros	11000
+Carnet	A, A2
+Cilindrada	649 CC
+Potencia Máxima	89 CV
+Transmisión	Manual
+Combustible	Gasolina
