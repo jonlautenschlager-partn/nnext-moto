@@ -6567,7 +6567,10 @@
     "url": "https://www.moto-ocasion.com/motos-de-ocasion/naked/kawasaki-er-6n-a2-0563xx/",
     "addedAt": "2026-10-26T09:17:58.974Z",
     "favorite": false,
-    "manualFields": [],
+    "manualFields": [
+      "seller",
+      "carnet"
+    ],
     "priceHistory": [
       {
         "date": "2026-10-26",
@@ -6583,14 +6586,14 @@
     "price": 3350,
     "currency": "EUR",
     "location": null,
-    "seller": null,
+    "seller": "particular",
     "powerKw": 52.9,
     "powerCv": 72,
     "cc": 649,
     "fuel": null,
     "gearbox": null,
     "color": null,
-    "carnet": "A, A2",
+    "carnet": "A2, A",
     "postalCode": null,
     "lastModified": null,
     "condition": null,
@@ -6647,6 +6650,10 @@
       "7.jpg",
       "8.jpg",
       "9.jpg"
+    ],
+    "userFields": [
+      "seller",
+      "carnet"
     ]
   },
   {
