@@ -6614,5 +6614,174 @@
       "2.jpg",
       "3.jpg"
     ]
+  },
+  {
+    "id": "72a5c3d1605f",
+    "url": "https://www.moto-ocasion.com/motos-de-ocasion/naked/kawasaki-er-6n-a2-0563xx/",
+    "addedAt": "2026-10-26T09:17:58.974Z",
+    "favorite": false,
+    "manualFields": [],
+    "priceHistory": [
+      {
+        "date": "2026-10-26",
+        "price": 3350
+      }
+    ],
+    "title": "KAWASAKI ER-6N ¿A2? -",
+    "brand": "Kawasaki",
+    "model": "ER-6N",
+    "type": "naked",
+    "year": 2012,
+    "km": 26000,
+    "price": 3350,
+    "currency": "EUR",
+    "location": null,
+    "seller": null,
+    "powerKw": 52.9,
+    "powerCv": 72,
+    "cc": 649,
+    "fuel": null,
+    "gearbox": null,
+    "color": null,
+    "carnet": "A, A2",
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": "240162",
+    "images": [
+      "https://www.moto-ocasion.com/wp-content/uploads/2026/10/kawasaki-er-6n-a2-copia-5022xx-23-a-kawasaki-er-6n.jpg",
+      "https://www.moto-ocasion.com/wp-content/uploads/2026/10/kawasaki-er-6n-a2-copia-5022xx-23-r2.jpg",
+      "https://www.moto-ocasion.com/wp-content/uploads/2026/10/kawasaki-er-6n-a2-copia-5022xx-23-r3.jpg",
+      "https://www.moto-ocasion.com/wp-content/uploads/2026/10/kawasaki-er-6n-a2-copia-5022xx-23-r4.jpg",
+      "https://www.moto-ocasion.com/wp-content/uploads/2026/10/kawasaki-er-6n-a2-copia-5022xx-23-r5.jpg",
+      "https://www.moto-ocasion.com/wp-content/uploads/2026/10/kawasaki-er-6n-a2-5022xx-23-r7.jpg",
+      "https://www.moto-ocasion.com/wp-content/uploads/2026/10/kawasaki-er-6n-a2-5022xx-23-r8.jpg",
+      "https://www.moto-ocasion.com/wp-content/uploads/2026/10/kawasaki-er-6n-a2-5022xx-23-r9.jpg",
+      "https://www.moto-ocasion.com/wp-content/uploads/2026/10/kawasaki-er-6n-a2-5022xx-23-r10.jpg",
+      "https://www.moto-ocasion.com/wp-content/uploads/2026/10/kawasaki-er-6n-a2-5022xx-23-r11.jpg",
+      "https://www.moto-ocasion.com/wp-content/uploads/2026/10/kawasaki-er-6n-a2-5022xx-23-r12.jpg",
+      "https://www.moto-ocasion.com/wp-content/uploads/2026/10/kawasaki-er-6n-a2-5022xx-23-r13.jpg"
+    ],
+    "description": "WWW.MOTO–OCASION.COM KAWASAKI ER-6N .ESTUPENDA. .SE ENTREGA CON GARANTÍA Y TOTALMENTE REVISADA. .POSIBILIDAD DE LIMITAR PARA CARNET A2. .SE ENTREGA CON JUEGO DE LLAVES. .EQUIPADA CON: - CÚPULA, TOPES ANTICAÍDA, ETC. .ACEPTAMOS SU MOTO COMO PARTE DE PAGO. .FINANCIACIÓN INSTANTÁNEA SIN ENTRADA. .ENVÍO GRATUITO A TODA ESPAÑA GARANTIZADO*. .PREGUNTE SIN COMPROMISO. ASESORAMIENTO TELEFÓNICO DE CONFIANZA. *Excepto islas. Consultar tarifas.",
+    "availability": null,
+    "kbModel": {
+      "stockKw": 52.9,
+      "kg": 204,
+      "restrictedAvailable": true,
+      "type": "naked"
+    },
+    "scrapeStatus": "ok",
+    "httpStatus": 200,
+    "status": "active",
+    "notes": [],
+    "site": "moto-ocasion.com",
+    "lastScrapedAt": "2026-10-26T09:17:58.526Z",
+    "a2": {
+      "legal": false,
+      "restricted": false,
+      "confidence": "low",
+      "reason": "Listed power 52.9 kW — needs official A2 restriction kit (stock 52.9 kW, kit exists)"
+    },
+    "insurance": {
+      "min": 310,
+      "max": 495,
+      "coverage": "terceros con grua",
+      "computedAt": "2026-10-26T09:17:58.975Z",
+      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
+    },
+    "localImages": [
+      "0.jpg",
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg",
+      "7.jpg",
+      "8.jpg",
+      "9.jpg"
+    ]
+  },
+  {
+    "id": "70a5e28eb5ac",
+    "url": "https://www.moto-ocasion.com/motos-de-ocasion/sport-turismo/honda-cbr-650-f-a2-4832xx/",
+    "addedAt": "2026-10-26T09:17:59.084Z",
+    "favorite": false,
+    "manualFields": [],
+    "priceHistory": [
+      {
+        "date": "2026-10-26",
+        "price": 6250
+      }
+    ],
+    "title": "HONDA CBR 650 F ¿A2? -",
+    "brand": "Honda",
+    "model": "CBR 650 F",
+    "type": "sport",
+    "year": 2018,
+    "km": 11000,
+    "price": 6250,
+    "currency": "EUR",
+    "location": null,
+    "seller": null,
+    "powerKw": 65.4,
+    "powerCv": 89,
+    "cc": 649,
+    "fuel": null,
+    "gearbox": null,
+    "color": null,
+    "carnet": "A, A2",
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": "240043",
+    "images": [
+      "https://www.moto-ocasion.com/wp-content/uploads/2026/10/honda-cbr-650-f-a2-8652x-653-a-honda-cbr-650-f.jpg",
+      "https://www.moto-ocasion.com/wp-content/uploads/2026/10/honda-cbr-650-f-a2-8652x-653-r2.jpg",
+      "https://www.moto-ocasion.com/wp-content/uploads/2026/10/honda-cbr-650-f-a2-8652x-653-r3.jpg",
+      "https://www.moto-ocasion.com/wp-content/uploads/2026/10/honda-cbr-650-f-a2-8652x-653-r4.jpg",
+      "https://www.moto-ocasion.com/wp-content/uploads/2026/10/honda-cbr-650-f-a2-8652x-653-r5.jpg",
+      "https://www.moto-ocasion.com/wp-content/uploads/2026/10/honda-cbr-650-f-a2-8652x-653-r7.jpg",
+      "https://www.moto-ocasion.com/wp-content/uploads/2026/10/honda-cbr-650-f-a2-8652x-653-r8.jpg",
+      "https://www.moto-ocasion.com/wp-content/uploads/2026/10/honda-cbr-650-f-a2-8652x-653-r9.jpg",
+      "https://www.moto-ocasion.com/wp-content/uploads/2026/10/honda-cbr-650-f-a2-8652x-653-r10.jpg",
+      "https://www.moto-ocasion.com/wp-content/uploads/2026/10/honda-cbr-650-f-a2-8652x-653-r11.jpg",
+      "https://www.moto-ocasion.com/wp-content/uploads/2026/10/honda-cbr-650-f-a2-8652x-653-r12.jpg",
+      "https://www.moto-ocasion.com/wp-content/uploads/2026/10/honda-cbr-650-f-a2-8652x-653-r13.jpg"
+    ],
+    "description": "WWW.MOTO–OCASION.COM HONDA CBR 650 F .ESTUPENDA. .SE ENTREGA CON GARANTÍA Y TOTALMENTE REVISADA. .POSIBILIDAD DE LIMITAR PARA CARNET A2. .SE ENTREGA CON LIBRO DE REVISIONES Y JUEGO DE LLAVES. .EQUIPADA CON: - ABS, ILUMINACIÓN LED, CÚPULA, ESCAPE SC PROJECT, ETC. .ACEPTAMOS SU MOTO COMO PARTE DE PAGO. .FINANCIACIÓN INSTANTÁNEA SIN ENTRADA. .ENVÍO GRATUITO A TODA ESPAÑA GARANTIZADO*. .PREGUNTE SIN COMPROMISO. ASESORAMIENTO TELEFÓNICO DE CONFIANZA. *Excepto islas. Consultar tarifas.",
+    "availability": null,
+    "kbModel": null,
+    "scrapeStatus": "ok",
+    "httpStatus": 200,
+    "status": "active",
+    "notes": [],
+    "site": "moto-ocasion.com",
+    "lastScrapedAt": "2026-10-26T09:17:58.975Z",
+    "a2": {
+      "legal": false,
+      "restricted": false,
+      "confidence": "medium",
+      "reason": "Power 65.4 kW > 35 kW limit"
+    },
+    "insurance": {
+      "min": 380,
+      "max": 600,
+      "coverage": "terceros con grua",
+      "computedAt": "2026-10-26T09:17:59.084Z",
+      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
+    },
+    "localImages": [
+      "0.jpg",
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg",
+      "7.jpg",
+      "8.jpg",
+      "9.jpg"
+    ]
   }
 ]
