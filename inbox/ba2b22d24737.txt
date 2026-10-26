@@ -1,0 +1,8 @@
+Modelo	NINJA 650
+Año	2017
+Kilómetros	13000
+Carnet	A, A2
+Cilindrada	649 CC
+Potencia Máxima	68 CV
+Transmisión	Manual
+Combustible	Gasolina
