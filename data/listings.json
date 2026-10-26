@@ -7047,5 +7047,87 @@
       "6.jpg",
       "7.jpg"
     ]
+  },
+  {
+    "id": "9e23cca10109",
+    "url": "https://es.wallapop.com/item/honda-cbr-500r-2021-1312782634",
+    "addedAt": "2026-10-26T10:10:54.406Z",
+    "favorite": false,
+    "manualFields": [
+      "title",
+      "brand",
+      "model",
+      "year",
+      "price",
+      "kbModel",
+      "description"
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-10-26",
+        "price": 5700
+      }
+    ],
+    "title": "Motocicleta Honda CBR 500R del año 2021, con un diseño deportivo y estilizado en color rojo.",
+    "brand": "Honda",
+    "model": "CBR500R",
+    "type": "sport",
+    "year": 2021,
+    "km": null,
+    "price": 5700,
+    "currency": "EUR",
+    "location": null,
+    "seller": null,
+    "powerKw": 35,
+    "powerCv": null,
+    "cc": 471,
+    "fuel": null,
+    "gearbox": null,
+    "color": null,
+    "carnet": null,
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": null,
+    "images": null,
+    "description": "Motocicleta Honda CBR 500R del año 2021, con un diseño deportivo y estilizado en color rojo.\n- Escape deportivo MIVV instalado.\n- Carenado completo.\n- Asiento biplaza.\n5700€",
+    "availability": null,
+    "kbModel": {
+      "stockKw": 35,
+      "kg": 192,
+      "restrictedAvailable": false,
+      "type": "sport"
+    },
+    "scrapeStatus": "ok-pasted-text",
+    "httpStatus": 403,
+    "status": "active",
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot",
+      "filled from pasted ad text"
+    ],
+    "site": "es.wallapop.com",
+    "lastScrapedAt": "2026-10-26T10:10:54.319Z",
+    "pasteFields": [
+      "title",
+      "brand",
+      "model",
+      "year",
+      "price",
+      "kbModel",
+      "description"
+    ],
+    "a2": {
+      "legal": true,
+      "restricted": false,
+      "confidence": "high",
+      "reason": "35 kW naturally <= 35 kW"
+    },
+    "insurance": {
+      "min": 285,
+      "max": 420,
+      "coverage": "terceros con grua",
+      "computedAt": "2026-10-26T10:10:54.413Z",
+      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
+    }
   }
 ]
