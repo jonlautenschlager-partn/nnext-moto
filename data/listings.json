@@ -6937,5 +6937,74 @@
       "8.jpg",
       "9.jpg"
     ]
+  },
+  {
+    "id": "832a5b62985d",
+    "url": "https://motos.coches.net/ocasion/honda/cbr_500_r/version_2022____2023-2023-en-madrid-10183264.htm",
+    "addedAt": "2026-10-26T09:30:25.616Z",
+    "favorite": false,
+    "manualFields": [],
+    "priceHistory": [
+      {
+        "date": "2026-10-26",
+        "price": 5980
+      }
+    ],
+    "title": "HONDA CBR 500 R Versión 2022 - 2023",
+    "brand": "Honda",
+    "model": "CBR500R",
+    "type": "sport",
+    "year": 2023,
+    "km": 21100,
+    "price": 5980,
+    "currency": "EUR",
+    "location": "Madrid",
+    "seller": null,
+    "powerKw": 35,
+    "powerCv": null,
+    "cc": 471,
+    "fuel": "Gasolina",
+    "gearbox": null,
+    "color": null,
+    "carnet": null,
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": null,
+    "images": [
+      "https://a.mcdn.es/mnet/vehicles/20769763/1e292e97-a461-4131-8cb0-b5e2ee62bc72.jpg"
+    ],
+    "description": "HONDA Versión 2022 - 2023 del 2023, disponible en Madrid por 5.980 €. 21.100 km, 471 cc. Las mejores ofertas de sport en Motos.net.",
+    "availability": "https://schema.org/InStock",
+    "kbModel": {
+      "stockKw": 35,
+      "kg": 192,
+      "restrictedAvailable": false,
+      "type": "sport"
+    },
+    "scrapeStatus": "ok",
+    "httpStatus": 200,
+    "status": "active",
+    "notes": [
+      "datos vía lector externo (r.jina.ai)"
+    ],
+    "site": "motos.coches.net",
+    "lastScrapedAt": "2026-10-26T09:30:24.786Z",
+    "a2": {
+      "legal": true,
+      "restricted": false,
+      "confidence": "high",
+      "reason": "35 kW naturally <= 35 kW"
+    },
+    "insurance": {
+      "min": 285,
+      "max": 420,
+      "coverage": "terceros con grua",
+      "computedAt": "2026-10-26T09:30:25.618Z",
+      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
+    },
+    "localImages": [
+      "0.jpg"
+    ]
   }
 ]
