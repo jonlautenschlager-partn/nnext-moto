@@ -1,0 +1,11 @@
+Vendida en 0,
+
+
+Modelo	CBR 500 R
+Año	2019
+Kilómetros	21000
+Carnet	A, A2
+Cilindrada	471 CC
+Potencia Máxima	47 CV
+Transmisión	Automática
+Combustible	Gasolina
