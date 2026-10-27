@@ -7441,5 +7441,69 @@
       "8.jpg",
       "9.jpg"
     ]
+  },
+  {
+    "id": "3dc8fc3401a9",
+    "url": "https://motos.coches.net/ocasion/kawasaki/z-500/version-2024-2025-en-madrid-10204824.htm",
+    "addedAt": "2026-10-27T12:40:04.336Z",
+    "favorite": false,
+    "manualFields": [],
+    "priceHistory": [
+      {
+        "date": "2026-10-27",
+        "price": 4599
+      }
+    ],
+    "title": "KAWASAKI Z 500 Versión 2024",
+    "brand": "Kawasaki",
+    "model": "Z 500",
+    "type": "other",
+    "year": 2025,
+    "km": 12025,
+    "price": 4599,
+    "currency": "EUR",
+    "location": "Madrid",
+    "seller": null,
+    "powerKw": null,
+    "powerCv": null,
+    "cc": 451,
+    "fuel": "Gasolina",
+    "gearbox": null,
+    "color": null,
+    "carnet": null,
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": null,
+    "images": [
+      "https://a.mcdn.es/mnet/vehicles/20926148/2db31bf6-9d12-4df3-88b9-5b7aaef31820.jpg"
+    ],
+    "description": "KAWASAKI Versión 2024 del 2025, disponible en Madrid por 4.599 €. 12.025 km, 451 cc. Las mejores ofertas de naked en Motos.net.",
+    "availability": "https://schema.org/InStock",
+    "kbModel": null,
+    "scrapeStatus": "ok",
+    "httpStatus": 200,
+    "status": "active",
+    "notes": [
+      "datos vía lector externo (r.jina.ai)"
+    ],
+    "site": "motos.coches.net",
+    "lastScrapedAt": "2026-10-27T12:40:03.247Z",
+    "a2": {
+      "legal": null,
+      "restricted": false,
+      "confidence": "low",
+      "reason": "No power info and no model match"
+    },
+    "insurance": {
+      "min": 300,
+      "max": 440,
+      "coverage": "terceros con grua",
+      "computedAt": "2026-10-27T12:40:04.336Z",
+      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
+    },
+    "localImages": [
+      "0.jpg"
+    ]
   }
 ]
