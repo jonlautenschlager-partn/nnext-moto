@@ -7748,39 +7748,46 @@
     "type": "naked",
     "year": 2023,
     "km": 34000,
-    "price": null,
+    "price": 5000,
     "currency": "EUR",
-    "location": null,
+    "location": "Barcelona",
     "seller": "professional",
     "powerKw": 35,
     "powerCv": null,
     "cc": 660,
     "fuel": null,
     "gearbox": null,
-    "color": null,
+    "color": "Negro",
     "carnet": null,
-    "postalCode": null,
-    "lastModified": null,
+    "postalCode": "08070",
+    "lastModified": "2026-10-27T10:13:22.000Z",
     "condition": null,
     "productId": null,
-    "images": null,
+    "images": [
+      "https://cdn.wallapop.com/images/10420/ls/il/__/c10420p1317685989/i6823485347.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/ls/il/__/c10420p1317685989/i6823485429.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/ls/il/__/c10420p1317685989/i6823485441.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/ls/il/__/c10420p1317685989/i6823485375.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/ls/il/__/c10420p1317685989/i6823485412.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/ls/il/__/c10420p1317685989/i6823485400.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/ls/il/__/c10420p1317685989/i6823485420.jpg?pictureSize=W800"
+    ],
     "description": "Triumph Trident 660\n2023 · 34000 km · Negro\nMuuuy negociable\nTriumph Trident 660 del año 2023 solo con 34,000km\n-Limitada para A2 (solo en papeles) entrego el puño de serie 47kW\n-Agarraderas pasajero\n-Protector de motor de fibra de carbono\n-Porta matrículas corto\nComprada hace 6 meses en concesionario de segunda mano con garantia de 1 año y la revisión recién pasada con factura. La vendo por necesidad del dinero precio negociable",
-    "availability": null,
+    "availability": "https://schema.org/InStock",
     "kbModel": {
       "stockKw": 59.6,
       "kg": 187,
       "restrictedAvailable": true,
       "type": "naked"
     },
-    "scrapeStatus": "ok-pasted-text",
-    "httpStatus": 403,
+    "scrapeStatus": "ok",
+    "httpStatus": 200,
     "status": "active",
     "notes": [
-      "HTTP 403 — site blocked automated access; needs paste-text or screenshot",
-      "filled from pasted ad text"
+      "ad says 'limitada' — power capped to 35 kW (A2 restricted)"
     ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-10-27T13:04:02.886Z",
+    "lastScrapedAt": "2026-10-27T14:16:13.629Z",
     "pasteFields": [
       "title",
       "brand",
@@ -7799,11 +7806,20 @@
       "reason": "Restricted to 35 kW from stock 59.6 kW — legal if official A2 version"
     },
     "insurance": {
-      "min": 315,
-      "max": 495,
+      "min": 345,
+      "max": 520,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-27T13:04:03.079Z",
+      "computedAt": "2026-10-27T14:16:13.991Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
-    }
+    },
+    "localImages": [
+      "0.jpg",
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ]
   }
 ]
