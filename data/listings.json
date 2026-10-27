@@ -7505,5 +7505,77 @@
     "localImages": [
       "0.jpg"
     ]
+  },
+  {
+    "id": "6730f17c8ec5",
+    "url": "https://motos.coches.net/ocasion/kawasaki/z_500/version_2024-2025-en-madrid-10211266.htm",
+    "addedAt": "2026-10-27T12:40:46.172Z",
+    "favorite": false,
+    "manualFields": [],
+    "priceHistory": [
+      {
+        "date": "2026-10-27",
+        "price": 5250
+      }
+    ],
+    "title": "KAWASAKI Z 500 Versión 2024",
+    "brand": "Kawasaki",
+    "model": "Z 500",
+    "type": "other",
+    "year": 2025,
+    "km": 1000,
+    "price": 5250,
+    "currency": "EUR",
+    "location": "Madrid",
+    "seller": null,
+    "powerKw": null,
+    "powerCv": null,
+    "cc": 451,
+    "fuel": "Gasolina",
+    "gearbox": null,
+    "color": "Negro",
+    "carnet": null,
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": null,
+    "images": [
+      "https://a.mcdn.es/mnet/2026/10/16/10211266/37518944_g.jpg",
+      "https://a.mcdn.es/mnet/2026/10/16/10211266/37518945_g.jpg",
+      "https://a.mcdn.es/mnet/2026/10/16/10211266/37518946_g.jpg",
+      "https://a.mcdn.es/mnet/2026/10/16/10211266/37518947_g.jpg",
+      "https://a.mcdn.es/mnet/2026/10/16/10211266/37518949_g.jpg"
+    ],
+    "description": "KAWASAKI Versión 2024 del 2025, disponible en Madrid por 5.250 €. 1.000 km, 451 cc. Las mejores ofertas de en Motos.net.",
+    "availability": "https://schema.org/InStock",
+    "kbModel": null,
+    "scrapeStatus": "ok",
+    "httpStatus": 200,
+    "status": "active",
+    "notes": [
+      "datos vía lector externo (r.jina.ai)"
+    ],
+    "site": "motos.coches.net",
+    "lastScrapedAt": "2026-10-27T12:40:44.631Z",
+    "a2": {
+      "legal": null,
+      "restricted": false,
+      "confidence": "low",
+      "reason": "No power info and no model match"
+    },
+    "insurance": {
+      "min": 300,
+      "max": 440,
+      "coverage": "terceros con grua",
+      "computedAt": "2026-10-27T12:40:46.173Z",
+      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
+    },
+    "localImages": [
+      "0.jpg",
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg"
+    ]
   }
 ]
