@@ -8315,5 +8315,76 @@
       "8.jpg",
       "9.jpg"
     ]
+  },
+  {
+    "id": "156ec1d309fa",
+    "url": "https://www.cuimo.com/moto/KAWASAKI-Z-500-2025-bf1cbe9b",
+    "addedAt": "2026-10-28T11:17:07.016Z",
+    "favorite": false,
+    "manualFields": [],
+    "priceHistory": [
+      {
+        "date": "2026-10-28",
+        "price": 4999
+      }
+    ],
+    "title": "KAWASAKI Z 500 de segunda mano",
+    "brand": "Kawasaki",
+    "model": "Z 500",
+    "type": "naked",
+    "year": 2025,
+    "km": 5435,
+    "price": 4999,
+    "currency": "EUR",
+    "location": null,
+    "seller": null,
+    "powerKw": 33.4,
+    "powerCv": 45.4,
+    "cc": 451,
+    "fuel": null,
+    "gearbox": null,
+    "color": null,
+    "carnet": null,
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": null,
+    "images": [
+      "https://images.cuimo.com/1793005962071-26-10-2026-599.jpg?width=1600&quality=90",
+      "images.cuimo.com/1793005962071-26-10-2026-599.jpg?width=1600&quality=90",
+      "images.cuimo.com/1793005962128-26-10-2026-600.jpg?width=1600&quality=90",
+      "images.cuimo.com/1793005962162-26-10-2026-601.jpg?width=1600&quality=90",
+      "images.cuimo.com/1793005962191-26-10-2026-602.jpg?width=1600&quality=90",
+      "images.cuimo.com/1793005962223-26-10-2026-603.jpg?width=1600&quality=90",
+      "images.cuimo.com/1793005962253-26-10-2026-604.jpg?width=1600&quality=90",
+      "images.cuimo.com/1793005962287-26-10-2026-605.jpg?width=1600&quality=90",
+      "images.cuimo.com/1793005962319-26-10-2026-606.jpg?width=1600&quality=90",
+      "images.cuimo.com/1793005962346-26-10-2026-607.jpg?width=1600&quality=90"
+    ],
+    "description": "Comprar KAWASAKI Z 500 del año 2025 por 4999€ certificada con garantía premium de hasta 3 años.",
+    "availability": "https://schema.org/InStock",
+    "kbModel": null,
+    "scrapeStatus": "ok",
+    "httpStatus": 200,
+    "status": "active",
+    "notes": [],
+    "site": "cuimo.com",
+    "lastScrapedAt": "2026-10-28T11:17:06.358Z",
+    "a2": {
+      "legal": true,
+      "restricted": false,
+      "confidence": "high",
+      "reason": "33.4 kW naturally <= 35 kW"
+    },
+    "insurance": {
+      "min": 300,
+      "max": 440,
+      "coverage": "terceros con grua",
+      "computedAt": "2026-10-28T11:17:07.017Z",
+      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
+    },
+    "localImages": [
+      "0.jpg"
+    ]
   }
 ]
