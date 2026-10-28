@@ -8227,5 +8227,73 @@
       "8.jpg",
       "9.jpg"
     ]
+  },
+  {
+    "id": "b98bd746f855",
+    "url": "https://es.wallapop.com/item/kawasaki-ninja-500-1317858695",
+    "addedAt": "2026-10-28T10:38:45.280Z",
+    "favorite": false,
+    "manualFields": [
+      "title",
+      "brand",
+      "model",
+      "year",
+      "description"
+    ],
+    "priceHistory": [],
+    "title": "Kawasaki Ninja 500 2025 (gris carbón metálico/51A)",
+    "brand": "Kawasaki",
+    "model": "Ninja 500",
+    "type": "other",
+    "year": 2025,
+    "km": null,
+    "price": null,
+    "currency": "EUR",
+    "location": null,
+    "seller": null,
+    "powerKw": null,
+    "powerCv": null,
+    "cc": null,
+    "fuel": null,
+    "gearbox": null,
+    "color": null,
+    "carnet": null,
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": null,
+    "images": null,
+    "description": "Kawasaki Ninja 500 2025 (gris carbón metálico/51A)\n- Unico dueño\n- Duerme siempre en garaje\n- En venta por obtención del carné A\n- Exenta de ITV hasta 2029\n- Se entrega con juego de llaves (dos llaves)\n- Primera revisión pasada en taller oficial\n- Cambio de aceite recién hecho\n- Neumáticos al 60%\n- Tiene algunos desperfectos\nEstoy abierto a cualquier duda y el precio puede ser negociable (hasta cierto punto)\n*Accesorios: Vendo también la cupula alta ahumada original de kawasaki homologada (+88€), escape (tramo final) homologado arrow pro race (+250€) con papeles y un quadlock de tija (+70€)",
+    "availability": null,
+    "kbModel": null,
+    "scrapeStatus": "ok-pasted-text",
+    "httpStatus": 403,
+    "status": "active",
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot",
+      "filled from pasted ad text"
+    ],
+    "site": "es.wallapop.com",
+    "lastScrapedAt": "2026-10-28T10:38:45.197Z",
+    "pasteFields": [
+      "title",
+      "brand",
+      "model",
+      "year",
+      "description"
+    ],
+    "a2": {
+      "legal": null,
+      "restricted": false,
+      "confidence": "low",
+      "reason": "No power info and no model match"
+    },
+    "insurance": {
+      "min": 300,
+      "max": 440,
+      "coverage": "terceros con grua",
+      "computedAt": "2026-10-28T10:38:45.287Z",
+      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
+    }
   }
 ]
