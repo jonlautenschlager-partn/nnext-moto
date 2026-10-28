@@ -8386,5 +8386,75 @@
     "localImages": [
       "0.jpg"
     ]
+  },
+  {
+    "id": "9d8db8cffa15",
+    "url": "https://es.wallapop.com/item/kawasaki-z900-a2-2019-naked-1223936373",
+    "addedAt": "2026-10-28T11:52:04.909Z",
+    "favorite": false,
+    "manualFields": [
+      "title",
+      "brand",
+      "model",
+      "year",
+      "km",
+      "description"
+    ],
+    "priceHistory": [],
+    "title": "✅ 33.000 km",
+    "brand": "Kawasaki",
+    "model": "Z900",
+    "type": "other",
+    "year": 2019,
+    "km": 33000,
+    "price": null,
+    "currency": "EUR",
+    "location": null,
+    "seller": null,
+    "powerKw": null,
+    "powerCv": null,
+    "cc": null,
+    "fuel": null,
+    "gearbox": null,
+    "color": null,
+    "carnet": null,
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": null,
+    "images": null,
+    "description": "Vendo Kawasaki Z900 A2 del año 2019, en combinación de colores blanco, negro y verde Kawasaki.\n✅ 33.000 km\n✅ Versión A2\n✅ ITV al día hasta 04/2027\n✅ Escape SC Project homologado, con documentación\n✅ Mantenimiento al día (con facturas)\nMoto muy cuidada. Duerme siempre en garaje.\n💶 Precio negociable dentro de lo razonable. Abstenerse ofertas absurdas.",
+    "availability": null,
+    "kbModel": null,
+    "scrapeStatus": "ok-pasted-text",
+    "httpStatus": 403,
+    "status": "active",
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot",
+      "filled from pasted ad text"
+    ],
+    "site": "es.wallapop.com",
+    "lastScrapedAt": "2026-10-28T11:52:04.780Z",
+    "pasteFields": [
+      "title",
+      "brand",
+      "model",
+      "year",
+      "km",
+      "description"
+    ],
+    "a2": {
+      "legal": null,
+      "restricted": false,
+      "confidence": "low",
+      "reason": "No power info and no model match"
+    },
+    "insurance": {
+      "min": 285,
+      "max": 420,
+      "coverage": "terceros con grua",
+      "computedAt": "2026-10-28T11:52:04.915Z",
+      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
+    }
   }
 ]
