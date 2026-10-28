@@ -8547,5 +8547,80 @@
     "localImages": [
       "0.jpg"
     ]
+  },
+  {
+    "id": "5d9529076b48",
+    "url": "https://es.wallapop.com/item/triumph-trident-660-1315228252",
+    "addedAt": "2026-10-28T13:38:46.231Z",
+    "favorite": false,
+    "manualFields": [
+      "title",
+      "brand",
+      "model",
+      "year",
+      "kbModel",
+      "description"
+    ],
+    "priceHistory": [],
+    "title": "TRIUMPH TRIDENT 660",
+    "brand": "Triumph",
+    "model": "Trident 660",
+    "type": "naked",
+    "year": 2021,
+    "km": null,
+    "price": null,
+    "currency": "EUR",
+    "location": null,
+    "seller": null,
+    "powerKw": 59.6,
+    "powerCv": null,
+    "cc": 660,
+    "fuel": null,
+    "gearbox": null,
+    "color": null,
+    "carnet": null,
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": null,
+    "images": null,
+    "description": "TRIUMPH TRIDENT 660\n• Extras: ABS, Faros de LED, bolsa portaobjetos original tiumph, Topes anti-caída, Control de tracción, cambio semiautomatico\n• KM: 3430\n• Año: 2021\n• Garantía Cüimo: 1 año ampliable",
+    "availability": null,
+    "kbModel": {
+      "stockKw": 59.6,
+      "kg": 187,
+      "restrictedAvailable": true,
+      "type": "naked"
+    },
+    "scrapeStatus": "ok-pasted-text",
+    "httpStatus": 403,
+    "status": "active",
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot",
+      "filled from pasted ad text"
+    ],
+    "site": "es.wallapop.com",
+    "lastScrapedAt": "2026-10-28T13:38:46.132Z",
+    "pasteFields": [
+      "title",
+      "brand",
+      "model",
+      "year",
+      "kbModel",
+      "description"
+    ],
+    "a2": {
+      "legal": false,
+      "restricted": false,
+      "confidence": "low",
+      "reason": "Listed power 59.6 kW — needs official A2 restriction kit (stock 59.6 kW, kit exists)"
+    },
+    "insurance": {
+      "min": 315,
+      "max": 495,
+      "coverage": "terceros con grua",
+      "computedAt": "2026-10-28T13:38:46.286Z",
+      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
+    }
   }
 ]
