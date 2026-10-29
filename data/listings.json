@@ -8889,5 +8889,80 @@
       "2.jpg",
       "3.jpg"
     ]
+  },
+  {
+    "id": "e65f27826b14",
+    "url": "https://motos.coches.net/ocasion/honda/cbr_500_r/version_2019____2021-2020-en-tarragona-10212025.htm",
+    "addedAt": "2026-10-29T11:27:01.777Z",
+    "favorite": false,
+    "manualFields": [],
+    "priceHistory": [
+      {
+        "date": "2026-10-29",
+        "price": 4800
+      }
+    ],
+    "title": "HONDA CBR 500 R Versión 2019 - 2021",
+    "brand": "Honda",
+    "model": "CBR500R",
+    "type": "sport",
+    "year": 2020,
+    "km": 48000,
+    "price": 4800,
+    "currency": "EUR",
+    "location": "Tarragona",
+    "seller": null,
+    "powerKw": 35,
+    "powerCv": null,
+    "cc": 471,
+    "fuel": "Gasolina",
+    "gearbox": null,
+    "color": "Negro",
+    "carnet": null,
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": null,
+    "images": [
+      "https://a.mcdn.es/mnet/2026/10/18/10212025/37526329_g.jpg",
+      "https://a.mcdn.es/mnet/2026/10/18/10212025/37526328_g.jpg",
+      "https://a.mcdn.es/mnet/2026/10/18/10212025/37526327_g.jpg",
+      "https://a.mcdn.es/mnet/2026/10/18/10212025/37526330_g.jpg"
+    ],
+    "description": "HONDA Versión 2019 - 2021 del 2020, disponible en Tarragona por 4.800 €. 48.000 km, 471 cc. Las mejores ofertas de en Motos.net.",
+    "availability": "https://schema.org/InStock",
+    "kbModel": {
+      "stockKw": 35,
+      "kg": 192,
+      "restrictedAvailable": false,
+      "type": "sport"
+    },
+    "scrapeStatus": "ok",
+    "httpStatus": 200,
+    "status": "active",
+    "notes": [
+      "datos vía lector externo (r.jina.ai)"
+    ],
+    "site": "motos.coches.net",
+    "lastScrapedAt": "2026-10-29T11:27:00.906Z",
+    "a2": {
+      "legal": true,
+      "restricted": false,
+      "confidence": "high",
+      "reason": "35 kW naturally <= 35 kW"
+    },
+    "insurance": {
+      "min": 285,
+      "max": 420,
+      "coverage": "terceros con grua",
+      "computedAt": "2026-10-29T11:27:01.778Z",
+      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
+    },
+    "localImages": [
+      "0.jpg",
+      "1.jpg",
+      "2.jpg",
+      "3.jpg"
+    ]
   }
 ]
