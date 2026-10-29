@@ -8715,5 +8715,82 @@
     "localImages": [
       "0.jpg"
     ]
+  },
+  {
+    "id": "0a13f7441365",
+    "url": "https://es.wallapop.com/item/honda-cbr500r-1318308597",
+    "addedAt": "2026-10-29T09:17:21.260Z",
+    "favorite": false,
+    "manualFields": [
+      "brand",
+      "model",
+      "year",
+      "km",
+      "seller",
+      "kbModel",
+      "description"
+    ],
+    "priceHistory": [],
+    "title": "Honda Cbr500r",
+    "brand": "Honda",
+    "model": "CBR500R",
+    "type": "sport",
+    "year": 2023,
+    "km": 4900,
+    "price": null,
+    "currency": "EUR",
+    "location": null,
+    "seller": "professional",
+    "powerKw": 35,
+    "powerCv": null,
+    "cc": 471,
+    "fuel": null,
+    "gearbox": null,
+    "color": null,
+    "carnet": null,
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": null,
+    "images": null,
+    "description": "Año\n2023\nKm\n4900 km\nColor\nRojo",
+    "availability": null,
+    "kbModel": {
+      "stockKw": 35,
+      "kg": 192,
+      "restrictedAvailable": false,
+      "type": "sport"
+    },
+    "scrapeStatus": "ok-pasted-text",
+    "httpStatus": 403,
+    "status": "active",
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot",
+      "filled from pasted ad text"
+    ],
+    "site": "es.wallapop.com",
+    "lastScrapedAt": "2026-10-29T09:17:21.161Z",
+    "pasteFields": [
+      "brand",
+      "model",
+      "year",
+      "km",
+      "seller",
+      "kbModel",
+      "description"
+    ],
+    "a2": {
+      "legal": true,
+      "restricted": false,
+      "confidence": "high",
+      "reason": "35 kW naturally <= 35 kW"
+    },
+    "insurance": {
+      "min": 260,
+      "max": 400,
+      "coverage": "terceros con grua",
+      "computedAt": "2026-10-29T09:17:21.349Z",
+      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
+    }
   }
 ]
