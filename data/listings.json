@@ -8731,45 +8731,50 @@
       "description"
     ],
     "priceHistory": [],
-    "title": "Honda Cbr500r",
+    "title": "Honda CBR500R",
     "brand": "Honda",
     "model": "CBR500R",
     "type": "sport",
     "year": 2023,
     "km": 4900,
-    "price": null,
+    "price": 5990,
     "currency": "EUR",
-    "location": null,
+    "location": "Sant Boi de Llobregat",
     "seller": "professional",
     "powerKw": 35,
     "powerCv": null,
     "cc": 471,
     "fuel": null,
     "gearbox": null,
-    "color": null,
+    "color": "Rojo",
     "carnet": null,
-    "postalCode": null,
-    "lastModified": null,
+    "postalCode": "08830",
+    "lastModified": "2026-10-29T01:03:20.000Z",
     "condition": null,
     "productId": null,
-    "images": null,
-    "description": "Año\n2023\nKm\n4900 km\nColor\nRojo",
-    "availability": null,
+    "images": [
+      "https://cdn.wallapop.com/images/10420/ls/vx/__/c10420p1318308597/i6827155265.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/ls/vx/__/c10420p1318308597/i6827155273.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/ls/vx/__/c10420p1318308597/i6827155276.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/ls/vx/__/c10420p1318308597/i6827155282.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/ls/vx/__/c10420p1318308597/i6827155288.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/ls/vx/__/c10420p1318308597/i6827155292.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/ls/vx/__/c10420p1318308597/i6827155302.jpg?pictureSize=W800"
+    ],
+    "description": "Honda CBR500R\n\nAKAIMOTO HONDA VO SABADELL\n\nEstado: usado\nKm: 4900\nCombustible: Gasolina\nPotencia: 47.00\nCambio: Cambio manual\nColor: Rojo\nGarantía: 12\nFecha matriculación: 27 / 10 / 2023\nMatrícula: 6198MLD\nChasis: MLHPC62A6N5205764\n\nHONDA CBR500R\n- 4.900 km\n- Año 2022/23\n- Garantía oficial Honda hasta octubre del 2028. Somos Concesionario Oficial MOVENTO HONDA AKAIMOTO.\n\nEXTRAS:\n- PUÑOS CALEFACTABLES\n- CÚPULA AHUMADA\n\nTotalmente Revisada. Opción de Financiación\nSe hacen ENVIOS a toda la Península.\n\nSe entrega tal cual está en las fotos\nPara cualquier duda mándanos un email o contáctanos.\n\n\nDirección: CTRA. DE TERRASSA, 169, 08205...",
+    "availability": "https://schema.org/InStock",
     "kbModel": {
       "stockKw": 35,
       "kg": 192,
       "restrictedAvailable": false,
       "type": "sport"
     },
-    "scrapeStatus": "ok-pasted-text",
-    "httpStatus": 403,
+    "scrapeStatus": "ok",
+    "httpStatus": 200,
     "status": "active",
-    "notes": [
-      "HTTP 403 — site blocked automated access; needs paste-text or screenshot",
-      "filled from pasted ad text"
-    ],
+    "notes": [],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-10-29T09:17:21.161Z",
+    "lastScrapedAt": "2026-10-29T09:23:04.889Z",
     "pasteFields": [
       "brand",
       "model",
@@ -8786,12 +8791,21 @@
       "reason": "35 kW naturally <= 35 kW"
     },
     "insurance": {
-      "min": 260,
-      "max": 400,
+      "min": 285,
+      "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-29T09:17:21.349Z",
+      "computedAt": "2026-10-29T09:23:05.413Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
-    }
+    },
+    "localImages": [
+      "0.jpg",
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ]
   },
   {
     "id": "0792e1573e06",
