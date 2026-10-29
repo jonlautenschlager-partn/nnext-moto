@@ -8826,40 +8826,42 @@
     "model": "CBR500R",
     "type": "sport",
     "year": 2020,
-    "km": null,
-    "price": null,
+    "km": 48000,
+    "price": 4750,
     "currency": "EUR",
-    "location": null,
-    "seller": null,
+    "location": "Castellbell i el Vilar",
+    "seller": "particular",
     "powerKw": 35,
     "powerCv": null,
     "cc": 471,
     "fuel": null,
     "gearbox": null,
-    "color": null,
+    "color": "Rojo",
     "carnet": null,
-    "postalCode": null,
-    "lastModified": null,
+    "postalCode": "08296",
+    "lastModified": "2026-10-28T23:15:12.000Z",
     "condition": null,
     "productId": null,
-    "images": null,
-    "description": "Vendo Honda CBR500R 2020\nExtras:\n-Colin deportivo ✅\n-Cúpula ahumada ( Entrego la original) ✅\n-Filtro kyn alto flujo (Mas CV) ✅\n-Soporte Movil Quad Lock Pro ✅\n-Protección de deposito Puig ✅\n-Bateria nueva✅\n-Cadena nueva ✅\n-Escape Leo vince (Entrego el original)✅\n-Neumaticos Bridgestone S23 Seminuevos✅\n-Nunca circuito\n- Siempre en garaje\n-Mantenimientos al dia\n- Acepto prueba mecánica\n-Ideal Para carnet A2\n-La moto esta como en las fotos envió mas por privado.",
-    "availability": null,
+    "images": [
+      "https://cdn.wallapop.com/images/10420/lq/yw/__/c10420p1315088373/i6808219247.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lq/yw/__/c10420p1315088373/i6808219253.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lq/yw/__/c10420p1315088373/i6808219250.jpg?pictureSize=W800",
+      "https://cdn.wallapop.com/images/10420/lq/yw/__/c10420p1315088373/i6808219249.jpg?pictureSize=W800"
+    ],
+    "description": "Vendo Honda CBR500R 2020\n\nExtras: \n-Colin deportivo ✅\n-Cúpula ahumada ( Entrego la original) ✅\n-Filtro kyn alto flujo (Mas CV) ✅\n-Soporte Movil Quad Lock Pro ✅\n-Protección de deposito Puig ✅\n-Bateria nueva✅\n-Cadena nueva ✅\n-Escape Leo vince (Entrego el original)✅\n-Neumaticos Bridgestone S23 Seminuevos✅\n\n-Nunca circuito\n- Siempre en garaje \n-Mantenimientos al dia\n- Acepto prueba mecánica \n-Ideal Para carnet A2\n-La moto esta como en las fotos envió mas por privado.\n",
+    "availability": "https://schema.org/InStock",
     "kbModel": {
       "stockKw": 35,
       "kg": 192,
       "restrictedAvailable": false,
       "type": "sport"
     },
-    "scrapeStatus": "ok-pasted-text",
-    "httpStatus": 403,
+    "scrapeStatus": "ok",
+    "httpStatus": 200,
     "status": "active",
-    "notes": [
-      "HTTP 403 — site blocked automated access; needs paste-text or screenshot",
-      "filled from pasted ad text"
-    ],
+    "notes": [],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-10-29T11:12:32.693Z",
+    "lastScrapedAt": "2026-10-29T11:23:38.558Z",
     "pasteFields": [
       "title",
       "brand",
@@ -8875,11 +8877,17 @@
       "reason": "35 kW naturally <= 35 kW"
     },
     "insurance": {
-      "min": 260,
-      "max": 400,
+      "min": 285,
+      "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-29T11:12:32.812Z",
+      "computedAt": "2026-10-29T11:23:38.955Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
-    }
+    },
+    "localImages": [
+      "0.jpg",
+      "1.jpg",
+      "2.jpg",
+      "3.jpg"
+    ]
   }
 ]
