@@ -8792,5 +8792,74 @@
       "computedAt": "2026-10-29T09:17:21.349Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     }
+  },
+  {
+    "id": "0792e1573e06",
+    "url": "https://motos.coches.net/ocasion/kawasaki/ninja-650/version-2022-2025-en-barcelona-10163546.htm",
+    "addedAt": "2026-10-29T09:21:47.331Z",
+    "favorite": false,
+    "manualFields": [],
+    "priceHistory": [
+      {
+        "date": "2026-10-29",
+        "price": 5990
+      }
+    ],
+    "title": "KAWASAKI Ninja 650 Versión 2022",
+    "brand": "Kawasaki",
+    "model": "Ninja 650",
+    "type": "sport",
+    "year": 2025,
+    "km": 6392,
+    "price": 5990,
+    "currency": "EUR",
+    "location": "Barcelona",
+    "seller": null,
+    "powerKw": 50.2,
+    "powerCv": null,
+    "cc": 649,
+    "fuel": "Gasolina",
+    "gearbox": null,
+    "color": null,
+    "carnet": null,
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": null,
+    "images": [
+      "https://a.mcdn.es/mnet/vehicles/20621239/ad4e654b-cc11-4daa-b3e2-637efeb9ba75.jpg"
+    ],
+    "description": "KAWASAKI Versión 2022 del 2025, disponible en Barcelona por 5.990 €. 6.392 km, 649 cc. Las mejores ofertas de sport en Motos.net.",
+    "availability": "https://schema.org/InStock",
+    "kbModel": {
+      "stockKw": 50.2,
+      "kg": 196,
+      "restrictedAvailable": true,
+      "type": "sport"
+    },
+    "scrapeStatus": "ok",
+    "httpStatus": 200,
+    "status": "active",
+    "notes": [
+      "datos vía lector externo (r.jina.ai)"
+    ],
+    "site": "motos.coches.net",
+    "lastScrapedAt": "2026-10-29T09:21:46.377Z",
+    "a2": {
+      "legal": false,
+      "restricted": false,
+      "confidence": "low",
+      "reason": "Listed power 50.2 kW — needs official A2 restriction kit (stock 50.2 kW, kit exists)"
+    },
+    "insurance": {
+      "min": 360,
+      "max": 545,
+      "coverage": "terceros con grua",
+      "computedAt": "2026-10-29T09:21:47.332Z",
+      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
+    },
+    "localImages": [
+      "0.jpg"
+    ]
   }
 ]
