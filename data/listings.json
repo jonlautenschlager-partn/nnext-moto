@@ -9231,7 +9231,11 @@
       "km",
       "cc",
       "kbModel",
-      "description"
+      "description",
+      "price",
+      "seller",
+      "color",
+      "carnet"
     ],
     "priceHistory": [],
     "title": "Datos básicos",
@@ -9240,17 +9244,17 @@
     "type": "sport",
     "year": 2021,
     "km": 28000,
-    "price": null,
+    "price": 5300,
     "currency": "EUR",
     "location": null,
-    "seller": null,
+    "seller": "particular",
     "powerKw": 35,
     "powerCv": null,
     "cc": 2021,
     "fuel": null,
     "gearbox": null,
-    "color": null,
-    "carnet": null,
+    "color": "roja",
+    "carnet": "A2",
     "postalCode": null,
     "lastModified": null,
     "condition": null,
@@ -9295,7 +9299,13 @@
       "coverage": "terceros con grua",
       "computedAt": "2026-10-30T11:11:07.209Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
-    }
+    },
+    "userFields": [
+      "price",
+      "seller",
+      "color",
+      "carnet"
+    ]
   },
   {
     "id": "52e39958ca3c",
