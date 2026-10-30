@@ -9217,5 +9217,167 @@
       "2.jpg",
       "3.jpg"
     ]
+  },
+  {
+    "id": "b8a22919dbfc",
+    "url": "https://www.milanuncios.com/motos-de-carretera/honda-cbr-500r-621384879.htm",
+    "addedAt": "2026-10-30T11:11:07.205Z",
+    "favorite": false,
+    "manualFields": [
+      "title",
+      "brand",
+      "model",
+      "year",
+      "km",
+      "cc",
+      "kbModel",
+      "description"
+    ],
+    "priceHistory": [],
+    "title": "Datos básicos",
+    "brand": "Honda",
+    "model": "CBR500R",
+    "type": "sport",
+    "year": 2021,
+    "km": 28000,
+    "price": null,
+    "currency": "EUR",
+    "location": null,
+    "seller": null,
+    "powerKw": 35,
+    "powerCv": null,
+    "cc": 2021,
+    "fuel": null,
+    "gearbox": null,
+    "color": null,
+    "carnet": null,
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": null,
+    "images": null,
+    "description": "Referencia: 621384879\nvendo honda CBR 500r año 2021, ITV hasta junio del 27, ruedas diablo Rosso IV recién puestas, aceite y todos los filtros cambiados hace 1000km, puedes verla sin compromiso, acepto cambio por moto de enduro\nLangreo",
+    "availability": null,
+    "kbModel": {
+      "stockKw": 35,
+      "kg": 192,
+      "restrictedAvailable": false,
+      "type": "sport"
+    },
+    "scrapeStatus": "ok-pasted-text",
+    "httpStatus": 403,
+    "status": "active",
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot",
+      "filled from pasted ad text"
+    ],
+    "site": "milanuncios.com",
+    "lastScrapedAt": "2026-10-30T11:11:07.002Z",
+    "pasteFields": [
+      "title",
+      "brand",
+      "model",
+      "year",
+      "km",
+      "cc",
+      "kbModel",
+      "description"
+    ],
+    "a2": {
+      "legal": true,
+      "restricted": false,
+      "confidence": "high",
+      "reason": "35 kW naturally <= 35 kW"
+    },
+    "insurance": {
+      "min": 260,
+      "max": 400,
+      "coverage": "terceros con grua",
+      "computedAt": "2026-10-30T11:11:07.209Z",
+      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
+    }
+  },
+  {
+    "id": "52e39958ca3c",
+    "url": "https://www.milanuncios.com/motos-de-carretera/honda-cbr500r-2021-622022970.htm",
+    "addedAt": "2026-10-30T11:11:07.256Z",
+    "favorite": false,
+    "manualFields": [
+      "title",
+      "brand",
+      "model",
+      "year",
+      "km",
+      "cc",
+      "powerCv",
+      "powerKw",
+      "kbModel",
+      "description"
+    ],
+    "priceHistory": [],
+    "title": "Datos básicos",
+    "brand": "Honda",
+    "model": "CBR500R",
+    "type": "sport",
+    "year": 2021,
+    "km": 19400,
+    "price": null,
+    "currency": "EUR",
+    "location": null,
+    "seller": null,
+    "powerKw": 34.6,
+    "powerCv": 47,
+    "cc": 2021,
+    "fuel": null,
+    "gearbox": null,
+    "color": null,
+    "carnet": null,
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": null,
+    "images": null,
+    "description": "Referencia: 622022970\nHonda CBR500R – 19.400 km - 47cv\nVendo Honda CBR500R modelo 2021 en muy buen estado, tanto estético como mecánico. La moto tiene únicamente 19.400 km, con un uso cuidado y siempre tratada con mimo. Ideal para carnet A2.\nRevisión de los 20.000 km aún NO realizada, por lo que el comprador puede hacerla por su cuenta y tener la moto recién revisada.\nLa moto cuenta con:\n*  Escape Leo Vince no homologado.\n*  Espejos\n*  Porta matrículas\n*  También entrego todas las piezas originales de escape, espejos y porta matrículas.",
+    "availability": null,
+    "kbModel": {
+      "stockKw": 35,
+      "kg": 192,
+      "restrictedAvailable": false,
+      "type": "sport"
+    },
+    "scrapeStatus": "ok-pasted-text",
+    "httpStatus": 403,
+    "status": "active",
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot",
+      "filled from pasted ad text"
+    ],
+    "site": "milanuncios.com",
+    "lastScrapedAt": "2026-10-30T11:11:07.209Z",
+    "pasteFields": [
+      "title",
+      "brand",
+      "model",
+      "year",
+      "km",
+      "cc",
+      "powerCv",
+      "powerKw",
+      "kbModel",
+      "description"
+    ],
+    "a2": {
+      "legal": true,
+      "restricted": false,
+      "confidence": "high",
+      "reason": "34.6 kW naturally <= 35 kW"
+    },
+    "insurance": {
+      "min": 260,
+      "max": 400,
+      "coverage": "terceros con grua",
+      "computedAt": "2026-10-30T11:11:07.259Z",
+      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
+    }
   }
 ]
