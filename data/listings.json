@@ -9294,10 +9294,10 @@
       "reason": "35 kW naturally <= 35 kW"
     },
     "insurance": {
-      "min": 260,
-      "max": 400,
+      "min": 285,
+      "max": 420,
       "coverage": "terceros con grua",
-      "computedAt": "2026-10-30T11:11:07.209Z",
+      "computedAt": "2026-10-30T12:04:44.069Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     },
     "userFields": [
