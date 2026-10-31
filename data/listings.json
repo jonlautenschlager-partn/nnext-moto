@@ -9487,5 +9487,82 @@
       "computedAt": "2026-10-31T10:41:27.626Z",
       "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
     }
+  },
+  {
+    "id": "a4552b58e92b",
+    "url": "https://www.milanuncios.com/motos-clasicas/honda-cbr500r-621828356.htm",
+    "addedAt": "2026-10-31T10:50:49.332Z",
+    "favorite": false,
+    "manualFields": [
+      "km",
+      "price",
+      "location",
+      "description"
+    ],
+    "priceHistory": [
+      {
+        "date": "2026-10-31",
+        "price": 5300
+      }
+    ],
+    "title": "Honda Cbr500r",
+    "brand": null,
+    "model": "Honda Cbr500r",
+    "type": "sport",
+    "year": null,
+    "km": 23000,
+    "price": 5300,
+    "currency": "EUR",
+    "location": "Zaragoza",
+    "seller": null,
+    "powerKw": 35,
+    "powerCv": null,
+    "cc": 471,
+    "fuel": null,
+    "gearbox": null,
+    "color": null,
+    "carnet": null,
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": null,
+    "images": null,
+    "description": "Es la de Karla, Zaragoza.\n5300€ con escape y con todo. 23.000km",
+    "availability": null,
+    "kbModel": {
+      "stockKw": 35,
+      "kg": 192,
+      "restrictedAvailable": false,
+      "type": "sport"
+    },
+    "scrapeStatus": "needs-manual",
+    "httpStatus": 403,
+    "status": "active",
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot",
+      "filled from pasted ad text",
+      "no brand after scrape/paste — marked needs-manual"
+    ],
+    "site": "milanuncios.com",
+    "lastScrapedAt": "2026-10-31T10:50:49.122Z",
+    "pasteFields": [
+      "km",
+      "price",
+      "location",
+      "description"
+    ],
+    "a2": {
+      "legal": true,
+      "restricted": false,
+      "confidence": "high",
+      "reason": "35 kW naturally <= 35 kW"
+    },
+    "insurance": {
+      "min": 285,
+      "max": 420,
+      "coverage": "terceros con grua",
+      "computedAt": "2026-10-31T10:50:49.337Z",
+      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
+    }
   }
 ]
