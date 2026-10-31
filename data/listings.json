@@ -9417,5 +9417,75 @@
     "localImages": [
       "0.jpg"
     ]
+  },
+  {
+    "id": "c99e9d8e549c",
+    "url": "https://www.milanuncios.com/motos-de-carretera/honda-cbr-500r-602293689.htm",
+    "addedAt": "2026-10-31T10:41:27.576Z",
+    "favorite": false,
+    "manualFields": [
+      "powerCv",
+      "powerKw",
+      "description"
+    ],
+    "priceHistory": [],
+    "title": "Honda Cbr 500r",
+    "brand": null,
+    "model": "Honda Cbr 500r",
+    "type": "sport",
+    "year": null,
+    "km": null,
+    "price": null,
+    "currency": "EUR",
+    "location": null,
+    "seller": null,
+    "powerKw": 35.3,
+    "powerCv": 48,
+    "cc": 471,
+    "fuel": null,
+    "gearbox": null,
+    "color": null,
+    "carnet": null,
+    "postalCode": null,
+    "lastModified": null,
+    "condition": null,
+    "productId": null,
+    "images": null,
+    "description": "1-creó recordar que al que se la compre me dijo que la compro nueva\n2-tengo que mirar la documentación que tengo para informarte exacto pero habrá sido en los dos x el tema de la garantía,yo le cambié los retenes de la horquilla cuando la compré ya que manchaba uno de los retenes,algo más tiene echo\n3-del tema caídas tiene un  rozon muy leve x uno de los lados(me comentó el antiguo dueño que fue al guardarla que le dio con el pilar)\n4-de neumáticos está perfecto 👌🏽 de pastillas tbn  y del kit de transmisión tbn está perfecto ya que está 🏍️ al tener 48 CV no tiene tanto desgaste como una de las grandes (yo tengo una 900 y esa como no tengas una conducción moderna pues hay aguanta más o o menos)\n5-las piezas originales las tengo(no se donde as visto la moto pero tiene fotos del tubo de escape)\n6-la ITV la a pasado este año en abril o mayo",
+    "availability": null,
+    "kbModel": {
+      "stockKw": 35,
+      "kg": 192,
+      "restrictedAvailable": false,
+      "type": "sport"
+    },
+    "scrapeStatus": "needs-manual",
+    "httpStatus": 200,
+    "status": "active",
+    "notes": [
+      "bot challenge page returned 200 — no data extracted",
+      "filled from pasted ad text",
+      "no brand after scrape/paste — marked needs-manual"
+    ],
+    "site": "milanuncios.com",
+    "lastScrapedAt": "2026-10-31T10:41:27.430Z",
+    "pasteFields": [
+      "powerCv",
+      "powerKw",
+      "description"
+    ],
+    "a2": {
+      "legal": false,
+      "restricted": false,
+      "confidence": "high",
+      "reason": "Power 35.3 kW > 35 kW limit"
+    },
+    "insurance": {
+      "min": 260,
+      "max": 400,
+      "coverage": "terceros con grua",
+      "computedAt": "2026-10-31T10:41:27.626Z",
+      "disclaimer": "Estimate, not a quote. Calibrated on CB125R 214 eur/yr anchor for this rider profile."
+    }
   }
 ]
