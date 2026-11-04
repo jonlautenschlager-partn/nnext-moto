@@ -1032,10 +1032,10 @@
     "httpStatus": 200,
     "status": "active",
     "notes": [
-      "lector externo devolvió una página sin anuncio (quizá eliminado)"
+      "lector externo no disponible (The operation was aborted due to timeout)"
     ],
     "site": "motos.coches.net",
-    "lastScrapedAt": "2026-11-04T10:00:10.644Z",
+    "lastScrapedAt": "2026-11-04T21:37:28.969Z",
     "a2": {
       "legal": true,
       "restricted": false,
