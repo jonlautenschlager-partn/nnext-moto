@@ -50,7 +50,7 @@
       "extracted from AS24 soft page (detail blocked for bots)"
     ],
     "site": "autoscout24.es",
-    "lastScrapedAt": "2026-11-17T10:00:02.165Z",
+    "lastScrapedAt": "2026-11-17T14:45:20.547Z",
     "a2": {
       "legal": false,
       "restricted": false,
@@ -205,11 +205,13 @@
       "type": "sport"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-11-17T10:00:02.603Z",
+    "lastScrapedAt": "2026-11-17T14:45:21.073Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -292,11 +294,13 @@
       "type": "sport"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-11-17T10:00:02.924Z",
+    "lastScrapedAt": "2026-11-17T14:45:21.235Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -392,13 +396,13 @@
       "type": "classic"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
     "notes": [
-      "ad says 'limitada' — power capped to 35 kW (A2 restricted)"
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
     ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-11-17T10:00:03.198Z",
+    "lastScrapedAt": "2026-11-17T14:45:21.299Z",
     "a2": {
       "legal": true,
       "restricted": true,
@@ -494,13 +498,13 @@
       "type": "naked"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
     "notes": [
-      "ad says 'limitada' — power capped to 35 kW (A2 restricted)"
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
     ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-11-17T10:00:03.472Z",
+    "lastScrapedAt": "2026-11-17T14:45:21.314Z",
     "a2": {
       "legal": true,
       "restricted": true,
@@ -682,7 +686,7 @@
     "status": "active",
     "notes": [],
     "site": "moto-ocasion.com",
-    "lastScrapedAt": "2026-11-17T10:00:03.841Z",
+    "lastScrapedAt": "2026-11-17T14:45:21.327Z",
     "a2": {
       "legal": false,
       "restricted": false,
@@ -772,13 +776,13 @@
       "type": "naked"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
     "notes": [
-      "ad says 'limitada' — power capped to 35 kW (A2 restricted)"
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
     ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-11-17T10:00:05.804Z",
+    "lastScrapedAt": "2026-11-17T14:45:22.287Z",
     "a2": {
       "legal": true,
       "restricted": true,
@@ -953,11 +957,13 @@
       "type": "naked"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-11-17T10:00:06.195Z",
+    "lastScrapedAt": "2026-11-17T14:45:22.301Z",
     "a2": {
       "legal": false,
       "restricted": false,
@@ -1039,7 +1045,7 @@
       "lector externo devolvió una página sin anuncio (quizá eliminado)"
     ],
     "site": "motos.coches.net",
-    "lastScrapedAt": "2026-11-17T10:00:06.448Z",
+    "lastScrapedAt": "2026-11-17T14:45:22.316Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -1119,7 +1125,7 @@
       "datos vía lector externo (r.jina.ai)"
     ],
     "site": "motos.coches.net",
-    "lastScrapedAt": "2026-11-17T10:00:07.359Z",
+    "lastScrapedAt": "2026-11-17T14:45:24.218Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -1201,7 +1207,7 @@
       "datos vía lector externo (r.jina.ai)"
     ],
     "site": "motos.coches.net",
-    "lastScrapedAt": "2026-11-17T10:00:08.243Z",
+    "lastScrapedAt": "2026-11-17T14:45:25.003Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -1286,7 +1292,7 @@
       "datos vía lector externo (r.jina.ai)"
     ],
     "site": "motos.coches.net",
-    "lastScrapedAt": "2026-11-17T10:00:09.369Z",
+    "lastScrapedAt": "2026-11-17T14:45:25.990Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -1371,7 +1377,7 @@
       "datos vía lector externo (r.jina.ai)"
     ],
     "site": "motos.coches.net",
-    "lastScrapedAt": "2026-11-17T10:00:10.306Z",
+    "lastScrapedAt": "2026-11-17T14:45:26.933Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -1452,7 +1458,7 @@
       "datos vía lector externo (r.jina.ai)"
     ],
     "site": "motos.coches.net",
-    "lastScrapedAt": "2026-11-17T10:00:11.417Z",
+    "lastScrapedAt": "2026-11-17T14:45:27.832Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -1552,7 +1558,7 @@
     "status": "active",
     "notes": [],
     "site": "mundimoto.com",
-    "lastScrapedAt": "2026-11-17T10:00:12.338Z",
+    "lastScrapedAt": "2026-11-17T14:45:28.616Z",
     "a2": {
       "legal": false,
       "restricted": false,
@@ -2047,7 +2053,7 @@
       "ad says 'limitada' — power capped to 35 kW (A2 restricted)"
     ],
     "site": "motos.coches.net",
-    "lastScrapedAt": "2026-11-17T10:00:13.028Z",
+    "lastScrapedAt": "2026-11-17T14:45:29.701Z",
     "a2": {
       "legal": true,
       "restricted": true,
@@ -2689,7 +2695,7 @@
     "status": "active",
     "notes": [],
     "site": "moto-ocasion.com",
-    "lastScrapedAt": "2026-11-17T10:00:14.097Z",
+    "lastScrapedAt": "2026-11-17T14:45:30.810Z",
     "a2": {
       "legal": false,
       "restricted": false,
@@ -2782,11 +2788,13 @@
       "type": "naked"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-11-17T10:00:14.206Z",
+    "lastScrapedAt": "2026-11-17T14:45:31.831Z",
     "a2": {
       "legal": false,
       "restricted": false,
@@ -2967,11 +2975,13 @@
       "type": "sport"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-11-17T10:00:14.597Z",
+    "lastScrapedAt": "2026-11-17T14:45:31.956Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -3060,11 +3070,13 @@
       "type": "sport"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-11-17T10:00:14.879Z",
+    "lastScrapedAt": "2026-11-17T14:45:32.047Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -3233,11 +3245,13 @@
       "type": "sport"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-11-17T10:00:15.132Z",
+    "lastScrapedAt": "2026-11-17T14:45:32.058Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -3693,11 +3707,13 @@
     "availability": "https://schema.org/InStock",
     "kbModel": null,
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-11-17T10:00:15.524Z",
+    "lastScrapedAt": "2026-11-17T14:45:32.071Z",
     "pasteFields": [
       "year",
       "description"
@@ -3779,11 +3795,13 @@
       "type": "naked"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-11-17T10:00:15.828Z",
+    "lastScrapedAt": "2026-11-17T14:45:32.082Z",
     "pasteFields": [
       "year",
       "description"
@@ -3863,7 +3881,7 @@
       "lector externo devolvió una página sin anuncio (quizá eliminado)"
     ],
     "site": "motos.coches.net",
-    "lastScrapedAt": "2026-11-17T10:00:16.128Z",
+    "lastScrapedAt": "2026-11-17T14:45:32.095Z",
     "a2": {
       "legal": null,
       "restricted": false,
@@ -3932,7 +3950,7 @@
       "lector externo devolvió una página sin anuncio (quizá eliminado)"
     ],
     "site": "motos.coches.net",
-    "lastScrapedAt": "2026-11-17T10:00:17.650Z",
+    "lastScrapedAt": "2026-11-17T14:45:33.394Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -4001,7 +4019,7 @@
       "lector externo devolvió una página sin anuncio (quizá eliminado)"
     ],
     "site": "motos.coches.net",
-    "lastScrapedAt": "2026-11-17T10:00:19.886Z",
+    "lastScrapedAt": "2026-11-17T14:45:34.891Z",
     "a2": {
       "legal": false,
       "restricted": false,
@@ -4077,11 +4095,13 @@
       "type": "sport"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-11-17T10:00:21.355Z",
+    "lastScrapedAt": "2026-11-17T14:45:36.565Z",
     "pasteFields": [
       "year",
       "km",
@@ -4163,11 +4183,13 @@
     "availability": "https://schema.org/InStock",
     "kbModel": null,
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-11-17T10:00:21.768Z",
+    "lastScrapedAt": "2026-11-17T14:45:36.632Z",
     "pasteFields": [
       "brand",
       "model",
@@ -4250,11 +4272,13 @@
     "availability": "https://schema.org/InStock",
     "kbModel": null,
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-11-17T10:00:22.055Z",
+    "lastScrapedAt": "2026-11-17T14:45:36.701Z",
     "pasteFields": [
       "title",
       "brand",
@@ -4343,11 +4367,13 @@
     "availability": "https://schema.org/InStock",
     "kbModel": null,
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-11-17T10:00:22.379Z",
+    "lastScrapedAt": "2026-11-17T14:45:36.715Z",
     "pasteFields": [
       "year",
       "km",
@@ -4421,11 +4447,13 @@
     "availability": "https://schema.org/SoldOut",
     "kbModel": null,
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-11-17T10:00:22.675Z",
+    "lastScrapedAt": "2026-11-17T14:45:36.733Z",
     "a2": {
       "legal": null,
       "restricted": false,
@@ -4583,11 +4611,13 @@
       "type": "sport"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-11-17T10:00:22.990Z",
+    "lastScrapedAt": "2026-11-17T14:45:36.747Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -4752,11 +4782,13 @@
     "availability": "https://schema.org/SoldOut",
     "kbModel": null,
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-11-17T10:00:23.239Z",
+    "lastScrapedAt": "2026-11-17T14:45:36.764Z",
     "pasteFields": [
       "title",
       "brand",
@@ -4835,11 +4867,13 @@
     "availability": "https://schema.org/InStock",
     "kbModel": null,
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-11-17T10:00:23.575Z",
+    "lastScrapedAt": "2026-11-17T14:45:36.777Z",
     "a2": {
       "legal": null,
       "restricted": false,
@@ -4912,11 +4946,13 @@
     "availability": "https://schema.org/InStock",
     "kbModel": null,
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-11-17T10:00:23.915Z",
+    "lastScrapedAt": "2026-11-17T14:45:36.794Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -4993,11 +5029,13 @@
     "availability": "https://schema.org/InStock",
     "kbModel": null,
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-11-17T10:00:24.174Z",
+    "lastScrapedAt": "2026-11-17T14:45:36.808Z",
     "pasteFields": [
       "title",
       "brand",
@@ -5079,11 +5117,13 @@
     "availability": "https://schema.org/InStock",
     "kbModel": null,
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-11-17T10:00:24.436Z",
+    "lastScrapedAt": "2026-11-17T14:45:36.824Z",
     "pasteFields": [
       "year",
       "km",
@@ -5253,7 +5293,7 @@
     "status": "active",
     "notes": [],
     "site": "moto-ocasion.com",
-    "lastScrapedAt": "2026-11-17T10:00:24.733Z",
+    "lastScrapedAt": "2026-11-17T14:45:36.839Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -5410,11 +5450,13 @@
     "availability": "https://schema.org/SoldOut",
     "kbModel": null,
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-11-17T10:00:27.341Z",
+    "lastScrapedAt": "2026-11-17T14:45:37.661Z",
     "a2": {
       "legal": null,
       "restricted": false,
@@ -5564,11 +5606,13 @@
     "availability": "https://schema.org/InStock",
     "kbModel": null,
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-11-17T10:00:27.807Z",
+    "lastScrapedAt": "2026-11-17T14:45:37.675Z",
     "a2": {
       "legal": null,
       "restricted": false,
@@ -5642,7 +5686,7 @@
       "datos vía lector externo (r.jina.ai)"
     ],
     "site": "motos.coches.net",
-    "lastScrapedAt": "2026-11-17T10:00:28.115Z",
+    "lastScrapedAt": "2026-11-17T14:45:37.691Z",
     "a2": {
       "legal": null,
       "restricted": false,
@@ -5726,11 +5770,13 @@
       "type": "sport"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-11-17T10:00:29.141Z",
+    "lastScrapedAt": "2026-11-17T14:45:38.653Z",
     "pasteFields": [
       "title",
       "brand",
@@ -6178,13 +6224,13 @@
       "type": "naked"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
     "notes": [
-      "ad says 'limitada' — power capped to 35 kW (A2 restricted)"
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
     ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-11-17T10:00:29.444Z",
+    "lastScrapedAt": "2026-11-17T14:45:38.668Z",
     "pasteFields": [
       "title",
       "brand",
@@ -6267,11 +6313,13 @@
     "availability": "https://schema.org/InStock",
     "kbModel": null,
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-11-17T10:00:29.855Z",
+    "lastScrapedAt": "2026-11-17T14:45:38.684Z",
     "pasteFields": [
       "description"
     ],
@@ -7014,7 +7062,7 @@
     "status": "active",
     "notes": [],
     "site": "moto-ocasion.com",
-    "lastScrapedAt": "2026-11-17T10:00:31.111Z",
+    "lastScrapedAt": "2026-11-17T14:45:38.699Z",
     "a2": {
       "legal": false,
       "restricted": false,
@@ -7092,7 +7140,7 @@
       "lector externo devolvió una página sin anuncio (quizá eliminado)"
     ],
     "site": "motos.coches.net",
-    "lastScrapedAt": "2026-11-17T10:00:31.176Z",
+    "lastScrapedAt": "2026-11-17T14:45:39.063Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -7168,7 +7216,7 @@
       "lector externo devolvió una página sin anuncio (quizá eliminado)"
     ],
     "site": "motos.coches.net",
-    "lastScrapedAt": "2026-11-17T10:00:32.623Z",
+    "lastScrapedAt": "2026-11-17T14:45:40.475Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -7253,11 +7301,13 @@
       "type": "sport"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-11-17T10:00:34.659Z",
+    "lastScrapedAt": "2026-11-17T14:45:41.947Z",
     "pasteFields": [
       "title",
       "brand",
@@ -7351,11 +7401,13 @@
       "type": "sport"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-11-17T10:00:34.985Z",
+    "lastScrapedAt": "2026-11-17T14:45:41.961Z",
     "pasteFields": [
       "title",
       "brand",
@@ -7449,7 +7501,7 @@
     "status": "active",
     "notes": [],
     "site": "moto-ocasion.com",
-    "lastScrapedAt": "2026-11-17T10:00:35.393Z",
+    "lastScrapedAt": "2026-11-17T14:45:41.982Z",
     "a2": {
       "legal": false,
       "restricted": false,
@@ -7610,7 +7662,7 @@
       "lector externo devolvió una página sin anuncio (quizá eliminado)"
     ],
     "site": "motos.coches.net",
-    "lastScrapedAt": "2026-11-17T10:00:35.499Z",
+    "lastScrapedAt": "2026-11-17T14:45:43.958Z",
     "a2": {
       "legal": null,
       "restricted": false,
@@ -7684,7 +7736,7 @@
       "datos vía lector externo (r.jina.ai)"
     ],
     "site": "motos.coches.net",
-    "lastScrapedAt": "2026-11-17T10:00:36.924Z",
+    "lastScrapedAt": "2026-11-17T14:45:45.209Z",
     "a2": {
       "legal": null,
       "restricted": false,
@@ -7766,7 +7818,7 @@
     "status": "active",
     "notes": [],
     "site": "cuimo.com",
-    "lastScrapedAt": "2026-11-17T10:00:37.760Z",
+    "lastScrapedAt": "2026-11-17T14:45:46.062Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -7841,7 +7893,7 @@
     "status": "active",
     "notes": [],
     "site": "cuimo.com",
-    "lastScrapedAt": "2026-11-17T10:00:38.030Z",
+    "lastScrapedAt": "2026-11-17T14:45:46.702Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -8343,11 +8395,13 @@
     "availability": "https://schema.org/SoldOut",
     "kbModel": null,
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-11-17T10:00:38.110Z",
+    "lastScrapedAt": "2026-11-17T14:45:46.840Z",
     "pasteFields": [
       "title",
       "brand",
@@ -8506,11 +8560,13 @@
     "availability": "https://schema.org/InStock",
     "kbModel": null,
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-11-17T10:00:38.364Z",
+    "lastScrapedAt": "2026-11-17T14:45:46.979Z",
     "pasteFields": [
       "title",
       "brand",
@@ -8559,7 +8615,7 @@
     "model": "CBR500R",
     "type": "sport",
     "year": 2023,
-    "km": 27500,
+    "km": 21100,
     "price": 5980,
     "currency": "EUR",
     "location": null,
@@ -8591,7 +8647,7 @@
     "status": "active",
     "notes": [],
     "site": "motick.com",
-    "lastScrapedAt": "2026-11-17T10:00:38.763Z",
+    "lastScrapedAt": "2026-11-17T14:45:47.082Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -8758,7 +8814,7 @@
     "status": "active",
     "notes": [],
     "site": "moto-ocasion.com",
-    "lastScrapedAt": "2026-11-17T10:00:45.315Z",
+    "lastScrapedAt": "2026-11-17T14:45:54.331Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -8830,11 +8886,13 @@
       "type": "sport"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-11-17T10:00:47.012Z",
+    "lastScrapedAt": "2026-11-17T14:45:56.889Z",
     "pasteFields": [
       "brand",
       "model",
@@ -8918,7 +8976,7 @@
       "lector externo devolvió una página sin anuncio (quizá eliminado)"
     ],
     "site": "motos.coches.net",
-    "lastScrapedAt": "2026-11-17T10:00:47.373Z",
+    "lastScrapedAt": "2026-11-17T14:45:56.979Z",
     "a2": {
       "legal": false,
       "restricted": false,
@@ -8986,11 +9044,13 @@
       "type": "sport"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-11-17T10:00:48.286Z",
+    "lastScrapedAt": "2026-11-17T14:45:58.043Z",
     "pasteFields": [
       "title",
       "brand",
@@ -9073,7 +9133,7 @@
       "datos vía lector externo (r.jina.ai)"
     ],
     "site": "motos.coches.net",
-    "lastScrapedAt": "2026-11-17T10:00:48.541Z",
+    "lastScrapedAt": "2026-11-17T14:45:58.057Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -9236,7 +9296,7 @@
       "datos vía lector externo (r.jina.ai)"
     ],
     "site": "motos.coches.net",
-    "lastScrapedAt": "2026-11-17T10:00:49.721Z",
+    "lastScrapedAt": "2026-11-17T14:45:58.929Z",
     "a2": {
       "legal": true,
       "restricted": false,
@@ -9315,11 +9375,13 @@
       "type": "sport"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "milanuncios.com",
-    "lastScrapedAt": "2026-11-17T10:00:50.686Z",
+    "lastScrapedAt": "2026-11-17T14:45:59.852Z",
     "pasteFields": [
       "title",
       "brand",
@@ -9461,11 +9523,13 @@
       "type": "sport"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "milanuncios.com",
-    "lastScrapedAt": "2026-11-17T10:00:51.033Z",
+    "lastScrapedAt": "2026-11-17T14:46:00.018Z",
     "pasteFields": [
       "title",
       "brand",
@@ -9544,11 +9608,13 @@
       "type": "sport"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "milanuncios.com",
-    "lastScrapedAt": "2026-11-17T10:00:51.593Z",
+    "lastScrapedAt": "2026-11-17T14:46:00.109Z",
     "pasteFields": [
       "title",
       "brand",
@@ -9618,13 +9684,13 @@
       "type": "sport"
     },
     "scrapeStatus": "needs-manual",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
     "notes": [
-      "bot challenge page returned 200 — no data extracted"
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
     ],
     "site": "milanuncios.com",
-    "lastScrapedAt": "2026-11-17T10:00:51.860Z",
+    "lastScrapedAt": "2026-11-17T14:46:00.204Z",
     "pasteFields": [
       "powerCv",
       "powerKw",
@@ -9692,13 +9758,13 @@
       "type": "sport"
     },
     "scrapeStatus": "needs-manual",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
     "notes": [
-      "bot challenge page returned 200 — no data extracted"
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
     ],
     "site": "milanuncios.com",
-    "lastScrapedAt": "2026-11-17T10:00:52.140Z",
+    "lastScrapedAt": "2026-11-17T14:46:00.286Z",
     "pasteFields": [
       "km",
       "price",
@@ -9855,11 +9921,13 @@
       "type": "sport"
     },
     "scrapeStatus": "ok",
-    "httpStatus": 200,
+    "httpStatus": 403,
     "status": "active",
-    "notes": [],
+    "notes": [
+      "HTTP 403 — site blocked automated access; needs paste-text or screenshot"
+    ],
     "site": "es.wallapop.com",
-    "lastScrapedAt": "2026-11-17T10:00:52.244Z",
+    "lastScrapedAt": "2026-11-17T14:46:00.361Z",
     "a2": {
       "legal": true,
       "restricted": false,
