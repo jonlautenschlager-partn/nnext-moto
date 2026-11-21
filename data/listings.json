@@ -1036,10 +1036,10 @@
     "httpStatus": 200,
     "status": "active",
     "notes": [
-      "lector externo no disponible (401)"
+      "lector externo devolvió una página sin anuncio (quizá eliminado)"
     ],
     "site": "motos.coches.net",
-    "lastScrapedAt": "2026-11-20T14:14:24.529Z",
+    "lastScrapedAt": "2026-11-21T03:34:09.580Z",
     "a2": {
       "legal": true,
       "restricted": false,
